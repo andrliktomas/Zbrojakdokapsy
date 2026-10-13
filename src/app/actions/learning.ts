@@ -59,12 +59,13 @@ export async function markLessonRead(lessonId: string) {
 const submitSchema = z.object({
   answers: z.record(z.string(), z.number().int().min(-1)),
   durationSec: z.number().int().min(0),
+  permitType: z.enum(["obecne", "rozsirene"]),
 });
 
 export async function submitTest(input: z.infer<typeof submitSchema>) {
   const user = await requireUser();
   if (!(await hasAccess(user.id))) throw new Error("Cvičný test vyžaduje aktivní balíček.");
-  const { answers, durationSec } = submitSchema.parse(input);
+  const { answers, durationSec, permitType } = submitSchema.parse(input);
   const ids = Object.keys(answers).filter((id) => questionById.has(id));
   if (!ids.length || ids.length !== Object.keys(answers).length || ids.length > EXAM.questionCount) {
     throw new Error("Neplatný test");
@@ -74,13 +75,13 @@ export async function submitTest(input: z.infer<typeof submitSchema>) {
     return { id, topic: q.topic, chosen: answers[id], correctIndex: q.correct, correct: answers[id] === q.correct };
   });
   const score = results.filter((r) => r.correct).length;
-  const passed = score >= EXAM.passScore(ids.length);
+  const passed = score >= EXAM.passScore(ids.length, permitType);
   await db.$transaction([
     db.questionAttempt.createMany({
       data: results.map((r) => ({ userId: user.id, questionId: r.id, topic: r.topic, correct: r.correct, mode: "test" })),
     }),
     db.testResult.create({
-      data: { userId: user.id, score, total: ids.length, passed, durationSec: Math.min(durationSec, EXAM.timeLimitMin * 60) },
+      data: { userId: user.id, score, total: ids.length, passed, permitType, durationSec: Math.min(durationSec, EXAM.timeLimitMin * 60) },
     }),
   ]);
   const xp = XP.testCompleted + (passed ? XP.testPassed : 0);

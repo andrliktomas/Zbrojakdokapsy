@@ -1,0 +1,782 @@
+[
+  {
+    "id": "zaklady-01",
+    "topic": "zaklady",
+    "question": "Kdy podle zákona o zbraních a střelivu zbraň „nosíte“?",
+    "options": [
+      "Když ji máte na místě veřejnosti přístupném při sobě nabitou nebo viditelně.",
+      "Kdykoli ji máte při sobě, i doma nebo na vlastní zahradě.",
+      "Jen když ji máte v pouzdře na opasku, bez ohledu na to, zda je nabitá."
+    ],
+    "correct": 0,
+    "explanation": "Nošení je definováno místem (veřejně přístupné) a stavem zbraně (nabitá nebo viditelná). Nenabitá zbraň v neprůhledném uzavřeném pouzdře se tedy nenosí.",
+    "source": "definice nošení, zákona č. 90/2024 Sb. (ověřeno: soubor MV 15. 12. 2025, ot. č. 15 a 16)"
+  },
+  {
+    "id": "zaklady-02",
+    "topic": "zaklady",
+    "question": "Která z následujících věcí je regulovanou součástí zbraně?",
+    "options": [
+      "Noktovizní zaměřovač",
+      "Tlumič hluku výstřelu",
+      "Optický puškohled"
+    ],
+    "correct": 1,
+    "explanation": "Regulovanými součástmi jsou hlavní části zbraně, součásti pro samočinnou střelbu, polotovary hlavních částí, tlumič hluku výstřelu a nadlimitní zásobník. Noktovizor ani puškohled mezi ně nepatří.",
+    "source": "vymezení pojmů, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 6–8)"
+  },
+  {
+    "id": "zaklady-03",
+    "topic": "zaklady",
+    "question": "Kdo může po komkoli požadovat předložení zbraně nebo střeliva, se kterými nakládá?",
+    "options": [
+      "Ministerstvo vnitra",
+      "Obecní policie",
+      "Policie České republiky (u vybraných zbraní také Ministerstvo obrany)"
+    ],
+    "correct": 2,
+    "explanation": "Povinnost předložit zbraň na výzvu platí vůči Policii ČR. Ministerstvo obrany ji může požadovat u zbraní zvláště účinných pod mezinárodním kontrolním režimem. MV toto oprávnění nemá.",
+    "source": "obecné povinnosti, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 55–57)"
+  },
+  {
+    "id": "zaklady-04",
+    "topic": "zaklady",
+    "question": "Vystřelili jste ostrým nábojem v nutné obraně. Co je vaší povinností?",
+    "options": [
+      "Neprodleně to ohlásit Policii ČR.",
+      "Ohlásit to krajskému ředitelství policie do 10 pracovních dnů.",
+      "Nic, pokud nikdo nebyl zraněn."
+    ],
+    "correct": 0,
+    "explanation": "Každý musí neprodleně ohlásit Policii ČR použití zbraně k ostré střelbě v krajní nouzi nebo nutné obraně.",
+    "source": "obecné povinnosti, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 59 a 60)"
+  },
+  {
+    "id": "zaklady-05",
+    "topic": "zaklady",
+    "question": "Lze zbraň podléhající registraci nebo střelivo koupit přes e-shop formou spotřebitelské smlouvy na dálku?",
+    "options": [
+      "Ano, pokud prodejce ověří zbrojní oprávnění v CRZ.",
+      "Ne, nabývání zbraní podléhajících registraci, zbraní PO, palných zbraní NO a střeliva na dálku je zakázáno.",
+      "Ano, ale jen u zbraní kategorie R4."
+    ],
+    "correct": 1,
+    "explanation": "Zákon nabývání těchto zbraní a střeliva prostřednictvím spotřebitelských smluv uzavřených na dálku výslovně zakazuje.",
+    "source": "zákazy, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 53 a 54)"
+  },
+  {
+    "id": "kategorie-01",
+    "topic": "kategorie",
+    "question": "Do jakých kategorií dělí zbraně zákon č. 90/2024 Sb.?",
+    "options": [
+      "A, A-I, B, C, C-I a D",
+      "ZL1, ZL2 a ZL3",
+      "R1, R2, R3, R4, PO a NO"
+    ],
+    "correct": 2,
+    "explanation": "Kategorie A až D platily podle zákona č. 119/2002 Sb. ZL1 až ZL3 jsou skupiny zbrojních licencí, nikoli kategorie zbraní.",
+    "source": "kategorizace zbraní, příloha č. 2 zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 18)"
+  },
+  {
+    "id": "kategorie-02",
+    "topic": "kategorie",
+    "question": "Které kategorie zbraní jsou zakázanými zbraněmi?",
+    "options": [
+      "R1 a R2",
+      "Pouze R1",
+      "R1, R2 a R3"
+    ],
+    "correct": 0,
+    "explanation": "Zbraně R1 až R4 podléhají registraci, přičemž zakázané jsou R1 a R2. Zakázané střelivo je S1 a S2.",
+    "source": "kategorizace zbraní, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 19, 20 a 22)"
+  },
+  {
+    "id": "kategorie-03",
+    "topic": "kategorie",
+    "question": "Do které kategorie patří běžná samonabíjecí pistole s odnímatelným zásobníkem na 10 až 20 nábojů?",
+    "options": [
+      "R2",
+      "R3",
+      "R4"
+    ],
+    "correct": 1,
+    "explanation": "Typické samonabíjecí pistole se zásobníkem do 20 nábojů jsou v kategorii R3. Do R2 by se dostaly s nadlimitním zásobníkem (více než 20 nábojů).",
+    "source": "příloha č. 2 zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 524)"
+  },
+  {
+    "id": "kategorie-04",
+    "topic": "kategorie",
+    "question": "Do které kategorie patří opakovací kulovnice pro střelivo se středovým zápalem?",
+    "options": [
+      "R3",
+      "PO",
+      "R4"
+    ],
+    "correct": 2,
+    "explanation": "Dlouhé opakovací kulové zbraně (kulovnice i opakovací malorážky) jsou v kategorii R4. Držitel zbrojního oprávnění s nimi může nakládat bez zvláštního povolení.",
+    "source": "příloha č. 2 zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 527 a 528)"
+  },
+  {
+    "id": "kategorie-05",
+    "topic": "kategorie",
+    "question": "Samonabíjecí puška pro střelivo se středovým zápalem vybavená zásobníkem na 30 nábojů je zbraní kategorie:",
+    "options": [
+      "R2",
+      "R3",
+      "R4"
+    ],
+    "correct": 0,
+    "explanation": "Zásobník na 30 nábojů je u dlouhé zbraně nadlimitní (nad 10 nábojů). Samonabíjecí zbraň se středovým zápalem s nadlimitním zásobníkem patří do zakázané kategorie R2.",
+    "source": "příloha č. 1 a 2 zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 503, 514 a 515)"
+  },
+  {
+    "id": "kategorie-06",
+    "topic": "kategorie",
+    "question": "Od jaké kapacity je zásobník pro palnou zbraň se středovým zápalem „nadlimitní“?",
+    "options": [
+      "Nad 10 nábojů u krátké zbraně a nad 5 nábojů u dlouhé zbraně.",
+      "Nad 20 nábojů u krátké zbraně a nad 10 nábojů u dlouhé zbraně.",
+      "Nad 30 nábojů u krátké i dlouhé zbraně."
+    ],
+    "correct": 1,
+    "explanation": "Nadlimitní zásobník je definován pro zbraně se středovým zápalem: krátká zbraň více než 20 nábojů, dlouhá více než 10 nábojů.",
+    "source": "příloha č. 1 zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 503 a 504)"
+  },
+  {
+    "id": "kategorie-07",
+    "topic": "kategorie",
+    "question": "Kdy je palná zbraň „krátká“?",
+    "options": [
+      "Když její celková délka nepřesahuje 500 mm a hlaveň 250 mm.",
+      "Když ji lze nosit skrytě pod oděvem.",
+      "Když její délka v nejkratším funkčním stavu nepřesahuje 600 mm nebo délka hlavně nepřesahuje 300 mm."
+    ],
+    "correct": 2,
+    "explanation": "Stačí splnit jednu z podmínek (celková délka do 600 mm, nebo hlaveň do 300 mm). Dlouhá je každá palná zbraň, která není krátká.",
+    "source": "příloha č. 1 zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 456–459)"
+  },
+  {
+    "id": "kategorie-08",
+    "topic": "kategorie",
+    "question": "Do které kategorie patří běžné náboje s celoplášťovou (FMJ) střelou do pistole nebo pušky?",
+    "options": [
+      "S3",
+      "S2",
+      "S4"
+    ],
+    "correct": 0,
+    "explanation": "Do S3 patří náboje s běžnou jednotnou nebo hromadnou střelou, které nejsou zařazeny jinam (FMJ, SP, Flobert). S2 zahrnuje například deformační náboje do krátkých zbraní, S4 aktivní komponenty a nábojky.",
+    "source": "příloha č. 2 zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 547 a 550–552)"
+  },
+  {
+    "id": "kategorie-09",
+    "topic": "kategorie",
+    "question": "Do které kategorie patří expanzní přístroje, historické zbraně a airsoftové zbraně?",
+    "options": [
+      "PO",
+      "NO",
+      "R4"
+    ],
+    "correct": 1,
+    "explanation": "Kategorie NO nepodléhá ohlášení. Patří sem expanzní přístroje, historické zbraně, neaktivní zbraně mimo PO, plynové zbraně do ráže 6,35 mm a paintballové i airsoftové zbraně.",
+    "source": "příloha č. 2 zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 536–538)"
+  },
+  {
+    "id": "kategorie-10",
+    "topic": "kategorie",
+    "question": "Palná zbraň je „historická“, pokud byla (včetně všech hlavních částí) vyrobena nejpozději:",
+    "options": [
+      "31. 12. 1900",
+      "31. 12. 1945",
+      "31. 12. 1890"
+    ],
+    "correct": 2,
+    "explanation": "Historické zbraně jsou palné zbraně vyrobené do 31. 12. 1890 (a plynové zbraně zkonstruované do tohoto data). Patří do kategorie NO.",
+    "source": "příloha č. 1 zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 475–477)"
+  },
+  {
+    "id": "opravneni-01",
+    "topic": "opravneni",
+    "question": "Jaké druhy zbrojního oprávnění zákon rozlišuje?",
+    "options": [
+      "Obecné a rozšířené, přičemž součástí rozšířeného je i obecné.",
+      "Skupiny A, B, C, D a E.",
+      "Základní, obecné a rozšířené, přičemž se navzájem nepřekrývají."
+    ],
+    "correct": 0,
+    "explanation": "Pět skupin zbrojního průkazu (A–E) nahradily dva druhy zbrojního oprávnění. Rozšířené oprávnění v sobě zahrnuje obecné.",
+    "source": "zbrojní oprávnění, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 79)"
+  },
+  {
+    "id": "opravneni-02",
+    "topic": "opravneni",
+    "question": "Jaký minimální věk je potřeba pro rozšířené zbrojní oprávnění?",
+    "options": [
+      "18 let",
+      "21 let",
+      "25 let"
+    ],
+    "correct": 1,
+    "explanation": "Obecné zbrojní oprávnění lze získat se zletilostí (18 let), rozšířené až od 21 let.",
+    "source": "věk, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 86; portal.gov.cz)"
+  },
+  {
+    "id": "opravneni-03",
+    "topic": "opravneni",
+    "question": "Za jakých okolností lze obecné zbrojní oprávnění vydat už 15letému žadateli?",
+    "options": [
+      "Kdykoli, pokud s tím souhlasí rodiče.",
+      "Nikdy, zbrojní oprávnění lze vydat jen zletilé osobě.",
+      "Je-li například žákem střední školy v oboru s výukou myslivosti a má písemný souhlas zákonného zástupce a školy."
+    ],
+    "correct": 2,
+    "explanation": "Výjimka od 15 let platí pro žáky vybraných oborů SŠ a pro členy sportovně-střeleckého spolku, který je držitelem zbrojní licence. Vždy je nutný písemný souhlas zákonného zástupce a školy nebo spolku.",
+    "source": "věk, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 87 a 88)"
+  },
+  {
+    "id": "opravneni-04",
+    "topic": "opravneni",
+    "question": "Co NEPATŘÍ mezi podmínky vydání zbrojního oprávnění?",
+    "options": [
+      "Občanství České republiky",
+      "Místo pobytu na území ČR",
+      "Zdravotní způsobilost"
+    ],
+    "correct": 0,
+    "explanation": "Podmínkami jsou místo pobytu v ČR, věk, svéprávnost, zdravotní způsobilost, bezúhonnost a spolehlivost a odborná způsobilost. Občanství ČR se nevyžaduje.",
+    "source": "podmínky zbrojního oprávnění, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 82 a 84)"
+  },
+  {
+    "id": "opravneni-05",
+    "topic": "opravneni",
+    "question": "Které zbrojní oprávnění potřebujete ke skrytému nošení zbraně podléhající registraci k ochraně života, zdraví a majetku?",
+    "options": [
+      "Stačí obecné zbrojní oprávnění",
+      "Rozšířené zbrojní oprávnění",
+      "Obecné zbrojní oprávnění a povolení kategorie R3"
+    ],
+    "correct": 1,
+    "explanation": "Skryté nošení zbraně podléhající registraci za účelem ochrany vyžaduje rozšířené oprávnění. Odpovídá dřívější skupině E.",
+    "source": "zbrojní oprávnění a nošení zbraně, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 81, 323 a 325)"
+  },
+  {
+    "id": "opravneni-06",
+    "topic": "opravneni",
+    "question": "Jakou dobu platnosti má standardně lékařský posudek o zdravotní způsobilosti?",
+    "options": [
+      "10 let",
+      "2 roky",
+      "5 let, pokud zdravotní stav neodůvodňuje kratší dobu"
+    ],
+    "correct": 2,
+    "explanation": "Nový zákon zkrátil interval z 10 na 5 let. Lékař může podle zdravotního stavu stanovit i kratší platnost.",
+    "source": "§ 15 zákona č. 90/2024 Sb.; NV č. 351/2025 Sb. (ověřeno: soubor MV, ot. č. 90)"
+  },
+  {
+    "id": "opravneni-07",
+    "topic": "opravneni",
+    "question": "Jak starý smí být nejvýše lékařský posudek přiložený k žádosti o vydání zbrojního oprávnění?",
+    "options": [
+      "90 dnů",
+      "30 dnů",
+      "6 měsíců"
+    ],
+    "correct": 0,
+    "explanation": "Podle zákona o specifických zdravotních službách, na který zákon o zbraních odkazuje, nesmí být posudek starší než 90 dnů.",
+    "source": "§ 15 zákona č. 90/2024 Sb. ve spojení se zák. č. 373/2011 Sb. (ověřeno: soubor MV, ot. č. 91)"
+  },
+  {
+    "id": "opravneni-08",
+    "topic": "opravneni",
+    "question": "Jak se při posuzování bezúhonnosti pro zbrojní oprávnění zohlední zahlazené odsouzení?",
+    "options": [
+      "Zahlazené odsouzení se nezohledňuje vůbec.",
+      "Nepřihlíží se k zahlazení, odsouzení se posuzuje, jako by zahlazeno nebylo.",
+      "Zahlazení se zohlední jen u činů spáchaných z nedbalosti."
+    ],
+    "correct": 1,
+    "explanation": "U zbrojního oprávnění se nepřihlíží k zahlazení ani k jiným případům, kdy se na pachatele hledí, jako by nebyl odsouzen. U zapsané autorizace je to naopak.",
+    "source": "bezúhonnost, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 107 a 223)"
+  },
+  {
+    "id": "opravneni-09",
+    "topic": "opravneni",
+    "question": "Kterou podmínku nesplňuje osoba, která nadměrně požívá alkohol?",
+    "options": [
+      "Bezúhonnost",
+      "Odbornou způsobilost",
+      "Spolehlivost"
+    ],
+    "correct": 2,
+    "explanation": "Spolehlivost zahrnuje trestní a přestupkovou zachovalost a vyloučení rizika alkoholismu a zneužívání návykových látek.",
+    "source": "spolehlivost, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 83 a 108)"
+  },
+  {
+    "id": "opravneni-10",
+    "topic": "opravneni",
+    "question": "Má odvolání proti rozhodnutí o pozastavení nebo odnětí zbrojního oprávnění odkladný účinek?",
+    "options": [
+      "Ne, nemá odkladný účinek.",
+      "Ano, oprávnění platí až do pravomocného rozhodnutí.",
+      "Odvolání proti těmto rozhodnutím nelze podat."
+    ],
+    "correct": 0,
+    "explanation": "Zákon výslovně vylučuje odkladný účinek odvolání proti pozastavení i odnětí zbrojního oprávnění.",
+    "source": "pozastavení a odnětí ZO, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 124)"
+  },
+  {
+    "id": "opravneni-11",
+    "topic": "opravneni",
+    "question": "Jak často nejméně krajské ředitelství policie prověřuje, zda držitel stále splňuje podmínky zbrojního oprávnění?",
+    "options": [
+      "Nejméně jednou za 10 let",
+      "Nejméně jednou za 5 let",
+      "Jen když dostane podnět"
+    ],
+    "correct": 1,
+    "explanation": "Prověrka podmínek probíhá nejméně jednou za 5 let. K předložení držených zbraní vyzve KŘP alespoň jednou za 10 let.",
+    "source": "kontrola držitelů, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 431 a 432)"
+  },
+  {
+    "id": "opravneni-12",
+    "topic": "opravneni",
+    "question": "Může držitel zbrojního oprávnění získat výjimku kategorie R1 (například pro samočinnou zbraň)?",
+    "options": [
+      "Ano, pokud má rozšířené zbrojní oprávnění.",
+      "Ano, na každou zbraň zvlášť.",
+      "Ne, výjimku R1 nebo S1 nelze vydat držiteli zbrojního oprávnění."
+    ],
+    "correct": 2,
+    "explanation": "Výjimku R1 nebo S1 lze vydat jen držiteli zbrojní licence ZL2 nebo ZL3. Držitel ZO může získat výjimku R2 nebo S2 a povolení R3.",
+    "source": "výjimky a povolení, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 197, 198 a 201)"
+  },
+  {
+    "id": "opravneni-13",
+    "topic": "opravneni",
+    "question": "Za co se podle přechodných ustanovení považuje zbrojní průkaz skupiny D nebo E vydaný podle zákona č. 119/2002 Sb.?",
+    "options": [
+      "Za rozšířené zbrojní oprávnění",
+      "Za obecné zbrojní oprávnění",
+      "Zanikl a držitel musí znovu složit zkoušku."
+    ],
+    "correct": 0,
+    "explanation": "Držitelé dřívějších průkazů se automaticky stali držiteli zbrojního oprávnění. Skupiny D a E odpovídají rozšířenému oprávnění, skupiny A, B a C obecnému.",
+    "source": "§ 150 odst. 8 zákona č. 90/2024 Sb. (ověřeno: úryvek krajta.slv.cz a FAQ MV; plný text neověřen)"
+  },
+  {
+    "id": "zkouska-01",
+    "topic": "zkouska",
+    "question": "Z jakých částí se skládá zkouška odborné způsobilosti žadatele o zbrojní oprávnění?",
+    "options": [
+      "Pouze z teoretického testu",
+      "Z teoretické a praktické části",
+      "Z teoretické části, praktické části a povinného kurzu"
+    ],
+    "correct": 1,
+    "explanation": "Zkouška odborné způsobilosti i komisionální zkouška mají teoretickou a praktickou část. Praktická část zahrnuje bezpečnou manipulaci a střelbu na terč.",
+    "source": "odborná způsobilost, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 115 a 117)"
+  },
+  {
+    "id": "zkouska-02",
+    "topic": "zkouska",
+    "question": "V jaké lhůtě musíte zkoušku složit a kolikrát ji smíte opakovat?",
+    "options": [
+      "Do 6 měsíců od podání žádosti, se dvěma opakováními.",
+      "Bez časového omezení a s libovolným počtem opakování.",
+      "Do 12 měsíců od zápisu do CRZ, že jste oprávněni prokázat odbornou způsobilost. Zkoušku lze jednou opakovat."
+    ],
+    "correct": 2,
+    "explanation": "Lhůta 12 měsíců běží od zápisu do centrálního registru zbraní. Po neúspěšném opakování je za podmínek zákona možná komisionální zkouška.",
+    "source": "odborná způsobilost, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 133)"
+  },
+  {
+    "id": "zkouska-03",
+    "topic": "zkouska",
+    "question": "Kdy můžete vykonat komisionální zkoušku?",
+    "options": [
+      "Když jste neuspěli ani v opakované zkoušce, ale alespoň jednou jste uspěli v teoretické části.",
+      "Kdykoli místo běžné zkoušky.",
+      "Jen po úspěšném protestu proti průběhu zkoušky."
+    ],
+    "correct": 0,
+    "explanation": "Komisionální zkouška je „poslední šance“ pro žadatele, který prokázal teoretické znalosti, ale neuspěl v praxi.",
+    "source": "komisionální zkouška, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 134)"
+  },
+  {
+    "id": "zkouska-04",
+    "topic": "zkouska",
+    "question": "Kolik zásahů z 10 výstřelů musí v praktické části dosáhnout žadatel o OBECNÉ zbrojní oprávnění?",
+    "options": [
+      "Alespoň 8",
+      "Alespoň 6",
+      "Alespoň 5"
+    ],
+    "correct": 1,
+    "explanation": "Střílí se na kruhový terč o průměru 500 mm: 5 ran z krátké zbraně na 10 m a 5 ran z dlouhé kulové zbraně na 25 m, celkem do 5 minut. Pro obecné ZO stačí 6 zásahů, pro rozšířené je potřeba 8.",
+    "source": "praktická část zkoušky, zákona č. 90/2024 Sb.; NV č. 238/2025 Sb. (ověřeno: soubor MV, ot. č. 118)"
+  },
+  {
+    "id": "zkouska-05",
+    "topic": "zkouska",
+    "question": "Kolik zásahů z 10 výstřelů musí v praktické části dosáhnout žadatel o ROZŠÍŘENÉ zbrojní oprávnění?",
+    "options": [
+      "Alespoň 6",
+      "Všech 10",
+      "Alespoň 8"
+    ],
+    "correct": 2,
+    "explanation": "Podmínky střelby jsou stejné jako u obecného ZO (terč 500 mm, 10 m a 25 m, 5 minut), ale požadovaný počet zásahů je 8.",
+    "source": "praktická část zkoušky, zákona č. 90/2024 Sb.; NV č. 238/2025 Sb. (ověřeno: soubor MV, ot. č. 119)"
+  },
+  {
+    "id": "zkouska-06",
+    "topic": "zkouska",
+    "question": "Kdy a kde lze podat protest proti průběhu nebo výsledku zkoušky odborné způsobilosti?",
+    "options": [
+      "Ihned po oznámení výsledku, na místě konání zkoušky, u dozorujícího krajského ředitelství policie.",
+      "Písemně do 10 pracovních dnů u Ministerstva vnitra.",
+      "Do 48 hodin elektronicky u zkušebního komisaře."
+    ],
+    "correct": 0,
+    "explanation": "Na později podaný protest se nebere zřetel. Pokud KŘP protest uzná, žadatel příslušnou část zkoušky opakuje.",
+    "source": "protest, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 139–142)"
+  },
+  {
+    "id": "zkouska-07",
+    "topic": "zkouska",
+    "question": "Smí žadatel při zkoušce využít tlumočníka?",
+    "options": [
+      "Ano, cizinec má na tlumočníka nárok.",
+      "Ne, zkoušku musí vykonat osobně, bez tlumočníka, podpůrce nebo obdobné osoby.",
+      "Ano, ale jen u praktické části."
+    ],
+    "correct": 1,
+    "explanation": "Zákon vyžaduje osobní vykonání zkoušky a využití tlumočníka nebo podpůrce nepřipouští.",
+    "source": "zkouška, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 114)"
+  },
+  {
+    "id": "zkouska-08",
+    "topic": "zkouska",
+    "question": "Kde se koná zkouška odborné způsobilosti?",
+    "options": [
+      "Vždy na policejní střelnici",
+      "Na kterékoli povolené střelnici podle volby žadatele",
+      "Vždy na zapsané zkouškové střelnici"
+    ],
+    "correct": 2,
+    "explanation": "Zkouška odborné způsobilosti se koná vždy na zapsané zkouškové střelnici, jejímž provozovatelem musí být držitel zbrojní licence. Komisionální zkouška se koná zpravidla na střelnici vyňaté instituce.",
+    "source": "zkouška, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 143–145 a 243)"
+  },
+  {
+    "id": "nakladani-01",
+    "topic": "nakladani",
+    "question": "Koupili jste zbraň podléhající registraci. Co a do kdy musíte udělat?",
+    "options": [
+      "Do 10 pracovních dnů ohlásit nabytí krajskému ředitelství policie a předložit zbraň k prohlídce.",
+      "Do 30 dnů zaslat kopii kupní smlouvy na policii.",
+      "Nic, registraci provede prodejce."
+    ],
+    "correct": 0,
+    "explanation": "Lhůta 10 pracovních dnů běží ode dne, kdy jste se zbraní začali nakládat. Zbraň se předkládá k prohlídce označení a technického stavu. Lze to udělat u kteréhokoli KŘP.",
+    "source": "registrace zbraní, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 268–271 a 423)"
+  },
+  {
+    "id": "nakladani-02",
+    "topic": "nakladani",
+    "question": "Kdo je „hlavním držitelem“ zbraně?",
+    "options": [
+      "Vlastník zbraně podle kupní smlouvy",
+      "Osoba, které byla zbraň zaregistrována",
+      "Ten, kdo zbraň právě nosí"
+    ],
+    "correct": 1,
+    "explanation": "Hlavní držitel může požádat o zápis jednoho nebo více vedlejších držitelů. Ti musí být oprávněni se zbraní nakládat a se zápisem souhlasit.",
+    "source": "hlavní a vedlejší držitel, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 276–280)"
+  },
+  {
+    "id": "nakladani-03",
+    "topic": "nakladani",
+    "question": "Co je zbrojní list?",
+    "options": [
+      "Plastová karta, která nahradila zbrojní průkaz",
+      "Povolení k nákupu konkrétní zbraně",
+      "Ověřený výstup z centrálního registru zbraní, který spolu s dokladem totožnosti prokazuje vaše oprávnění"
+    ],
+    "correct": 2,
+    "explanation": "Zbrojní list je zdarma na Portálu veřejné správy (přihlášení přes eIdentitu), vydává ho i KŘP nebo Czech POINT. Nemá omezenou platnost, platí k okamžiku vydání.",
+    "source": "prokazování oprávnění, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 437–443)"
+  },
+  {
+    "id": "nakladani-04",
+    "topic": "nakladani",
+    "question": "Na jak dlouho nejvýše můžete zbraň kategorie R4 přenechat jinému držiteli zbrojního oprávnění (mimo střelnici a bez zápisu vedlejšího držitele)?",
+    "options": [
+      "Nejvýše na 30 po sobě jdoucích dnů",
+      "Nejvýše na 7 dnů",
+      "Bez časového omezení"
+    ],
+    "correct": 0,
+    "explanation": "Zbraň R4 lze přenechat držiteli ZO vždy nejvýše na 30 po sobě jdoucích dnů. Kdo zbraň dostal přenechanou, nesmí ji přenechat dál.",
+    "source": "§ 78 zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 304–308)"
+  },
+  {
+    "id": "nakladani-05",
+    "topic": "nakladani",
+    "question": "Jak dlouho nejvýše smí zbraň zůstat krátkodobě uložená v zamčeném vozidle?",
+    "options": [
+      "Nejvýše 1 hodinu",
+      "Nejvýše 4 hodiny",
+      "Nejvýše 24 hodin"
+    ],
+    "correct": 1,
+    "explanation": "Krátkodobé uložení ve vozidle (nejvýše 2 zbraně R2–R4 a 1 000 nábojů) je možné do 4 hodin: v uzamčeném kufru pevně spojeném s karoserií, mimo dohled, zbraň nenabitá a střelivo odděleně. Dlouhodobé uložení ve vozidle zákon nepřipouští.",
+    "source": "NV č. 187/2025 Sb. (ověřeno: soubor MV, ot. č. 598–602)"
+  },
+  {
+    "id": "nakladani-06",
+    "topic": "nakladani",
+    "question": "Kolik zbraní a nábojů smíte uložit jen „vhodným způsobem“ bez standardního fyzického zabezpečení (trezor apod.)?",
+    "options": [
+      "Nejvýše 5 zbraní a 5 000 nábojů",
+      "Žádné, každá zbraň musí být v trezoru",
+      "Nejvýše 2 zbraně kategorie R2–R4 a nejvýše 1 000 nábojů S2 nebo S3"
+    ],
+    "correct": 2,
+    "explanation": "Rozhoduje počet současně ukládaných zbraní a nábojů. Nad tento limit platí technické požadavky nařízení vlády, například pro více než 20 zbraní komorový trezor s EZS.",
+    "source": "zabezpečení, zákona č. 90/2024 Sb.; NV č. 187/2025 Sb. (ověřeno: soubor MV, ot. č. 336–341)"
+  },
+  {
+    "id": "nakladani-07",
+    "topic": "nakladani",
+    "question": "Na jak dlouho vydává Česká republika evropský zbrojní pas?",
+    "options": [
+      "Na 5 let s možností prodloužení o dalších 5 let",
+      "Na 10 let bez možnosti prodloužení",
+      "Na dobu neurčitou"
+    ],
+    "correct": 0,
+    "explanation": "Evropský zbrojní pas vydává KŘP na žádost fyzické osoby. Opravňuje k dočasnému přemístění zapsané zbraně do jiného státu EU za účelem lovu, sportu nebo rekonstrukce.",
+    "source": "§ 97 a násl. zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 375–379)"
+  },
+  {
+    "id": "nakladani-08",
+    "topic": "nakladani",
+    "question": "Kdo projednává přestupky držitele zbrojního oprávnění podle zákona o zbraních a střelivu?",
+    "options": [
+      "Krajské ředitelství policie",
+      "Obecní úřad obce s rozšířenou působností (policista může uložit příkaz na místě)",
+      "Okresní soud"
+    ],
+    "correct": 1,
+    "explanation": "Za přestupek fyzické osoby hrozí obecně pokuta do 30 000 Kč. V přitěžujících případech až 50 000 Kč, 100 000 Kč nebo 1 000 000 Kč.",
+    "source": "přestupky, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 427 a 430)"
+  },
+  {
+    "id": "strelnice-01",
+    "topic": "strelnice",
+    "question": "Jaká střelnice je podle zákona „příležitostná“?",
+    "options": [
+      "Taková, která nemá stálého správce střelnice",
+      "Taková, která je umístěna pod širým nebem",
+      "Taková, kterou provozní řád nedovoluje využívat častěji než 26 dnů v kalendářním roce"
+    ],
+    "correct": 2,
+    "explanation": "Podle způsobu provozování jsou střelnice příležitostné a stálé, podle konstrukce kryté a otevřené.",
+    "source": "střelnice, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 239–242)"
+  },
+  {
+    "id": "nauka-01",
+    "topic": "nauka",
+    "question": "Jakou palnou zbraní je podle zákona běžný revolver?",
+    "options": [
+      "Opakovací",
+      "Samonabíjecí",
+      "Nabíjená jednotlivě"
+    ],
+    "correct": 0,
+    "explanation": "Revolver se znovu nabíjí ruční manipulací (natočením válce spouští nebo kohoutem), proto je opakovací zbraní.",
+    "source": "příloha č. 1 zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 465 a 733)"
+  },
+  {
+    "id": "nauka-02",
+    "topic": "nauka",
+    "question": "K čemu slouží drážkovaný vývrt hlavně?",
+    "options": [
+      "Snižuje zpětný ráz zbraně.",
+      "Uvádí střelu do otáčivého pohybu kolem její podélné osy.",
+      "Zvyšuje tlak plynů v nábojové komoře."
+    ],
+    "correct": 1,
+    "explanation": "Rotace stabilizuje střelu za letu. Brokové zbraně mají zpravidla hladký vývrt.",
+    "source": "nauka o zbraních (ověřeno: soubor MV, ot. č. 721)"
+  },
+  {
+    "id": "nauka-03",
+    "topic": "nauka",
+    "question": "Jaký zápal má náboj typu Flobert?",
+    "options": [
+      "Středový",
+      "Žádný, jde o dělené střelivo",
+      "Okrajový"
+    ],
+    "correct": 2,
+    "explanation": "Flobert je náboj s okrajovým zápalem a jednotnou nebo hromadnou střelou, obvykle v rážích 4, 6 nebo 9 mm. Patří do kategorie S3.",
+    "source": "nauka o střelivu; příloha č. 2 zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 552 a 760)"
+  },
+  {
+    "id": "nauka-04",
+    "topic": "nauka",
+    "question": "Jaký může být maximální dostřel dlouhé zbraně ráže .22 Long Rifle se standardním střelivem?",
+    "options": [
+      "Více než 1,5 km",
+      "Přibližně 300 m",
+      "Nejvýše 100 m"
+    ],
+    "correct": 0,
+    "explanation": "I malorážka má nebezpečný dostřel přes 1,5 km. Proto je nutné vždy znát, co je za cílem, a dbát na bezpečný směr.",
+    "source": "nauka o zbraních – balistika (ověřeno: soubor MV, ot. č. 766)"
+  },
+  {
+    "id": "bezpecna-manipulace-01",
+    "topic": "bezpecna-manipulace",
+    "question": "Při střelbě nastal selhač (náboj nevystřelil). Jak dlouho alespoň musíte vyčkat se zbraní v bezpečném směru?",
+    "options": [
+      "Alespoň 1 sekundu",
+      "Alespoň 10 sekund (nebo déle, pokud to stanoví výrobce)",
+      "Není třeba čekat, závěr se natáhne okamžitě."
+    ],
+    "correct": 1,
+    "explanation": "Hrozí opožděná iniciace náboje. Po vyčkání se provede kontrola zbraně a zkontroluje se otisk zápalníku na zápalce.",
+    "source": "NV č. 238/2025 Sb., příloha č. 2 (ověřeno: soubor MV, ot. č. 586 a 587)"
+  },
+  {
+    "id": "bezpecna-manipulace-02",
+    "topic": "bezpecna-manipulace",
+    "question": "Jak se u zkoušky provádí kontrola revolveru?",
+    "options": [
+      "Několikrát se stiskne spoušť do bezpečného směru.",
+      "Stačí nahlédnout do ústí hlavně.",
+      "Vyklopí se nábojový válec a vizuálně se zkontrolují jeho nábojové komory. Revolver se odkládá s vyklopeným válcem."
+    ],
+    "correct": 2,
+    "explanation": "Účelem kontroly je vybít zbraň a uvést ji do bezpečného stavu pro odložení nebo další manipulaci.",
+    "source": "NV č. 238/2025 Sb., příloha č. 2 (ověřeno: soubor MV, ot. č. 572, 579 a 580)"
+  },
+  {
+    "id": "bezpecna-manipulace-03",
+    "topic": "bezpecna-manipulace",
+    "question": "Kde má být ukazováček po nabití zbraně, dokud nezazní pokyn ke střelbě?",
+    "options": [
+      "Mimo lučík zbraně, zbraň stále míří do bezpečného směru",
+      "Na spoušti, aby byl výstřel rychlý",
+      "V lučíku, ale mimo spoušť"
+    ],
+    "correct": 0,
+    "explanation": "Prst na spoušti nebo v prostoru lučíku bez důvodu je porušením zásad bezpečného nakládání. Výjimkou je záměrný výstřel, rána jistoty u zkontrolované zbraně nebo úkon předepsaný výrobcem.",
+    "source": "NV č. 238/2025 Sb., příloha č. 2 (ověřeno: soubor MV, ot. č. 568 a 569)"
+  },
+  {
+    "id": "trestni-pravo-01",
+    "topic": "trestni-pravo",
+    "question": "Kdy podle trestního zákoníku NEJDE o nutnou obranu?",
+    "options": [
+      "Když byla obrana intenzivnější než útok",
+      "Když byla obrana zcela zjevně nepřiměřená způsobu útoku",
+      "Když obránce předem nevyzval útočníka, aby upustil od útoku"
+    ],
+    "correct": 1,
+    "explanation": "Obrana smí (a zpravidla musí) být silnější než útok, nesmí však být zcela zjevně nepřiměřená. Výzva útočníkovi není podmínkou.",
+    "source": "§ 29 zákona č. 40/2009 Sb., trestní zákoník (ověřeno: soubor MV, ot. č. 637–640)"
+  },
+  {
+    "id": "trestni-pravo-02",
+    "topic": "trestni-pravo",
+    "question": "Která podmínka musí být splněna u krajní nouze (na rozdíl od nutné obrany)?",
+    "options": [
+      "Nebezpečí musí vždy způsobit člověk útokem.",
+      "Jednat smí jen ten, komu nebezpečí přímo hrozí.",
+      "Nebezpečí nešlo za daných okolností odvrátit jinak a způsobený následek není zřejmě stejně závažný nebo závažnější než hrozící."
+    ],
+    "correct": 2,
+    "explanation": "Krajní nouze je subsidiární (jen pokud nelze jinak) a proporcionální. Nebezpečí může způsobit i příroda nebo zvíře a pomoci může kdokoli.",
+    "source": "§ 28 zákona č. 40/2009 Sb., trestní zákoník (ověřeno: soubor MV, ot. č. 632–636)"
+  },
+  {
+    "id": "trestni-pravo-03",
+    "topic": "trestni-pravo",
+    "question": "Napadnou vás současně dva útočníci. Proti komu smí směřovat nutná obrana?",
+    "options": [
+      "Proti kterémukoli z nich",
+      "Jen proti tomu, kdo zaútočil první",
+      "Jen proti tomu, kdo je ozbrojen"
+    ],
+    "correct": 0,
+    "explanation": "Nutná obrana směřuje přímo proti útočníkovi. Při více útočnících může směřovat proti kterémukoli z nich.",
+    "source": "§ 29 zákona č. 40/2009 Sb., trestní zákoník (ověřeno: soubor MV, ot. č. 644 a 645)"
+  },
+  {
+    "id": "trestni-pravo-04",
+    "topic": "trestni-pravo",
+    "question": "Jak soud posoudí čin spáchaný při odvracení útoku, kdy obránce překročil meze nutné obrany?",
+    "options": [
+      "Jako by šlo o nutnou obranu, čin není trestný",
+      "Jen jako polehčující okolnost",
+      "Jako přitěžující okolnost"
+    ],
+    "correct": 1,
+    "explanation": "Pokud nejsou zcela splněny podmínky nutné obrany, jde o trestný čin, ale soud k okolnostem přihlédne jako k polehčující.",
+    "source": "trestní zákoník č. 40/2009 Sb. (ověřeno: soubor MV, ot. č. 648)"
+  },
+  {
+    "id": "zdravoveda-01",
+    "topic": "zdravoveda",
+    "question": "Jak správně použijete zaškrcovadlo při masivním krvácení z končetiny?",
+    "options": [
+      "Přiložíte ho pod ránu a každých 5 minut povolíte.",
+      "Přiložíte ho přímo na ránu a nepevně utáhnete.",
+      "Přiložíte ho nad ránu na paži nebo stehně, utáhnete do zástavy krvácení, zaznamenáte čas a voláte 155."
+    ],
+    "correct": 2,
+    "explanation": "Zaškrcovadlo se dává nad ránu (blíže k srdci). Čas přiložení je důležitý pro zdravotníky.",
+    "source": "zdravotnické minimum (ověřeno: soubor MV, ot. č. 803 a 809)"
+  },
+  {
+    "id": "zdravoveda-02",
+    "topic": "zdravoveda",
+    "question": "V jakém poměru střídá laik při resuscitaci stlačení hrudníku a vdechy, pokud dýchá z úst do úst?",
+    "options": [
+      "30 stlačení : 2 vdechy",
+      "15 stlačení : 2 vdechy",
+      "5 stlačení : 1 vdech"
+    ],
+    "correct": 0,
+    "explanation": "Stlačuje se frekvencí 100–120 za minutu na dolní polovině hrudní kosti. Dýchání z plic do plic není pro laika povinné.",
+    "source": "zdravotnické minimum (ověřeno: soubor MV, ot. č. 806, 807 a 827)"
+  },
+  {
+    "id": "zdravoveda-03",
+    "topic": "zdravoveda",
+    "question": "Kdy vytahujete rukou jazyk postiženému v bezvědomí?",
+    "options": [
+      "Vždy na začátku první pomoci.",
+      "Nikdy, dýchací cesty se uvolňují záklonem hlavy.",
+      "Jen pokud postižený nedýchá."
+    ],
+    "correct": 1,
+    "explanation": "Dýchací cesty uvolní řádný záklon hlavy. Vytahování jazyka je zbytečné a nebezpečné.",
+    "source": "zdravotnické minimum (ověřeno: soubor MV, ot. č. 825 a 833)"
+  },
+  {
+    "id": "zdravoveda-04",
+    "topic": "zdravoveda",
+    "question": "Co je při poskytování první pomoci nejdůležitější?",
+    "options": [
+      "Co nejrychlejší transport postiženého",
+      "Zjištění totožnosti postiženého",
+      "Vlastní bezpečí zachránce"
+    ],
+    "correct": 2,
+    "explanation": "Zachránce nesmí ohrozit sám sebe. Například při úrazu elektrickým proudem nejprve izoluje postiženého od zdroje proudu.",
+    "source": "zdravotnické minimum (ověřeno: soubor MV, ot. č. 826 a 834)"
+  }
+]

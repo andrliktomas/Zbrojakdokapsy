@@ -137,7 +137,7 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
                 <li key={t.id} className="flex justify-between">
                   <span>{t.createdAt.toLocaleDateString("cs-CZ")}</span>
                   <span className={t.passed ? "font-semibold text-brand-700" : "text-red-600"}>
-                    {t.score}/{t.total} {t.passed ? "✔" : "✘"}
+                    {t.permitType === "rozsirene" ? "rozš. " : ""}{t.score}/{t.total} {t.passed ? "✔" : "✘"}
                   </span>
                 </li>
               ))}

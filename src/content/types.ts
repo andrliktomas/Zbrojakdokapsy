@@ -47,3 +47,11 @@ export type Question = {
   explanation: string;
   source?: string;
 };
+
+/** Obsah jednoho okruhu – každý okruh má vlastní soubor v src/content/data/<slug>.ts */
+export type TopicContent = {
+  lessons: Lesson[];
+  glossary: GlossaryTerm[];
+  flashcards: Flashcard[];
+  questions: Question[];
+};

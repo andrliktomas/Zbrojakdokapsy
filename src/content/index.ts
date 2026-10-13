@@ -1,12 +1,10 @@
 import type { Flashcard, GlossaryTerm, Lesson, Question, Topic } from "./types";
 import { TOPICS } from "./topics";
-import { LESSONS } from "./lessons";
-import { GLOSSARY } from "./glossary";
-import { FLASHCARDS } from "./flashcards";
-import { QUESTIONS } from "./questions";
-import { EXAM } from "./exam";
+import { FLASHCARDS, GLOSSARY, LESSONS, QUESTIONS } from "./data";
+import { EXAM, PERMIT_LABEL, type PermitType } from "./exam";
 
-export { TOPICS, LESSONS, GLOSSARY, FLASHCARDS, QUESTIONS, EXAM };
+export { TOPICS, LESSONS, GLOSSARY, FLASHCARDS, QUESTIONS, EXAM, PERMIT_LABEL };
+export type { PermitType };
 export type { Flashcard, GlossaryTerm, Lesson, Question, Topic };
 
 export const topicBySlug = (slug: string) => TOPICS.find((t) => t.slug === slug);

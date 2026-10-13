@@ -4,10 +4,13 @@ import Link from "next/link";
 import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import { submitTest } from "@/app/actions/learning";
 import type { PublicQuestion } from "./Practice";
+import { PERMIT_LABEL, type PermitType } from "@/content/exam";
 
 type Result = Awaited<ReturnType<typeof submitTest>>;
 
-export function MockTest({ questions, timeLimitMin, passScore }: { questions: PublicQuestion[]; timeLimitMin: number; passScore: number }) {
+type Props = { questions: PublicQuestion[]; permitType: PermitType; timeLimitMin: number; passScore: number };
+
+export function MockTest({ questions, permitType, timeLimitMin, passScore }: Props) {
   const [started, setStarted] = useState(false);
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
@@ -21,9 +24,9 @@ export function MockTest({ questions, timeLimitMin, passScore }: { questions: Pu
     startTransition(async () => {
       const payload = Object.fromEntries(questions.map((q) => [q.id, answers[q.id] ?? -1]));
       const durationSec = Math.round((Date.now() - startedAt.current) / 1000);
-      setResult(await submitTest({ answers: payload, durationSec }));
+      setResult(await submitTest({ answers: payload, durationSec, permitType }));
     });
-  }, [answers, pending, questions, result]);
+  }, [answers, pending, permitType, questions, result]);
 
   useEffect(() => {
     if (!started || result) return;
@@ -40,9 +43,16 @@ export function MockTest({ questions, timeLimitMin, passScore }: { questions: Pu
       <div className="card mx-auto max-w-lg text-center">
         <div className="text-5xl">📝</div>
         <h1 className="mt-2 text-2xl font-bold">Test nanečisto</h1>
-        <p className="mt-2 text-stone-600">
-          {questions.length} náhodných otázek ze všech okruhů, časový limit {timeLimitMin} minut.
-          Pro úspěch potřebujete alespoň {passScore} správných odpovědí.
+        <div className="mt-4 inline-flex rounded-xl bg-stone-100 p-1 text-sm">
+          {(["obecne", "rozsirene"] as const).map((t) => (
+            <Link key={t} href={`/test?typ=${t}`} className={`rounded-lg px-3 py-1.5 ${t === permitType ? "bg-white font-semibold shadow" : "text-stone-600"}`}>
+              {t === "obecne" ? "Obecné ZO" : "Rozšířené ZO"}
+            </Link>
+          ))}
+        </div>
+        <p className="mt-3 text-stone-600">
+          {questions.length} otázek ve skladbě skutečné zkoušky (právo, nauka o zbraních, bezpečné zacházení, zdravověda),
+          časový limit {timeLimitMin} minut. Pro {PERMIT_LABEL[permitType]} potřebujete alespoň {passScore} správných odpovědí.
         </p>
         <button className="btn-primary mt-4" onClick={() => { startedAt.current = Date.now(); setStarted(true); }}>Spustit test</button>
       </div>
