@@ -241,7 +241,7 @@ export const content: TopicContent = {
     { id: "zdravoveda-k20", topic: T, front: "Příznaky šoku?", back: "Bledá studená opocená kůže, rychlý slabý tep, neklid, žízeň, zmatenost." },
     { id: "zdravoveda-k21", topic: T, front: "Protišoková opatření?", back: "Zastavit krvácení, uložit vleže (nohy nahoru, pokud nejsou poraněné), chránit před chladem, uklidnit, nic pít, volat 155." },
     { id: "zdravoveda-k22", topic: T, front: "Jak ošetřit zlomeninu?", back: "Znehybnit v nalezené poloze včetně sousedních kloubů. Nenapravovat." },
-    { id: "zdravoveda-k23", topic: T, front: "Jak chladit popáleninu?", back: "Chladnou až vlažnou čistou vodou, ne ledem. Hlídat podchlazení." },
+    { id: "zdravoveda-k23", topic: T, front: "Jak chladit popáleninu?", back: "Chladnou až vlažnou čistou vodou alespoň 20 minut, ne ledem. Hlídat podchlazení." },
     { id: "zdravoveda-k24", topic: T, front: "Co znamená FAST?", back: "Face (obličej), Arm (paže), Speech (řeč), Time (čas – volat 155)." },
     { id: "zdravoveda-k25", topic: T, front: "Epileptický záchvat – co nedělat?", back: "Nic nevkládat do úst a postiženého násilím nedržet." },
     { id: "zdravoveda-k26", topic: T, front: "Diabetik zmatený, opocený, při vědomí?", back: "Pravděpodobně hypoglykemie – dát sladký nápoj nebo cukr, pokud umí polykat." },

@@ -12,8 +12,10 @@ export async function startCheckout(formData: FormData) {
   if (!plan) throw new Error("Neznámý balíček");
 
   if (!stripe) {
-    // Vývojový režim bez Stripe klíče: balíček se aktivuje rovnou.
-    if (process.env.NODE_ENV === "production") throw new Error("Platby nejsou nakonfigurovány");
+    // Vývojový / ukázkový režim bez Stripe klíče: balíček se aktivuje rovnou.
+    if (process.env.NODE_ENV === "production" && process.env.ALLOW_FAKE_PAYMENTS !== "1") {
+      throw new Error("Platby nejsou nakonfigurovány");
+    }
     await grantPlan({ userId: user.id, planId: plan.id, provider: "dev", providerRef: `dev_${randomUUID()}`, amountCzk: 0 });
     redirect("/ucet?zaplaceno=1");
   }

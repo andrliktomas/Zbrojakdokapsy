@@ -112,12 +112,12 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
       <div className="grid gap-4 lg:grid-cols-3">
         <div className="card">
           <h2 className="mb-3 font-bold">Aktivita – posledních 7 dní</h2>
-          <div className="flex h-28 items-end gap-2">
+          <div className="flex h-28 gap-2">
             {d.last7.map((x) => (
               <div key={x.day} className="flex flex-1 flex-col items-center gap-1">
                 <div className="flex w-full flex-1 flex-col justify-end">
-                  <div className="w-full rounded-t bg-brand-200" style={{ height: `${(x.count / maxDay) * 100}%` }} title={`${x.count} odpovědí, ${x.correct} správně`}>
-                    <div className="w-full rounded-t bg-brand-500" style={{ height: x.count ? `${(x.correct / x.count) * 100}%` : 0 }} />
+                  <div className="flex w-full flex-col justify-end overflow-hidden rounded-t bg-brand-200" style={{ height: `${(x.count / maxDay) * 100}%` }} title={`${x.count} odpovědí, ${x.correct} správně`}>
+                    <div className="w-full bg-brand-500" style={{ height: x.count ? `${(x.correct / x.count) * 100}%` : 0 }} />
                   </div>
                 </div>
                 <span className="text-[10px] text-stone-500">{new Date(x.day).toLocaleDateString("cs-CZ", { weekday: "short" })}</span>

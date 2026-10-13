@@ -26,7 +26,7 @@ npm test           # testy logiky gamifikace a validace obsahu
 ```
 
 Bez `STRIPE_SECRET_KEY` běží aplikace v **testovacím režimu plateb** – tlačítko „Koupit“ balíček rovnou aktivuje
-(jen mimo produkci).
+(mimo produkci; v produkčním buildu jen s `ALLOW_FAKE_PAYMENTS=1` pro ukázková nasazení).
 
 ### Stripe
 
