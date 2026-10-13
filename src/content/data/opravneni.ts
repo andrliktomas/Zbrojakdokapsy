@@ -180,10 +180,16 @@ export const content: TopicContent = {
             "ZL3 – jednorázová nebo účelová, nikoli podnikatelská; držitel ZL1 nebo ZL2 nemůže zároveň držet ZL3,",
             "zapsaná autorizace – pro subjekt, který nakládá jen se zbraněmi PO.",
           ],
-          paragraphs: [
-            "Odbornou způsobilost u držitele licence zajišťuje hlavní zbrojíř. U ZL1 a ZL3 musí mít rozšířené ZO.",
-          ],
           source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 157–181, 219–227)",
+        },
+        {
+          heading: "Hlavní zbrojíř",
+          paragraphs: [
+            "Firma ani spolek nemůže skládat zkoušku – odbornou způsobilost držitele zbrojní licence proto zajišťuje fyzická osoba, hlavní zbrojíř.",
+            "U držitele ZL1 nebo ZL3 musí mít hlavní zbrojíř rozšířené zbrojní oprávnění. Rozšířené ZO potřebují i další osoby, které plní některé úkoly držitele zbrojní licence podle § 90.",
+          ],
+          tip: "Pozor: § 90 se týká osob podílejících se na činnosti držitele licence, ne „druhů zbrojního oprávnění“, jak chybně uvádějí některé weby.",
+          source: "§ 90 zákona č. 90/2024 Sb. (soubor MV ot. č. 80, 81)",
         },
       ],
     },
