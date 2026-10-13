@@ -1,0 +1,114 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Pro vývoj SQLite, v produkci stačí změnit provider na "postgresql" a DATABASE_URL.
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  name         String
+  passwordHash String
+  createdAt    DateTime @default(now())
+
+  xp             Int       @default(0)
+  streak         Int       @default(0)
+  bestStreak     Int       @default(0)
+  lastActiveDay  String? // YYYY-MM-DD v Europe/Prague
+
+  sessions     Session[]
+  purchases    Purchase[]
+  attempts     QuestionAttempt[]
+  cards        CardProgress[]
+  tests        TestResult[]
+  achievements Achievement[]
+  lessonsRead  LessonRead[]
+}
+
+model Session {
+  id        String   @id // sha256 hash tokenu z cookie
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Purchase {
+  id              String   @id @default(cuid())
+  userId          String
+  planId          String
+  amountCzk       Int
+  startsAt        DateTime
+  endsAt          DateTime
+  provider        String // "stripe" | "dev"
+  providerRef     String   @unique // Stripe checkout session id
+  createdAt       DateTime @default(now())
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, endsAt])
+}
+
+model QuestionAttempt {
+  id         String   @id @default(cuid())
+  userId     String
+  questionId String
+  topic      String
+  correct    Boolean
+  mode       String // "practice" | "test"
+  createdAt  DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, topic, createdAt])
+  @@index([userId, questionId])
+}
+
+model CardProgress {
+  userId     String
+  cardId     String
+  topic      String
+  box        Int      @default(1) // Leitnerův systém 1–5
+  dueAt      DateTime
+  reviews    Int      @default(0)
+  updatedAt  DateTime @updatedAt
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, cardId])
+  @@index([userId, dueAt])
+}
+
+model TestResult {
+  id          String   @id @default(cuid())
+  userId      String
+  score       Int
+  total       Int
+  passed      Boolean
+  durationSec Int
+  createdAt   DateTime @default(now())
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+}
+
+model Achievement {
+  userId     String
+  code       String
+  unlockedAt DateTime @default(now())
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, code])
+}
+
+model LessonRead {
+  userId    String
+  lessonId  String
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, lessonId])
+}
