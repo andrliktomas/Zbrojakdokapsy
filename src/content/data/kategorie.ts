@@ -1,0 +1,288 @@
+import type { TopicContent } from "../types";
+
+const T = "kategorie";
+
+export const content: TopicContent = {
+  lessons: [
+    {
+      id: "kategorie-l1",
+      topic: T,
+      title: "Kategorie zbraní R1–R4, PO a NO",
+      sections: [
+        {
+          heading: "Šest kategorií místo písmen A–D",
+          paragraphs: [
+            "Nový zákon dělí zbraně do šesti kategorií: R1, R2, R3, R4, PO a NO. Písmeno „R“ znamená registraci – zbraně R1 až R4 podléhají registraci v CRZ. „PO“ znamená podléhající ohlášení a „NO“ nepodléhající ohlášení.",
+            "Zakázanými zbraněmi jsou kategorie R1 a R2. Zakázaná neznamená „pro civilistu zcela nedostupná“, ale vyžaduje zvláštní výjimku nebo zbrojní licenci.",
+          ],
+          tip: "Zapamatujte si: R1 a R2 = zakázané, R3 = povolení, R4 = stačí ZO, PO = ohlášení, NO = bez ohlášení.",
+          source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 18–22)",
+        },
+        {
+          heading: "Přehled kategorií a typických zbraní",
+          bullets: [
+            "R1 (zakázaná, zhruba dřívější A) – samočinné (automatické) zbraně, zákeřné zbraně, zbraně zvláště účinné.",
+            "R2 (zakázaná, zhruba dřívější A-I) – samonabíjecí zbraně se středovým zápalem s nadlimitním zásobníkem, samonabíjecí zbraně vzniklé úpravou ze samočinných, dlouhé samonabíjecí zbraně se sklopnou pažbou zkrátitelné pod 600 mm.",
+            "R3 (zhruba dřívější B) – běžné samonabíjecí pistole se zásobníkem na 10–20 ran, samonabíjecí dlouhé zbraně se zásobníkem na 3–10 ran, krátké jednotlivě nabíjené zbraně se středovým zápalem, signální zbraně ráže 26,5 mm.",
+            "R4 (zhruba dřívější C) – opakovací kulovnice a malorážky, brokové kozlice a dvojky, krátké jednotlivě nabíjené zbraně s okrajovým zápalem o délce alespoň 280 mm.",
+            "PO (zhruba dřívější C-I) – poplašné a signalizační zbraně, neletální zneschopňující prostředky na principu palné nebo plynové zbraně, jednoranové a dvouranové zbraně pro dělené střelivo, zbraně znehodnocené podle předpisu EU.",
+            "NO (zhruba dřívější D) – expanzní přístroje, historické zbraně (vyrobené do 31. 12. 1890), plynové zbraně do ráže 6,35 mm, airsoft a paintball.",
+          ],
+          tip: "Srovnání se starými kategoriemi je jen orientační. V testu se ptají na nové kategorie, ne na stará písmena.",
+          source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 505–538)",
+        },
+        {
+          heading: "Kdo smí se kterou kategorií nakládat",
+          bullets: [
+            "R1 – držitel zbrojní licence ZL1; ZL2 nebo ZL3 jen s výjimkou R1 na každý kus. Držiteli zbrojního oprávnění výjimku R1 vydat nelze.",
+            "R2 – ZL1; držitel ZO nebo ZL2 s výjimkou R2 na každý kus.",
+            "R3 – ZL1; držitel ZO nebo ZL2 s povolením R3 na každý kus.",
+            "R4 – držitel zbrojní licence nebo zbrojního oprávnění bez dalšího povolení.",
+            "PO – držitel ZO, ZL nebo zapsané autorizace.",
+            "NO – každá plně svéprávná zletilá osoba s pobytem v ČR.",
+          ],
+          source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 27–36)",
+        },
+      ],
+    },
+    {
+      id: "kategorie-l2",
+      topic: T,
+      title: "Kategorie střeliva S1–S4",
+      sections: [
+        {
+          heading: "Čtyři kategorie střeliva",
+          paragraphs: [
+            "Střelivo má vlastní kategorie S1 až S4. Zakázaným střelivem jsou kategorie S1 a S2.",
+          ],
+          bullets: [
+            "S1 (zakázané) – průbojné, výbušné, zápalné a nezjistitelné náboje.",
+            "S2 (zakázané) – deformační nebo fragmentační náboje pro krátké zbraně a svítící náboje.",
+            "S3 – běžné náboje, např. s celoplášťovou (FMJ) nebo poloplášťovou (SP) střelou a náboje Flobert.",
+            "S4 – aktivní komponenty (zápalky, prachy), nábojky a signální náboje do 16 mm.",
+          ],
+          tip: "Deformační (expanzní) náboje do pistole nejsou „běžné“ S3 – patří do zakázané S2.",
+          source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 540–554)",
+        },
+        {
+          heading: "Výjimky pro zakázané střelivo",
+          paragraphs: [
+            "Podobně jako u zbraní R1 platí, že výjimku pro střelivo S1 nelze vydat držiteli zbrojního oprávnění.",
+          ],
+          source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 27, 28, 197, 198)",
+        },
+        {
+          heading: "Kdo rozhodne v nejasném případě",
+          paragraphs: [
+            "Pokud není jasné, do které kategorie zbraň nebo střelivo patří, stanoví to Český úřad pro zkoušení zbraní a střeliva (ČÚZZS) opatřením obecné povahy.",
+          ],
+          source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 420)",
+        },
+      ],
+    },
+    {
+      id: "kategorie-l3",
+      topic: T,
+      title: "Důležité definice: délka, zásobník, tlumič",
+      sections: [
+        {
+          heading: "Krátká a dlouhá zbraň",
+          paragraphs: [
+            "Palná zbraň je krátká, pokud její délka v nejkratším funkčním stavu nepřesahuje 600 mm NEBO délka hlavně nepřesahuje 300 mm. Stačí splnit jednu z podmínek.",
+            "Dlouhá je každá palná zbraň, která není krátká.",
+          ],
+          tip: "Spojka „nebo“ je klíčová – puška s hlavní 290 mm je krátká zbraň, i když je celkově delší než 600 mm.",
+          source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 450–504)",
+        },
+        {
+          heading: "Nadlimitní zásobník",
+          paragraphs: [
+            "U zbraní se středovým zápalem je zásobník nadlimitní, když pojme více než 20 nábojů u krátké zbraně nebo více než 10 nábojů u dlouhé zbraně.",
+            "Samonabíjecí zbraň se středovým zápalem s nadlimitním zásobníkem spadá do zakázané kategorie R2. Sám nadlimitní zásobník je regulovanou součástí.",
+          ],
+          bullets: [
+            "krátká zbraň: > 20 nábojů = nadlimitní,",
+            "dlouhá zbraň: > 10 nábojů = nadlimitní.",
+          ],
+          source: "zákon č. 90/2024 Sb., příloha č. 1",
+        },
+        {
+          heading: "Tlumič hluku výstřelu",
+          paragraphs: [
+            "Tlumič je regulovaná součást, která snižuje hluk výstřelu alespoň o 10 dB. Nakládá se s ním podle ustanovení o kategorii R4 – platí pro něj tedy stejný režim jako pro zbraň R4.",
+          ],
+          source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 43, 502)",
+        },
+        {
+          heading: "Hlavní části a historické zbraně",
+          bullets: [
+            "Hlavní části zbraně: hlaveň (i vložná), tělo (i rám revolveru), revolverový válec, závěr.",
+            "Historická palná zbraň: včetně všech hlavních částí vyrobená nejpozději 31. 12. 1890 – patří do kategorie NO.",
+          ],
+          source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 475, 493–498)",
+        },
+      ],
+    },
+  ],
+
+  glossary: [
+    { term: "Zakázaná zbraň", topic: T, definition: "Zbraň kategorie R1 nebo R2; nakládat s ní lze jen se zbrojní licencí nebo zvláštní výjimkou.", source: "soubor MV ot. č. 18–22" },
+    { term: "Kategorie R3", topic: T, definition: "Zbraně podléhající registraci, k jejichž nabytí potřebuje držitel ZO povolení R3 na každý kus (typicky samonabíjecí pistole).", source: "soubor MV ot. č. 33" },
+    { term: "Kategorie R4", topic: T, definition: "Zbraně podléhající registraci, se kterými smí držitel ZO nakládat bez dalšího povolení (např. opakovací kulovnice, brokové kozlice).", source: "soubor MV ot. č. 34" },
+    { term: "Kategorie PO", topic: T, definition: "Zbraně podléhající ohlášení, např. poplašné a signalizační zbraně nebo zbraně znehodnocené podle předpisu EU.", source: "soubor MV ot. č. 531–534" },
+    { term: "Kategorie NO", topic: T, definition: "Zbraně nepodléhající ohlášení – expanzní přístroje, historické zbraně, plynové zbraně do ráže 6,35 mm, airsoft, paintball.", source: "soubor MV ot. č. 536–538" },
+    { term: "Krátká palná zbraň", topic: T, definition: "Délka v nejkratším funkčním stavu nejvýše 600 mm nebo délka hlavně nejvýše 300 mm.", source: "zákon č. 90/2024 Sb., příloha č. 1" },
+    { term: "Nadlimitní zásobník", topic: T, definition: "Zásobník pro střelivo se středovým zápalem s kapacitou nad 20 nábojů (krátká zbraň) nebo nad 10 nábojů (dlouhá zbraň).", source: "zákon č. 90/2024 Sb., příloha č. 1" },
+    { term: "Tlumič hluku výstřelu", topic: T, definition: "Regulovaná součást snižující hluk výstřelu alespoň o 10 dB; nakládá se s ní jako se zbraní R4.", source: "soubor MV ot. č. 43, 502" },
+    { term: "Historická zbraň", topic: T, definition: "Palná zbraň včetně všech hlavních částí vyrobená nejpozději 31. 12. 1890; kategorie NO.", source: "soubor MV ot. č. 475" },
+    { term: "ČÚZZS", topic: T, definition: "Český úřad pro zkoušení zbraní a střeliva; mimo jiné stanoví kategorii zbraně či střeliva v nejasných případech.", source: "soubor MV ot. č. 420" },
+    { term: "Zakázané střelivo", topic: T, definition: "Střelivo kategorie S1 (průbojné, výbušné, zápalné, nezjistitelné) a S2 (deformační pro krátké zbraně, svítící).", source: "soubor MV ot. č. 540–554" },
+  ],
+
+  flashcards: [
+    { id: "kategorie-k01", topic: T, front: "Kategorie zbraní podle zákona č. 90/2024 Sb.", back: "R1, R2, R3, R4, PO, NO." },
+    { id: "kategorie-k02", topic: T, front: "Které kategorie zbraní podléhají registraci?", back: "R1 až R4." },
+    { id: "kategorie-k03", topic: T, front: "Které kategorie zbraní jsou zakázané?", back: "R1 a R2." },
+    { id: "kategorie-k04", topic: T, front: "Kategorie střeliva?", back: "S1, S2, S3, S4 – zakázané jsou S1 a S2." },
+    { id: "kategorie-k05", topic: T, front: "Samočinná (automatická) zbraň", back: "R1." },
+    { id: "kategorie-k06", topic: T, front: "Samonabíjecí puška se středovým zápalem a zásobníkem na 30 ran", back: "R2 (nadlimitní zásobník)." },
+    { id: "kategorie-k07", topic: T, front: "Běžná samonabíjecí pistole (zásobník 10–20 ran)", back: "R3 – držitel ZO potřebuje povolení R3." },
+    { id: "kategorie-k08", topic: T, front: "Opakovací kulovnice, malorážka, broková kozlice", back: "R4 – stačí zbrojní oprávnění." },
+    { id: "kategorie-k09", topic: T, front: "Poplašná a signalizační zbraň", back: "PO." },
+    { id: "kategorie-k10", topic: T, front: "Airsoft, paintball, expanzní přístroj, plynovka do 6,35 mm", back: "NO." },
+    { id: "kategorie-k11", topic: T, front: "Historická zbraň – rozhodné datum výroby", back: "Nejpozději 31. 12. 1890." },
+    { id: "kategorie-k12", topic: T, front: "Krátká zbraň – limity", back: "Celková délka ≤ 600 mm NEBO hlaveň ≤ 300 mm." },
+    { id: "kategorie-k13", topic: T, front: "Nadlimitní zásobník – krátká / dlouhá zbraň", back: "Nad 20 / nad 10 nábojů (středový zápal)." },
+    { id: "kategorie-k14", topic: T, front: "Tlumič – o kolik snižuje hluk a jaký režim?", back: "Alespoň o 10 dB; nakládá se s ním jako s R4." },
+    { id: "kategorie-k15", topic: T, front: "S1", back: "Průbojné, výbušné, zápalné a nezjistitelné náboje (zakázané)." },
+    { id: "kategorie-k16", topic: T, front: "S2", back: "Deformační/fragmentační náboje pro krátké zbraně a svítící náboje (zakázané)." },
+    { id: "kategorie-k17", topic: T, front: "S3", back: "Běžné náboje – FMJ, SP, Flobert." },
+    { id: "kategorie-k18", topic: T, front: "S4", back: "Zápalky, prachy, nábojky, signální náboje do 16 mm." },
+    { id: "kategorie-k19", topic: T, front: "Hlavní části zbraně", back: "Hlaveň, tělo (rám revolveru), revolverový válec, závěr." },
+    { id: "kategorie-k20", topic: T, front: "Lze držiteli ZO vydat výjimku R1?", back: "Ne. Výjimku R2 (na každý kus) ano." },
+    { id: "kategorie-k21", topic: T, front: "Kdo určí kategorii v nejasném případě?", back: "ČÚZZS opatřením obecné povahy." },
+  ],
+
+  questions: [
+    {
+      id: "kategorie-x01", topic: T,
+      question: "Do které kategorie patří samočinná (automatická) palná zbraň?",
+      options: ["R1", "R2", "R3"],
+      correct: 0,
+      explanation: "Samočinné zbraně jsou spolu se zákeřnými a zvláště účinnými zbraněmi v nejpřísnější zakázané kategorii R1.",
+      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 505–509)",
+    },
+    {
+      id: "kategorie-x02", topic: T,
+      question: "Samonabíjecí puška vznikla úpravou ze samočinné zbraně. Do které kategorie patří?",
+      options: ["R3", "R2", "R4"],
+      correct: 1,
+      explanation: "Samonabíjecí zbraň vzniklá úpravou ze samočinné zbraně patří do zakázané kategorie R2, i když už samočinně střílet neumí.",
+      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 512–515)",
+    },
+    {
+      id: "kategorie-x03", topic: T,
+      question: "Do které kategorie patří broková kozlice nebo dvojka?",
+      options: ["R3", "PO", "R4"],
+      correct: 2,
+      explanation: "Brokové kozlice a dvojky (stejně jako opakovací kulovnice) patří do kategorie R4, se kterou smí držitel ZO nakládat bez dalšího povolení.",
+      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 523–530)",
+    },
+    {
+      id: "kategorie-x04", topic: T,
+      question: "Do které kategorie patří poplašná a signalizační zbraň?",
+      options: ["PO", "NO", "R4"],
+      correct: 0,
+      explanation: "Poplašné a signalizační zbraně podléhají ohlášení – kategorie PO.",
+      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 531–534)",
+    },
+    {
+      id: "kategorie-x05", topic: T,
+      question: "Do které kategorie patří plynová zbraň ráže do 6,35 mm?",
+      options: ["PO", "NO", "R3"],
+      correct: 1,
+      explanation: "Plynové zbraně do ráže 6,35 mm nepodléhají ohlášení, patří tedy do kategorie NO.",
+      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 536–538)",
+    },
+    {
+      id: "kategorie-x06", topic: T,
+      question: "Které kategorie střeliva jsou zakázaným střelivem?",
+      options: ["S3 a S4", "Jen S1", "S1 a S2"],
+      correct: 2,
+      explanation: "Zakázaným střelivem jsou kategorie S1 a S2. Běžné náboje (S3) a aktivní komponenty (S4) zakázané nejsou.",
+      source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 18–22)",
+    },
+    {
+      id: "kategorie-x07", topic: T,
+      question: "Do které kategorie patří průbojné a zápalné náboje?",
+      options: ["S1", "S2", "S3"],
+      correct: 0,
+      explanation: "Průbojné, výbušné, zápalné a nezjistitelné náboje patří do nejpřísnější kategorie S1.",
+      source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 540–554)",
+    },
+    {
+      id: "kategorie-x08", topic: T,
+      question: "Do které kategorie patří deformační (expanzní) náboje do pistole?",
+      options: ["S3", "S2", "S4"],
+      correct: 1,
+      explanation: "Deformační nebo fragmentační náboje pro krátké zbraně jsou zakázaným střelivem kategorie S2.",
+      source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 540–554)",
+    },
+    {
+      id: "kategorie-x09", topic: T,
+      question: "Do které kategorie střeliva patří zápalky a střelný prach?",
+      options: ["S1", "S3", "S4"],
+      correct: 2,
+      explanation: "Aktivní komponenty (zápalky, prachy), nábojky a signální náboje do 16 mm patří do kategorie S4.",
+      source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 540–554)",
+    },
+    {
+      id: "kategorie-x10", topic: T,
+      question: "Podle ustanovení o které kategorii se nakládá s tlumičem hluku výstřelu?",
+      options: ["R4", "R3", "R2"],
+      correct: 0,
+      explanation: "Tlumič je regulovaná součást a nakládá se s ním podle ustanovení o kategorii R4.",
+      source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 43, 502)",
+    },
+    {
+      id: "kategorie-x11", topic: T,
+      question: "Kdo stanoví kategorii zbraně, pokud není zřejmé, kam patří?",
+      options: ["Krajské ředitelství policie podle místa pobytu", "Český úřad pro zkoušení zbraní a střeliva opatřením obecné povahy", "Výrobce zbraně v návodu k použití"],
+      correct: 1,
+      explanation: "V nejasných případech určuje kategorii ČÚZZS, a to opatřením obecné povahy.",
+      source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 420)",
+    },
+    {
+      id: "kategorie-x12", topic: T,
+      question: "Která z uvedených věcí je hlavní částí zbraně?",
+      options: ["Mířidla", "Zásobník na 5 nábojů", "Revolverový válec"],
+      correct: 2,
+      explanation: "Hlavními částmi jsou hlaveň, tělo (včetně rámu revolveru), revolverový válec a závěr. Mířidla ani běžný zásobník mezi ně nepatří.",
+      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 493–498)",
+    },
+    {
+      id: "kategorie-x13", topic: T,
+      question: "Co potřebuje držitel zbrojního oprávnění, aby mohl nabýt zbraň kategorie R3?",
+      options: ["Nic dalšího, ZO stačí", "Povolení R3 na každý kus", "Zbrojní licenci ZL1"],
+      correct: 1,
+      explanation: "Se zbraní R3 smí držitel ZO nakládat jen s povolením R3, které se vydává na každý kus zvlášť.",
+      source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 33, 211)",
+    },
+    {
+      id: "kategorie-x14", topic: T,
+      question: "Za jakých podmínek může držitel zbrojního oprávnění nakládat se zbraní kategorie R2?",
+      options: ["S výjimkou R2 vydanou na každý kus", "Nikdy, R2 je jen pro ZL1", "Bez dalšího povolení, pokud má rozšířené ZO"],
+      correct: 0,
+      explanation: "R2 je zakázaná kategorie, ale držitel ZO (i ZL2) může získat výjimku R2, a to na každý kus zvlášť. Na rozdíl od R1, kde výjimku držiteli ZO vydat nelze.",
+      source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 29, 31)",
+    },
+    {
+      id: "kategorie-x15", topic: T,
+      question: "Dlouhá samonabíjecí puška se sklopnou pažbou se dá zkrátit na délku pod 600 mm. Kam patří?",
+      options: ["R4", "R3", "R2"],
+      correct: 2,
+      explanation: "Dlouhé samonabíjecí zbraně se sklopnou pažbou zkrátitelné pod 600 mm jsou zakázanou kategorií R2.",
+      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 512–515)",
+    },
+  ],
+};
