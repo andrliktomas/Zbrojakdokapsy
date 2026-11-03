@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 
 /** Barvy značky: grafit (téma) a papír (pozadí). */
-const GRAPHITE = "#15181D";
 const PAPER = "#F3F1EC";
 
 const SHORTCUT_ICON = [{ src: "/icons/icon-96.png", sizes: "96x96", type: "image/png" }];
@@ -19,7 +18,7 @@ export default function manifest(): MetadataRoute.Manifest {
     start_url: "/prehled",
     scope: "/",
     display: "standalone",
-    theme_color: GRAPHITE,
+    theme_color: PAPER,
     background_color: PAPER,
     categories: ["education"],
     icons: [

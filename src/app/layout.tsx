@@ -14,12 +14,14 @@ import { displayedStreak, levelFromXp, nextStreak, pragueDay } from "@/lib/gamif
 import { HeaderStats } from "@/components/HeaderStats";
 import { Logo } from "@/components/Logo";
 import { NavLinks } from "@/components/NavLinks";
+import { PwaRegister } from "@/components/PwaRegister";
 import { logout } from "./actions/auth";
 
 export const metadata: Metadata = {
   title: "Zbroják do kapsy – příprava na zkoušku zbrojního oprávnění",
   description:
     "Interaktivní učebnice ke zkoušce odborné způsobilosti podle zákona č. 90/2024 Sb. – výklad, kartičky, náhodné otázky a cvičné testy.",
+  appleWebApp: { capable: true, title: "Zbroják", statusBarStyle: "default" },
 };
 
 export const viewport: Viewport = {
@@ -32,6 +34,8 @@ const NAV = [
   { href: "/karticky", label: "Kartičky" },
   { href: "/procvicovani", label: "Procvičování" },
   { href: "/test", label: "Test nanečisto" },
+  { href: "/trenazer", label: "Trenažér" },
+  { href: "/otazky-mv", label: "Otázky MV" },
   { href: "/slovnicek", label: "Slovníček" },
   { href: "/ucet", label: "Účet" },
 ];
@@ -134,6 +138,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </nav>
           </div>
         </footer>
+        <PwaRegister signedIn={!!user} />
       </body>
     </html>
   );
