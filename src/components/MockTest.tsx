@@ -7,6 +7,7 @@ import type { PublicQuestion } from "./Practice";
 import { PERMIT_LABEL, type PermitType } from "@/content/exam";
 import { Figure } from "./figures";
 import { questionFigure } from "./figures/question-figures";
+import { ExplainButton } from "./ai/ExplainButton";
 
 type Result = Awaited<ReturnType<typeof submitTest>>;
 
@@ -91,6 +92,7 @@ export function MockTest({ questions, permitType, timeLimitMin, passScore }: Pro
                 ))}
               </ul>
               {r.chosen === -1 && <p className="mt-1 text-xs text-red-600">Nezodpovězeno</p>}
+              {!r.correct && <ExplainButton questionId={q.id} chosenIndex={r.chosen} />}
             </div>
           );
         })}

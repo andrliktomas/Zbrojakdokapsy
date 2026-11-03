@@ -8,6 +8,7 @@ import type { AchievementDef } from "@/lib/gamification";
 import { XpToast } from "./XpToast";
 import { Figure } from "./figures";
 import { questionFigure } from "./figures/question-figures";
+import { ExplainButton } from "./ai/ExplainButton";
 import type { FigureRef } from "@/content/types";
 
 export type PublicQuestion = { id: string; topic: string; topicTitle: string; question: string; options: string[]; figure?: FigureRef };
@@ -87,8 +88,8 @@ export function Practice({ questions }: { questions: PublicQuestion[] }) {
           {q.options.map((opt, i) => {
             let cls = "ring-stone-200 hover:bg-stone-50";
             if (feedback) {
-              if (i === feedback.correctIndex) cls = "bg-brand-50 ring-brand-500";
-              else if (i === chosen) cls = "bg-red-50 ring-red-400";
+              if (i === feedback.correctIndex) cls = "bg-zasah-50 ring-2 ring-zasah";
+              else if (i === chosen) cls = "bg-chyba-50 ring-2 ring-chyba";
               else cls = "ring-stone-200 opacity-60";
             } else if (i === chosen) cls = "ring-brand-500";
             return (
@@ -105,10 +106,13 @@ export function Practice({ questions }: { questions: PublicQuestion[] }) {
           })}
         </div>
         {feedback && (
-          <div className={`mt-4 rounded-xl p-4 ${feedback.correct ? "bg-brand-50" : "bg-red-50"}`}>
-            <div className="font-bold">{feedback.correct ? "✔ Správně!" : "✘ Špatně"}</div>
+          <div role="status" className={`mt-4 rounded-xl p-4 ${feedback.correct ? "bg-zasah-50" : "bg-chyba-50"}`}>
+            <div className={`font-bold ${feedback.correct ? "text-zasah-700" : "text-chyba"}`}>{feedback.correct ? "Zásah – správně" : "Vedle – špatně"}</div>
             <p className="mt-1 text-sm text-stone-700">{feedback.explanation}</p>
             {feedback.source && <p className="mt-1 text-xs text-stone-500">Zdroj: {feedback.source}</p>}
+            {!feedback.correct && chosen !== null && (
+              <ExplainButton key={q.id} questionId={q.id} chosenIndex={chosen} />
+            )}
           </div>
         )}
         {feedback && (
