@@ -7,8 +7,28 @@ export type Topic = {
   free?: boolean;
 };
 
+/**
+ * Odkaz na vlastní schematický obrázek (registr v src/components/figures).
+ * Obrázky jsou vlastní kresby – nepřebíráme fotografie ani kresby ze souboru MV.
+ */
+export type FigureRef = {
+  /** ID obrázku z registru (src/components/figures/catalog.ts). */
+  id: string;
+  /** Klíč části, která se zvýrazní signální barvou (např. "kovani"). */
+  highlight?: string;
+  /** Vlastní popisek pod obrázkem; jinak se ve výkladu použije výchozí popisek obrázku. */
+  caption?: string;
+  /**
+   * Které odkazové značky ukázat: "all" = všechna čísla (výchozí),
+   * "highlight" = jen šipka na zvýrazněnou část, "none" = žádné.
+   */
+  callouts?: "all" | "highlight" | "none";
+};
+
 export type LessonSection = {
   heading: string;
+  /** Schematický obrázek k oddílu (zobrazí se pod nadpisem). */
+  figure?: FigureRef;
   paragraphs?: string[];
   bullets?: string[];
   /** Zvýrazněné upozornění / "na tohle se v testu často chytá". */
@@ -46,6 +66,8 @@ export type Question = {
   correct: number;
   explanation: string;
   source?: string;
+  /** Obrázková otázka – obrázek se zobrazí nad možnostmi. */
+  figure?: FigureRef;
 };
 
 /** Obsah jednoho okruhu – každý okruh má vlastní soubor v src/content/data/<slug>.ts */
