@@ -2,6 +2,7 @@ import type { TopicContent } from "../types";
 
 const T = "bezpecna-manipulace";
 const NV = "příloha č. 2 NV č. 238/2025 Sb.";
+const ZASADY = "zásady bezpečného zacházení, soubor otázek MV (verze 15. 12. 2025)";
 
 export const content: TopicContent = {
   lessons: [
@@ -41,8 +42,25 @@ export const content: TopicContent = {
         {
           heading: "Co je za cílem",
           paragraphs: [
-            "Střela může cíl minout nebo jím projít. I malorážka .22 LR doletí přes 1,5 km. Nestřílejte, pokud nevidíte, co je za cílem, a nikdy nestřílejte na vodní hladinu, kameny nebo kov – hrozí odraz.",
+            "Střela může cíl minout nebo jím projít. I malorážka .22 LR doletí přes 1,5 km. Nestřílejte na cíl, který vaše zbraň může prostřelit, pokud si nejste jistí, co je za ním v dosahu střely. Musíte vědět, kde střela skončí, a to až do jejího úplného zachycení.",
+            "Pod příliš malým úhlem se nestřílí proti většině povrchů, včetně vodní hladiny a povrchu země – hrozí odraz. U tvrdých nebo zakřivených povrchů (kámen, beton, kov) se střela může nebezpečně odrazit prakticky pod jakýmkoli úhlem.",
           ],
+          source: `${ZASADY}, ot. č. 785, 791–794`,
+        },
+        {
+          heading: "Další zásady bezpečného zacházení",
+          bullets: [
+            "Manipulace se zbraní zpravidla začíná i končí kontrolou jejího stavu (jinak jen tam, kde je to odůvodněné, např. při přípravě zbraně k nošení).",
+            "Ani o zbrani, o které jste přesvědčeni, že nabitá není, nemiřte „jen tak“ na člověka – ani mimoděk při manipulaci nesmí ústí mířit na nic, na co by nebylo možné vystřelit.",
+            "Pokud nechcete střílet, nedotýkejte se spouště – prst je bezpečně mimo prostor lučíku.",
+            "Střílet se smí jen ze zbraně v dobrém technickém stavu. Při každém čištění a pokud možno před každou střelbou zbraň aspoň zběžně prohlédněte: vydutí hlavně, cizí předměty v hlavni, prasklé součásti.",
+            "Při střelbě používejte ochranu sluchu a zraku, pokud je to možné.",
+            "Krátkou zbraň noste v odpovídajícím pouzdře a v oděvu, který bezpečné nošení umožňuje. Dlouhou zbraň noste zajištěnou, a nemá-li spolehlivou manuální pojistku, bez náboje v komoře.",
+            "Žádnou zbraň, ani nenabitou, nenechávejte bez dozoru na místě přístupném jiným osobám.",
+            "Než začnete s jakoukoli zbraní nebo střelivem manipulovat, seznamte se s jejich funkcí a ovládacími prvky.",
+            "Za zvládnutí a dodržování zásad odpovídá každý, kdo se zbraní nakládá – s pokorou a uměřeností.",
+          ],
+          source: `${ZASADY}, ot. č. 784–799`,
         },
       ],
     },
@@ -235,12 +253,17 @@ export const content: TopicContent = {
     { id: "bezpecna-manipulace-k14", topic: T, front: "Jak poznáte slabou ránu?", back: "Nezvykle tichý výstřel a slabší zpětný ráz." },
     { id: "bezpecna-manipulace-k15", topic: T, front: "Co je největší nebezpečí po slabé ráně?", back: "Střela uvízla v hlavni. Další výstřel by mohl hlaveň roztrhnout." },
     { id: "bezpecna-manipulace-k16", topic: T, front: "Co je zádržka?", back: "Zbraň se správně nepřebila – nábojnice nevyhozena nebo náboj nedopraven do komory." },
-    { id: "bezpecna-manipulace-k17", topic: T, front: "Kdo může zavelet zastavení palby?", back: "Kdokoli, kdo zjistí nebezpečí." },
+    { id: "bezpecna-manipulace-k17", topic: T, front: "Kdo dává pokyny na střelnici a co když zjistíte nebezpečí?", back: "Pokyny dává správce střelnice a řídící střelby. Nebezpečí musí okamžitě ohlásit každý, kdo ho zjistí." },
     { id: "bezpecna-manipulace-k18", topic: T, front: "Co dělá střelec na pokyn k zastavení palby?", back: "Ihned přestane střílet, prst mimo lučík, zbraň v bezpečném směru, a čeká na další pokyn." },
     { id: "bezpecna-manipulace-k19", topic: T, front: "Jaká zbraň se smí čistit?", back: "Jen vybitá a zkontrolovaná. Střelivo patří mimo místo čištění." },
     { id: "bezpecna-manipulace-k20", topic: T, front: "Typické důvody neúspěchu v praktické části?", back: "Míření na osobu, opuštění bezpečného směru, prst v lučíku bez důvodu, chybný postup u závady." },
     { id: "bezpecna-manipulace-k21", topic: T, front: "Střelba u praktické zkoušky?", back: "5 ran z krátké zbraně na 10 m a 5 ran z dlouhé zbraně na 25 m, terč o průměru 500 mm." },
     { id: "bezpecna-manipulace-k22", topic: T, front: "Jak se zbraň předává jiné osobě?", back: "Vybitá, s otevřeným závěrem (vyklopeným válcem). Přebírající ji sám znovu zkontroluje." },
+    { id: "bezpecna-manipulace-k23", topic: T, front: "Čím začíná a končí manipulace se zbraní?", back: "Kontrolou jejího stavu." },
+    { id: "bezpecna-manipulace-k24", topic: T, front: "Co zkontrolovat na zbrani před střelbou?", back: "Technický stav: vydutí hlavně, cizí předměty v hlavni, prasklé součásti." },
+    { id: "bezpecna-manipulace-k25", topic: T, front: "Jak nosit dlouhou zbraň?", back: "Zajištěnou; bez spolehlivé manuální pojistky bez náboje v komoře." },
+    { id: "bezpecna-manipulace-k26", topic: T, front: "Odraz střely – kdy hrozí?", back: "Při malém úhlu dopadu na většinu povrchů včetně vody a země; u tvrdých či zakřivených povrchů prakticky pod jakýmkoli úhlem." },
+    { id: "bezpecna-manipulace-k27", topic: T, front: "Smíte nechat nenabitou zbraň bez dozoru na přístupném místě?", back: "Ne, žádnou zbraň." },
   ],
 
   questions: [
@@ -387,6 +410,54 @@ export const content: TopicContent = {
       correct: 2,
       explanation: "Otevřený závěr nebo vyklopený válec jasně ukazuje, že zbraň je v bezpečném stavu. Přebírající ji přesto sám zkontroluje.",
       source: "zásady bezpečného zacházení se zbraní",
+    },
+    {
+      id: "bezpecna-manipulace-x19", topic: T,
+      question: "Jste si jistí, že vaše zbraň není nabitá. Smíte s ní ze žertu zamířit na kamaráda?",
+      options: ["Ano, pokud jste ji před chvílí zkontrolovali.", "Ne, se zbraní se zachází, jako by byla nabitá, a na člověka se nemíří.", "Ano, pokud je zajištěná."],
+      correct: 1,
+      explanation: "První zásada: s každou zbraní zacházet, jako by byla nabitá. Mířit „jen tak“ na člověka není přípustné ani se zbraní, o které jste přesvědčeni, že nabitá není.",
+      source: `${ZASADY}, ot. č. 784, 789`,
+    },
+    {
+      id: "bezpecna-manipulace-x20", topic: T,
+      question: "Smíte střílet na cíl, který vaše zbraň může prostřelit, když nevíte, co je za ním?",
+      options: ["Ano, pokud cíl dobře vidíte.", "Ano, pokud je cíl dál než 50 m.", "Ne, musíte vědět, co je za cílem v dosahu střely."],
+      correct: 2,
+      explanation: "Střelec musí vědět, kam může střela letět po průstřelu cíle, a být si vědom, kde skončí – až do jejího úplného zachycení.",
+      source: `${ZASADY}, ot. č. 785, 791, 792`,
+    },
+    {
+      id: "bezpecna-manipulace-x21", topic: T,
+      question: "Proč se nestřílí pod malým úhlem na vodní hladinu nebo povrch země?",
+      options: ["Kvůli nebezpečí odrazu střely", "Protože voda střelu zastaví a nic se nestane", "Protože se tím poškodí hlaveň"],
+      correct: 0,
+      explanation: "Pod malým úhlem se střela od většiny povrchů, včetně vody a země, odrazí. U tvrdých či zakřivených povrchů hrozí odraz prakticky pod jakýmkoli úhlem.",
+      source: `${ZASADY}, ot. č. 793, 794`,
+    },
+    {
+      id: "bezpecna-manipulace-x22", topic: T,
+      question: "Čím zpravidla začíná a končí každá manipulace se zbraní?",
+      options: ["Čištěním hlavně", "Kontrolou stavu zbraně", "Nasazením ochrany sluchu"],
+      correct: 1,
+      explanation: "Manipulace zpravidla začíná a končí kontrolou stavu zbraně. Výjimkou jsou odůvodněné případy, třeba příprava zbraně k nošení.",
+      source: `${ZASADY}, ot. č. 795`,
+    },
+    {
+      id: "bezpecna-manipulace-x23", topic: T,
+      question: "Jak bezpečně nosit dlouhou zbraň, která nemá spolehlivou manuální pojistku?",
+      options: ["Bez náboje v nábojové komoře", "S nábojem v komoře, ale s prstem mimo lučík", "Jen s napnutým kohoutem"],
+      correct: 0,
+      explanation: "Dlouhá zbraň se nosí zajištěná. Pokud nemá spolehlivou manuální pojistku nebo obdobný mechanismus, nosí se bez náboje v komoře.",
+      source: `${ZASADY}, ot. č. 788`,
+    },
+    {
+      id: "bezpecna-manipulace-x24", topic: T,
+      question: "Na chvíli odcházíte od stolu na veřejně přístupné střelnici. Co s vybitou zbraní?",
+      options: ["Nechám ji na stole, je přece vybitá.", "Nenechám ji bez dozoru – vezmu ji s sebou nebo ji předám oprávněné osobě.", "Nechám ji na stole se zasunutým prázdným zásobníkem."],
+      correct: 1,
+      explanation: "Žádnou zbraň, ani nenabitou, není přípustné nechat bez dozoru na místě přístupném jiným osobám.",
+      source: `${ZASADY}, ot. č. 796`,
     },
   ],
 };

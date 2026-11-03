@@ -358,12 +358,13 @@ na mv.gov.cz; případné sněmovní návrhy novel; právní posouzení doslovn�
 Test nanečisto: 17 (`zaklady` … `trestni-pravo`) + 5 (`nauka`) + 5 (`bezpecna-manipulace`) + 3 (`zdravoveda`),
 40 minut, obecné 26/30, rozšířené 28/30.
 
-**Pokrytí souboru MV v aplikaci (audit 3. 11. 2026):** oddíl I asi 58 %, II 85 %, III 97 %, **IV jen asi 3 %**,
-V asi 26 % (podle čísel otázek, na které obsah odkazuje). Největší mezery: obrazové otázky nauky (části náboje,
-pistole, revolveru, brokovnice, zkušební značky), terminologie nauky (ot. 718–783), výjimky a povolení
-(199–218), zbrojní licence (164–196), provoz střelnic a příloha 3 (244–267, 555–561), zadržení a zajištění
-zbraně (400–410), znehodnocení a přebíjení (359–374), přeshraniční přemístění (376–384), definice přílohy 1
-(450–492) a další stavy zdravovědy (poleptání, mdloba, páteř, krvácení z nosu).
+**Pokrytí souboru MV v aplikaci** (podle čísel otázek, na které obsah odkazuje): oddíl I asi 58 %, II 85 %,
+III 97 %, **IV 97 %** (doplněno 3. 11. 2026; z původních 3 %), V asi 26 %. V oddílu IV zbývá jen 5 čistě
+obrazových otázek (674, 676, 677, 679, 680 – směr šipek a čísla dílů na fotografii, předmět munice), jejichž
+pojmy výklad pokrývá textem. Zbývající mezery: výjimky a povolení (199–218), zbrojní licence (164–196), provoz
+střelnic a příloha 3 (244–267, 555–561), zadržení a zajištění zbraně (400–410), znehodnocení a přebíjení
+(359–374), přeshraniční přemístění (376–384), definice přílohy 1 (450–492) a další stavy zdravovědy (poleptání,
+mdloba, páteř, krvácení z nosu).
 
 ---
 
@@ -418,8 +419,13 @@ zbraně (400–410), znehodnocení a přebíjení (359–374), přeshraniční p
   poplatky (položka 30); odstraněny výhrady „ověřte aktuální znění“.
 - Citace: § 16, § 17, § 21, § 80/§ 81, § 12 odst. 2, § 34 (místo MV ot. č. 154 → 149).
 
-**Doporučeno dál:** doplnit obsah pro mezery v pokrytí (kap. 5), zejména nauku o zbraních (oddíl IV MV),
-a přeformulovat blízké parafráze otázek MV v `research-questions.json` (seznam v auditu: opravneni-10,
+**Nauka o zbraních (doplněno 3. 11. 2026):** okruh `nauka` rozšířen ze 4 na 7 lekcí (hlavní části podle
+zákona, rozložení pistole, funkční cykly, závorník a nosič, brokový náboj a kování, záměna ráže 20/12, typy
+nábojnic, školní náboj, Flobert, dostřely podle MV, krytí a zahrdlení, lovecké názvosloví, historické zámky,
+havárie zbraně, zkušební značky, pojmy ze střelnice), pojmy z 14 na 49, kartičky z 25 na 55, otázky z 18 na 54.
+Okruh `bezpecna-manipulace` doplněn o zásady bezpečného zacházení z ot. č. 784–799 (+6 otázek, +5 kartiček).
+
+**Doporučeno dál:** doplnit obsah pro zbývající mezery v pokrytí (kap. 5) a přeformulovat blízké parafráze otázek MV v `research-questions.json` (seznam v auditu: opravneni-10,
 zkouska-08, strelnice-x04, kategorie-01/02/05, opravneni-04, nakladani-08, nauka-02, zdravoveda-01/03/04,
 bezpecna-manipulace-02/03, zkouska-07, zaklady-x08, nakladani-x02) – nebo, po právním posouzení, nabídnout
 přímo oficiální znění otázek s uvedením zdroje.
