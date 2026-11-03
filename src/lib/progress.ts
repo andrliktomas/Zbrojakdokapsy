@@ -74,7 +74,7 @@ export async function computeTopicStats(userId: string) {
 async function checkAchievements(userId: string) {
   const [user, answers, cardReviews, tests, existing, { stats }] = await Promise.all([
     db.user.findUniqueOrThrow({ where: { id: userId } }),
-    db.questionAttempt.count({ where: { userId, mode: "practice" } }),
+    db.questionAttempt.count({ where: { userId, mode: { in: ["practice", "mv"] } } }),
     db.cardProgress.aggregate({ where: { userId }, _sum: { reviews: true } }),
     db.testResult.findMany({ where: { userId }, select: { passed: true, score: true, total: true } }),
     db.achievement.findMany({ where: { userId }, select: { code: true } }),
