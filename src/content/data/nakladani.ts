@@ -1,7 +1,7 @@
 import type { TopicContent } from "../types";
 
 // Zdroj faktů: docs/research/legislativa.md (kap. 1.2, 1.6, 1.7, 1.8, 3.2).
-// Čísla § uvádíme jen tam, kde je rešerše označuje jako jistá (§ 78, § 81, § 97, § 111).
+// Čísla § ověřena proti konsolidovanému znění zákona č. 90/2024 Sb. k 1. 1. 2026 (revize rešerše 3. 11. 2026).
 
 const T = "nakladani";
 
@@ -83,7 +83,7 @@ export const content: TopicContent = {
             "Zbraň se obecně nosí skrytě. Viditelně ji smíte nosit jen při akcích, kde je to přirozené – například při lovu, sportovní střelbě, výcviku, kulturních akcích nebo rekonstrukcích bitev.",
             "Pro skryté nošení zbraně podléhající registraci k ochraně života, zdraví a majetku potřebujete rozšířené zbrojní oprávnění.",
           ],
-          source: "§ 81 zákona č. 90/2024 Sb.; soubor MV ot. č. 80, 322–328",
+          source: "§ 80 (skryté nošení, rozšířené ZO) a § 81 (viditelné nošení) zákona č. 90/2024 Sb.; soubor MV ot. č. 80, 322–328",
         },
         {
           heading: "Přenechání – samostatné nakládání",
@@ -97,7 +97,7 @@ export const content: TopicContent = {
           heading: "Svěření – pod dohledem",
           paragraphs: [
             "Svěření znamená, že druhý se zbraní nakládá pod dohledem oprávněné osoby – typicky na střelnici.",
-            "Pokud jde o zbraň R2–R4 svěřenou osobě mladší 18 let bez zbrojního oprávnění, dohled smí vykonávat jen osoba starší 21 let, která je držitelem zbrojního oprávnění déle než 3 roky.",
+            "Pokud jde o zbraň R2–R4 svěřenou osobě mladší 18 let bez zbrojního oprávnění, dohled smí vykonávat jen osoba, která dosáhla věku 21 let a je držitelem zbrojního oprávnění déle než 3 roky. Svěřovaná osoba musí být přiměřeně rozumově a tělesně vyspělá.",
           ],
           tip: "Zapamatujte si dvojici čísel 21 let a 3 roky.",
           source: "zákon č. 90/2024 Sb.; soubor MV ot. č. 314–319",
@@ -112,29 +112,32 @@ export const content: TopicContent = {
         {
           heading: "Zabezpečení doma",
           paragraphs: [
-            "Podrobnosti zabezpečení stanoví nařízení vlády č. 187/2025 Sb. Rozhoduje počet zbraní a střeliva, které ukládáte současně na jednom místě, nikoli kolik zbraní máte celkem registrováno.",
+            "Způsob zabezpečení stanoví § 83 zákona, technické parametry trezorů a schránek nařízení vlády č. 187/2025 Sb. Rozhoduje počet současně ukládaných zbraní a nábojů (např. v jedné schránce nebo trezoru), nikoli celkový počet zbraní, se kterými nakládáte.",
           ],
           bullets: [
-            "nejvýše 2 zbraně R2–R4 a 1 000 nábojů S2 nebo S3: stačí zabezpečení „vhodným způsobem“,",
-            "více zbraní: platí technické požadavky nařízení vlády (trezory podle počtu),",
-            "více než 20 zbraní: komorový trezor s elektronickou zabezpečovací signalizací (EZS).",
+            "nejvýše 10 zbraní (nebo 10 000 nábojů): uzamčená ocelová schránka, ocelová skříň nebo zvláštní uzamčené zařízení,",
+            "11 až 20 zbraní (10 001 až 20 000 nábojů): uzamčený skříňový trezor, uzamčená místnost nebo samostatný objekt,",
+            "více než 20 zbraní (přes 20 000 nábojů): trezor (skříňový nebo komorový), místnost nebo objekt chráněné elektronickým zabezpečovacím zařízením (EZS),",
+            "výjimka „vhodným způsobem“: nejvýše 2 zbraně R2–R4 nebo nejvýše 1 000 nábojů S2/S3 – pokud celkem nenakládáte s více zbraněmi či náboji, nebo jde o dočasné uložení v obydlí, nebo o krátkodobé uložení ve vozidle.",
           ],
           tip: "Chyták: rozhoduje počet SOUČASNĚ ukládaných zbraní, ne celkový počet zbraní v registru.",
-          source: "NV č. 187/2025 Sb.; soubor MV ot. č. 336–341",
+          source: "§ 83 zákona č. 90/2024 Sb.; NV č. 187/2025 Sb.; soubor MV ot. č. 336–341",
         },
         {
           heading: "Zbraň ve vozidle",
           paragraphs: [
-            "Ve vozidle je možné jen krátkodobé uložení, nejvýše 4 hodiny. Zbraň musí být v uzamčeném kufru pevně spojeném s karoserií, mimo dohled, nenabitá a střelivo uložené odděleně. Dlouhodobé uložení ve vozidle zákon nepřipouští.",
+            "Ve vozidle je možné jen krátkodobé uložení: nejvýše 4 hodiny, nejvýše 2 zbraně R2–R4 a 1 000 nábojů S2/S3. Zbraň nebo střelivo se zamknou do uzamykatelného plastového nebo kovového kufru či schránky upevněné ke karoserii, kterou nejde otevřít ani oddělit bez dílenského nářadí a která není zvenku ani částečně vidět.",
+            "Schránka musí být v části vozidla chráněné uzavřenou pevnou kovovou karoserií, okna musí být zavřená a vozidlo zamčené. Zbraň nesmí být nabitá a střelivo je uložené odděleně. Dlouhodobé uložení ve vozidle zákon nepřipouští.",
           ],
           source: "NV č. 187/2025 Sb.; soubor MV ot. č. 598–602",
         },
         {
           heading: "Aktivní komponenty (přebíjení)",
           paragraphs: [
-            "Pro skladování aktivních komponentů platí obecné limity, například nejvýše 10 kg bezdýmného prachu a 3 kg černého prachu.",
+            "Fyzická osoba oprávněná nakládat se střelivem S4 (není-li držitelem zbrojní licence) smí v kterýkoli okamžik nakládat nejvýše s 10 kg bezdýmného prachu, 3 kg černého loveckého prachu, 15 000 zápalek pro kulové zbraně, 10 000 zápalek pro brokové zbraně a 15 000 perkusních zápalek.",
+            "Každý druh aktivního komponentu má vlastní limit – množství různých druhů se nesčítají.",
           ],
-          source: "NV č. 187/2025 Sb.; soubor MV ot. č. 606",
+          source: "NV č. 187/2025 Sb.; soubor MV ot. č. 606, 607",
         },
         {
           heading: "Přeprava většího množství",
@@ -208,7 +211,7 @@ export const content: TopicContent = {
     { term: "Nošení zbraně", topic: T, definition: "Mít zbraň na místě veřejnosti přístupném při sobě nabitou nebo viditelně.", source: "soubor MV ot. č. 15" },
     { term: "Přenechání zbraně", topic: T, definition: "Dočasné umožnění samostatně nakládat se zbraní. Zbraň R4 lze držiteli ZO přenechat nejvýše na 30 po sobě jdoucích dnů.", source: "§ 78 zákona č. 90/2024 Sb." },
     { term: "Svěření zbraně", topic: T, definition: "Nakládání se zbraní pod dohledem oprávněné osoby, např. při výcviku na střelnici.", source: "soubor MV ot. č. 314–319" },
-    { term: "Zabezpečení „vhodným způsobem“", topic: T, definition: "Nejmírnější úroveň zabezpečení. Stačí při současném uložení nejvýše 2 zbraní R2–R4 a 1 000 nábojů S2/S3.", source: "NV č. 187/2025 Sb.; soubor MV ot. č. 340" },
+    { term: "Zabezpečení „vhodným způsobem“", topic: T, definition: "Mírnější zabezpečení mimo technické požadavky. Lze ho použít pro nejvýše 2 zbraně R2–R4 nebo 1 000 nábojů S2/S3, pokud osoba celkem nenakládá s více, nebo při dočasném uložení v obydlí či krátkodobém uložení ve vozidle.", source: "§ 83 odst. 4 zákona č. 90/2024 Sb.; soubor MV ot. č. 340, 341" },
     { term: "Evropský zbrojní pas", topic: T, definition: "Doklad pro dočasné přemístění zbraně do jiného státu EU. Vydává se na 5 let s možností prodloužení o 5 let.", source: "§ 97 a násl. zákona č. 90/2024 Sb." },
     { term: "Nabývání na dálku", topic: T, definition: "Nákup bez osobního předání (např. e-shop se zásilkou). Je zakázané u zbraní R1–R4, PO, palných NO a u střeliva.", source: "soubor MV ot. č. 53" },
   ],
@@ -222,13 +225,13 @@ export const content: TopicContent = {
     { id: "nakladani-k06", topic: T, front: "Podmínky pro vedlejšího držitele", back: "Zápis na žádost hlavního držitele, vlastní souhlas a oprávnění se zbraní nakládat (u R3 povolení R3)." },
     { id: "nakladani-k07", topic: T, front: "Nošení zbraně = ?", back: "Mít ji na místě veřejnosti přístupném při sobě nabitou NEBO viditelně." },
     { id: "nakladani-k08", topic: T, front: "Nenabitá dlouhá zbraň v neprůhledném pouzdře", back: "Podle zákona se nenosí." },
-    { id: "nakladani-k09", topic: T, front: "Kdy smíte nosit zbraň viditelně?", back: "Jen při akcích typu lov, sport, výcvik, kultura, rekonstrukce bitev (§ 81). Jinak skrytě." },
+    { id: "nakladani-k09", topic: T, front: "Kdy smíte nosit zbraň viditelně?", back: "Jen při akcích typu lov, sport, výcvik, kultura, rekonstrukce bitev (§ 81). Jinak skrytě (§ 80)." },
     { id: "nakladani-k10", topic: T, front: "Maximální doba přenechání zbraně R4 držiteli ZO", back: "30 po sobě jdoucích dnů (§ 78). Dál se přenechat nesmí." },
-    { id: "nakladani-k11", topic: T, front: "Dohled nad svěřenou zbraní u osoby mladší 18 let bez ZO", back: "Osoba starší 21 let, držitel ZO déle než 3 roky." },
-    { id: "nakladani-k12", topic: T, front: "Limit pro zabezpečení „vhodným způsobem“", back: "Nejvýše 2 zbraně R2–R4 a 1 000 nábojů S2/S3 uložené současně." },
+    { id: "nakladani-k11", topic: T, front: "Dohled nad svěřenou zbraní u osoby mladší 18 let bez ZO", back: "Osoba, která dosáhla 21 let a je držitelem ZO déle než 3 roky." },
+    { id: "nakladani-k12", topic: T, front: "Limit pro zabezpečení „vhodným způsobem“", back: "Nejvýše 2 zbraně R2–R4 nebo 1 000 nábojů S2/S3 – když celkem nenakládáte s více, při dočasném uložení v obydlí nebo krátkodobě ve vozidle." },
     { id: "nakladani-k13", topic: T, front: "Od kolika zbraní je nutný komorový trezor s EZS?", back: "Při více než 20 současně ukládaných zbraních." },
-    { id: "nakladani-k14", topic: T, front: "Krátkodobé uložení zbraně ve vozidle", back: "Nejvýše 4 hodiny, uzamčený kufr pevně spojený s karoserií, mimo dohled, nenabitá, střelivo odděleně." },
-    { id: "nakladani-k15", topic: T, front: "Limity prachu (obecně)", back: "10 kg bezdýmného prachu, 3 kg černého prachu." },
+    { id: "nakladani-k14", topic: T, front: "Krátkodobé uložení zbraně ve vozidle", back: "Nejvýše 4 h, max. 2 zbraně a 1 000 nábojů, zamčený kufr nebo schránka upevněná ke karoserii (bez nářadí neoddělitelná), zvenku neviditelná, zavřená okna, zamčené auto, zbraň nenabitá, střelivo odděleně." },
+    { id: "nakladani-k15", topic: T, front: "Limity prachu (obecně)", back: "10 kg bezdýmného prachu, 3 kg černého prachu, 15 000 zápalek kulových, 10 000 brokových, 15 000 perkusních. Druhy se nesčítají." },
     { id: "nakladani-k16", topic: T, front: "Kdy a jak hlásit přepravu?", back: "Více než 100 zbraní nebo 200 000 nábojů – přes CRZ nejméně 1 hodinu předem (§ 111)." },
     { id: "nakladani-k17", topic: T, front: "Platnost evropského zbrojního pasu", back: "5 let, lze prodloužit o dalších 5 let." },
     { id: "nakladani-k18", topic: T, front: "Ztráta nebo odcizení zbraně", back: "Neprodleně ohlásit Policii ČR." },
@@ -311,18 +314,18 @@ export const content: TopicContent = {
       ],
       correct: 2,
       explanation: "Zbraň se obecně nosí skrytě. Viditelné nošení zákon připouští jen u vyjmenovaných typů akcí.",
-      source: "§ 81 zákona č. 90/2024 Sb.; soubor MV ot. č. 322–328",
+      source: "§ 80 a § 81 zákona č. 90/2024 Sb.; soubor MV ot. č. 322–328",
     },
     {
       id: "nakladani-x07", topic: T,
       question: "Kdo smí dohlížet na šestnáctiletého střelce bez zbrojního oprávnění, kterému byla svěřena zbraň R4?",
       options: [
-        "Osoba starší 21 let, která je držitelem zbrojního oprávnění déle než 3 roky.",
+        "Osoba, která dosáhla věku 21 let a je držitelem zbrojního oprávnění déle než 3 roky.",
         "Kterýkoli zletilý držitel zbrojního oprávnění.",
         "Pouze jeho zákonný zástupce, i bez zbrojního oprávnění.",
       ],
       correct: 0,
-      explanation: "Dohled nad svěřenou zbraní R2–R4 u osoby mladší 18 let bez ZO smí vykonávat jen osoba starší 21 let s oprávněním drženým déle než 3 roky.",
+      explanation: "Dohled nad svěřenou zbraní R2–R4 u osoby mladší 18 let bez ZO smí vykonávat jen osoba, která dosáhla 21 let a má oprávnění déle než 3 roky.",
       source: "zákon č. 90/2024 Sb.; soubor MV ot. č. 314–319",
     },
     {
@@ -435,15 +438,15 @@ export const content: TopicContent = {
     },
     {
       id: "nakladani-x17", topic: T,
-      question: "Kolik bezdýmného prachu smíte podle obecného limitu skladovat?",
+      question: "S kolika kilogramy bezdýmného prachu smí fyzická osoba (bez zbrojní licence) podle obecného limitu v kterýkoli okamžik nakládat?",
       options: [
         "Nejvýše 1 kg",
         "Nejvýše 10 kg",
         "Nejvýše 50 kg",
       ],
       correct: 1,
-      explanation: "Obecný limit aktivních komponentů je 10 kg bezdýmného prachu a 3 kg černého prachu.",
-      source: "NV č. 187/2025 Sb.; soubor MV ot. č. 606",
+      explanation: "Obecný množstevní limit je 10 kg bezdýmného prachu, 3 kg černého loveckého prachu a 15 000 / 10 000 / 15 000 zápalek (kulové / brokové / perkusní). Každý druh má limit samostatně, nesčítají se.",
+      source: "NV č. 187/2025 Sb.; soubor MV ot. č. 606, 607",
     },
     {
       id: "nakladani-x18", topic: T,

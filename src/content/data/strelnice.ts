@@ -16,15 +16,16 @@ export const content: TopicContent = {
         {
           heading: "Proč na střelnicích záleží",
           paragraphs: [
-            "Střílet se zbraní smíte jen tam, kde je to dovoleno. Typickým takovým místem je střelnice. Zákon o zbraních a střelivu proto upravuje, jaké druhy střelnic existují a za jakých podmínek se provozují. Technické požadavky na střelnice stanoví nařízení vlády č. 187/2025 Sb.",
+            "Střílet se zbraní smíte jen tam, kde je to dovoleno. Typickým takovým místem je střelnice. Zákon o zbraních a střelivu proto upravuje, jaké druhy střelnic existují a za jakých podmínek se provozují. Právně závazné technické a organizační požadavky na střelnice stanoví příloha č. 3 zákona o zbraních a střelivu; nařízení vlády č. 187/2025 Sb. k nim stanoví některé další technické specifikace.",
           ],
-          source: "zákon č. 90/2024 Sb.; NV č. 187/2025 Sb.",
+          tip: "Na otázku „kde jsou stanoveny technické a organizační požadavky na střelnice“ je u zkoušky správně: v příloze č. 3 zákona.",
+          source: "zákon č. 90/2024 Sb., příloha č. 3 (soubor MV ot. č. 556)",
         },
         {
           heading: "Dělení podle konstrukce",
           bullets: [
-            "krytá střelnice – střílí se v uzavřeném prostoru,",
-            "otevřená střelnice – střílí se venku.",
+            "krytá střelnice – celý ohrožený prostor se nachází v uzavřeném objektu, který je konstruován tak, aby byl únik střel do okolí při dodržení provozního řádu vyloučen,",
+            "otevřená střelnice – každá střelnice, která není krytá.",
           ],
           source: "zákon č. 90/2024 Sb.; soubor MV ot. č. 239–242",
         },
@@ -58,7 +59,7 @@ export const content: TopicContent = {
         {
           heading: "Zapsaná zkoušková střelnice",
           paragraphs: [
-            "Zkouška odborné způsobilosti se koná vždy na zapsané zkouškové střelnici. Jejím provozovatelem je držitel zbrojní licence.",
+            "Zkouška odborné způsobilosti se koná vždy na zapsané zkouškové střelnici. Právo provozovat ji přizná KŘP provozovateli, který je držitelem zbrojní licence nebo nevyňatou veřejnoprávní institucí.",
             "Komisionální zkouška (poslední šance po neúspěšném opakování) se zpravidla koná na střelnici vyňaté instituce – například ministerstva vnitra, policie nebo armády.",
           ],
           source: "zákon č. 90/2024 Sb.; soubor MV ot. č. 144, 145, 243",
@@ -74,11 +75,12 @@ export const content: TopicContent = {
         {
           heading: "Kdo co platí",
           bullets: [
-            "správní poplatek za žádost (3 000 Kč, přes Podací portál MV 2 400 Kč) zahrnuje odměnu zkušebního komisaře i případné opakování,",
+            "správní poplatek za přijetí žádosti o ZO: 3 000 Kč (při podání na elektronickém formuláři přes Podací portál MV 2 400 Kč),",
+            "odměnu zkušebního komisaře hradí policie (KŘP), žadatel ji neplatí – ani u opakované zkoušky,",
             "použití zapsané zkouškové střelnice hradí žadatel zvlášť podle ceníku provozovatele.",
           ],
           tip: "Poplatek za střelnici v ceně správního poplatku NENÍ.",
-          source: "soubor MV ot. č. 143; mv.gov.cz – správní poplatky od 1. 1. 2026",
+          source: "§ 31 odst. 1 zákona č. 90/2024 Sb.; položka 30 sazebníku zákona č. 634/2004 Sb.; soubor MV ot. č. 143",
         },
         {
           heading: "Praktická střelba v kostce",
@@ -92,13 +94,13 @@ export const content: TopicContent = {
   ],
 
   glossary: [
-    { term: "Krytá střelnice", topic: T, definition: "Střelnice v uzavřeném prostoru (dělení podle konstrukce).", source: "soubor MV ot. č. 239–242" },
-    { term: "Otevřená střelnice", topic: T, definition: "Venkovní střelnice (dělení podle konstrukce).", source: "soubor MV ot. č. 239–242" },
+    { term: "Krytá střelnice", topic: T, definition: "Střelnice, u níž se celý ohrožený prostor nachází v uzavřeném objektu, který vylučuje únik střel do okolí.", source: "soubor MV ot. č. 241" },
+    { term: "Otevřená střelnice", topic: T, definition: "Každá střelnice, která není krytá.", source: "soubor MV ot. č. 241" },
     { term: "Příležitostná střelnice", topic: T, definition: "Střelnice, kterou provozní řád nedovoluje využívat častěji než 26 dnů v kalendářním roce.", source: "soubor MV ot. č. 239–242" },
     { term: "Stálá střelnice", topic: T, definition: "Střelnice, která není příležitostná – její využití není omezeno na 26 dnů v roce.", source: "soubor MV ot. č. 239–242" },
     { term: "Provozní řád", topic: T, definition: "Dokument, kterým se řídí provoz konkrétní střelnice; mimo jiné určuje, jak často se smí využívat.", source: "zákon č. 90/2024 Sb." },
     { term: "Správce střelnice", topic: T, definition: "Osoba, která dohlíží na bezpečný provoz střelnice. Střelci se řídí jejími pokyny.", source: "zákon č. 90/2024 Sb." },
-    { term: "Zapsaná zkoušková střelnice", topic: T, definition: "Střelnice, na které se koná zkouška odborné způsobilosti. Provozuje ji držitel zbrojní licence.", source: "soubor MV ot. č. 144, 243" },
+    { term: "Zapsaná zkoušková střelnice", topic: T, definition: "Střelnice, na které se koná zkouška odborné způsobilosti. Provozuje ji držitel zbrojní licence (zákon připouští i nevyňatou veřejnoprávní instituci).", source: "§ 33 zákona č. 90/2024 Sb.; soubor MV ot. č. 144, 147, 243" },
     { term: "Vyňatá instituce", topic: T, definition: "Např. MV, policie nebo armáda. Na jejich střelnicích se zpravidla konají komisionální zkoušky.", source: "soubor MV ot. č. 145" },
   ],
 
@@ -107,13 +109,13 @@ export const content: TopicContent = {
     { id: "strelnice-k02", topic: T, front: "Dělení střelnic podle způsobu provozování", back: "Příležitostné a stálé." },
     { id: "strelnice-k03", topic: T, front: "Příležitostná střelnice", back: "Provozní řád nedovoluje využití častěji než 26 dnů v kalendářním roce." },
     { id: "strelnice-k04", topic: T, front: "Kde se koná zkouška odborné způsobilosti?", back: "Vždy na zapsané zkouškové střelnici." },
-    { id: "strelnice-k05", topic: T, front: "Kdo provozuje zapsanou zkouškovou střelnici?", back: "Držitel zbrojní licence." },
+    { id: "strelnice-k05", topic: T, front: "Kdo provozuje zapsanou zkouškovou střelnici?", back: "Držitel zbrojní licence (nebo nevyňatá veřejnoprávní instituce, § 33)." },
     { id: "strelnice-k06", topic: T, front: "Kde se zpravidla koná komisionální zkouška?", back: "Na střelnici vyňaté instituce (MV, policie, armáda)." },
     { id: "strelnice-k07", topic: T, front: "Kdo zajišťuje zbraně a střelivo ke zkoušce?", back: "Provozovatel střelnice." },
     { id: "strelnice-k08", topic: T, front: "Kdy musí provozovatel zveřejnit modely zbraní ke zkoušce?", back: "Nejméně 14 dní předem." },
     { id: "strelnice-k09", topic: T, front: "Kdo platí použití zkouškové střelnice?", back: "Žadatel, zvlášť podle ceníku provozovatele (není ve správním poplatku)." },
-    { id: "strelnice-k10", topic: T, front: "Co zahrnuje správní poplatek 3 000 Kč?", back: "Odměnu zkušebního komisaře a případné opakování zkoušky." },
-    { id: "strelnice-k11", topic: T, front: "Který předpis stanoví technické požadavky pro střelnice?", back: "Nařízení vlády č. 187/2025 Sb." },
+    { id: "strelnice-k10", topic: T, front: "Kdo hradí odměnu zkušebního komisaře?", back: "Policie (KŘP), nikoli žadatel. Žadatel platí správní poplatek a použití střelnice." },
+    { id: "strelnice-k11", topic: T, front: "Kde jsou stanoveny právně závazné technické a organizační požadavky na střelnice?", back: "V příloze č. 3 zákona o zbraních a střelivu." },
     { id: "strelnice-k12", topic: T, front: "Terč při zkoušce", back: "Kruhový terč o průměru 500 mm." },
     { id: "strelnice-k13", topic: T, front: "Vzdálenosti při zkouškové střelbě", back: "Krátká kulová zbraň 10 m, dlouhá kulová zbraň 25 m (po 5 ranách, celkem do 5 minut)." },
     { id: "strelnice-k14", topic: T, front: "Kolik zásahů je třeba při zkoušce?", back: "Obecné ZO alespoň 6 z 10, rozšířené ZO alespoň 8 z 10." },
@@ -166,7 +168,7 @@ export const content: TopicContent = {
         "V budově krajského ředitelství policie",
       ],
       correct: 0,
-      explanation: "Zkouška odborné způsobilosti se koná vždy na zapsané zkouškové střelnici, jejímž provozovatelem je držitel zbrojní licence.",
+      explanation: "Zkouška odborné způsobilosti se koná vždy na zapsané zkouškové střelnici, kterou provozuje držitel zbrojní licence (případně nevyňatá veřejnoprávní instituce).",
       source: "zákon č. 90/2024 Sb.; soubor MV ot. č. 144",
     },
     {
@@ -175,11 +177,11 @@ export const content: TopicContent = {
       options: [
         "Krajské ředitelství policie",
         "Držitel zbrojní licence",
-        "Obec, na jejímž území střelnice leží",
+        "Ministerstvo vnitra",
       ],
       correct: 1,
-      explanation: "Zapsanou zkouškovou střelnici provozuje držitel zbrojní licence. Policie u zkoušky vykonává dozor.",
-      source: "zákon č. 90/2024 Sb.; soubor MV ot. č. 144, 243",
+      explanation: "Zapsanou zkouškovou střelnici provozuje držitel zbrojní licence (§ 33 připouští i nevyňatou veřejnoprávní instituci). Policie u zkoušky vykonává dozor.",
+      source: "§ 33 zákona č. 90/2024 Sb.; soubor MV ot. č. 144, 147, 243",
     },
     {
       id: "strelnice-x06", topic: T,
@@ -214,8 +216,8 @@ export const content: TopicContent = {
         "Krajské ředitelství policie.",
       ],
       correct: 1,
-      explanation: "Správní poplatek pokrývá odměnu zkušebního komisaře a případné opakování. Použití střelnice platí žadatel zvlášť podle ceníku provozovatele.",
-      source: "zákon č. 90/2024 Sb.; soubor MV ot. č. 143",
+      explanation: "Náklady na využití zapsané zkouškové střelnice hradí žadatel, odměnu zkušebního komisaře hradí policie.",
+      source: "§ 31 odst. 1 zákona č. 90/2024 Sb.; soubor MV ot. č. 143",
     },
     {
       id: "strelnice-x09", topic: T,
@@ -231,15 +233,15 @@ export const content: TopicContent = {
     },
     {
       id: "strelnice-x10", topic: T,
-      question: "Který prováděcí předpis stanoví technické požadavky pro střelnice?",
+      question: "Kde jsou stanoveny právně závazné technické a organizační požadavky na střelnice?",
       options: [
-        "Nařízení vlády č. 187/2025 Sb.",
-        "Nařízení vlády č. 238/2025 Sb.",
-        "Nařízení vlády č. 351/2025 Sb.",
+        "V příloze č. 3 zákona o zbraních a střelivu",
+        "Jen v provozním řádu, který si střelnice sama schválí",
+        "V nařízení vlády č. 351/2025 Sb.",
       ],
       correct: 0,
-      explanation: "NV č. 187/2025 Sb. upravuje technické požadavky pro některé zbraně, střelivo a střelnice a zabezpečení zbraní. NV 238/2025 Sb. se týká zkoušek a NV 351/2025 Sb. zdravotní způsobilosti.",
-      source: "NV č. 187/2025 Sb.",
+      explanation: "Technické a organizační požadavky na střelnice obsahuje příloha č. 3 zákona o zbraních a střelivu. NV č. 351/2025 Sb. se týká zdravotní způsobilosti.",
+      source: "zákon č. 90/2024 Sb., příloha č. 3 (soubor MV ot. č. 556)",
     },
   ],
 };

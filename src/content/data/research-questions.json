@@ -204,7 +204,7 @@
       "Základní, obecné a rozšířené, přičemž se navzájem nepřekrývají."
     ],
     "correct": 0,
-    "explanation": "Pět skupin zbrojního průkazu (A–E) nahradily dva druhy zbrojního oprávnění. Rozšířené oprávnění v sobě zahrnuje obecné.",
+    "explanation": "Skupiny zbrojního průkazu podle starého zákona nahradily dva druhy zbrojního oprávnění. Rozšířené oprávnění v sobě zahrnuje obecné.",
     "source": "zbrojní oprávnění, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 79)"
   },
   {
@@ -361,7 +361,7 @@
     ],
     "correct": 0,
     "explanation": "Držitelé dřívějších průkazů se automaticky stali držiteli zbrojního oprávnění. Skupiny D a E odpovídají rozšířenému oprávnění, skupiny A, B a C obecnému.",
-    "source": "§ 150 odst. 8 zákona č. 90/2024 Sb. (ověřeno: úryvek krajta.slv.cz a FAQ MV; plný text neověřen)"
+    "source": "§ 150 odst. 8 zákona č. 90/2024 Sb. (ověřeno v konsolidovaném znění k 1. 1. 2026)"
   },
   {
     "id": "zkouska-01",
@@ -413,7 +413,7 @@
     ],
     "correct": 1,
     "explanation": "Střílí se na kruhový terč o průměru 500 mm: 5 ran z krátké zbraně na 10 m a 5 ran z dlouhé kulové zbraně na 25 m, celkem do 5 minut. Pro obecné ZO stačí 6 zásahů, pro rozšířené je potřeba 8.",
-    "source": "praktická část zkoušky, zákona č. 90/2024 Sb.; NV č. 238/2025 Sb. (ověřeno: soubor MV, ot. č. 118)"
+    "source": "§ 20 odst. 3 písm. c) zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 118)"
   },
   {
     "id": "zkouska-05",
@@ -426,7 +426,7 @@
     ],
     "correct": 2,
     "explanation": "Podmínky střelby jsou stejné jako u obecného ZO (terč 500 mm, 10 m a 25 m, 5 minut), ale požadovaný počet zásahů je 8.",
-    "source": "praktická část zkoušky, zákona č. 90/2024 Sb.; NV č. 238/2025 Sb. (ověřeno: soubor MV, ot. č. 119)"
+    "source": "§ 20 odst. 3 písm. c) zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 119)"
   },
   {
     "id": "zkouska-06",
@@ -464,7 +464,7 @@
       "Vždy na zapsané zkouškové střelnici"
     ],
     "correct": 2,
-    "explanation": "Zkouška odborné způsobilosti se koná vždy na zapsané zkouškové střelnici, jejímž provozovatelem musí být držitel zbrojní licence. Komisionální zkouška se koná zpravidla na střelnici vyňaté instituce.",
+    "explanation": "Zkouška odborné způsobilosti se koná vždy na zapsané zkouškové střelnici, jejímž provozovatelem je držitel zbrojní licence (případně nevyňatá veřejnoprávní instituce). Komisionální zkouška se koná zpravidla na střelnici vyňaté instituce.",
     "source": "zkouška, zákona č. 90/2024 Sb. (ověřeno: soubor MV, ot. č. 143–145 a 243)"
   },
   {
@@ -529,7 +529,7 @@
       "Nejvýše 24 hodin"
     ],
     "correct": 1,
-    "explanation": "Krátkodobé uložení ve vozidle (nejvýše 2 zbraně R2–R4 a 1 000 nábojů) je možné do 4 hodin: v uzamčeném kufru pevně spojeném s karoserií, mimo dohled, zbraň nenabitá a střelivo odděleně. Dlouhodobé uložení ve vozidle zákon nepřipouští.",
+    "explanation": "Krátkodobé uložení ve vozidle (nejvýše 2 zbraně R2–R4 a 1 000 nábojů) je možné do 4 hodin: v zamčeném kufru nebo schránce upevněné ke karoserii (bez dílenského nářadí neoddělitelné), zvenku neviditelné, se zavřenými okny a zamčeným vozidlem; zbraň nenabitá a střelivo odděleně. Dlouhodobé uložení ve vozidle zákon nepřipouští.",
     "source": "NV č. 187/2025 Sb. (ověřeno: soubor MV, ot. č. 598–602)"
   },
   {
@@ -542,8 +542,8 @@
       "Nejvýše 2 zbraně kategorie R2–R4 a nejvýše 1 000 nábojů S2 nebo S3"
     ],
     "correct": 2,
-    "explanation": "Rozhoduje počet současně ukládaných zbraní a nábojů. Nad tento limit platí technické požadavky nařízení vlády, například pro více než 20 zbraní komorový trezor s EZS.",
-    "source": "zabezpečení, zákona č. 90/2024 Sb.; NV č. 187/2025 Sb. (ověřeno: soubor MV, ot. č. 336–341)"
+    "explanation": "Vhodným způsobem lze zabezpečit nejvýše 2 zbraně R2–R4 nebo 1 000 nábojů S2/S3, pokud osoba celkem nenakládá s více, nebo jde o dočasné uložení v obydlí či krátkodobé uložení ve vozidle. Jinak platí stupně podle počtu současně ukládaných zbraní (do 10, 11–20, nad 20 s EZS).",
+    "source": "§ 83 odst. 4 zákona č. 90/2024 Sb.; NV č. 187/2025 Sb. (ověřeno: soubor MV, ot. č. 336–341)"
   },
   {
     "id": "nakladani-07",

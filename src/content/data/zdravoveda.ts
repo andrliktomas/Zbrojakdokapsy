@@ -2,6 +2,7 @@ import type { TopicContent } from "../types";
 
 const T = "zdravoveda";
 const ERC = "Doporučení ERC 2021";
+const MV = (n: string) => `soubor otázek MV (verze 15. 12. 2025), ot. č. ${n}`;
 
 export const content: TopicContent = {
   lessons: [
@@ -42,10 +43,13 @@ export const content: TopicContent = {
           bullets: [
             "Zajistit bezpečí.",
             "Zastavit masivní krvácení – to zabíjí za několik minut.",
-            "Zkontrolovat vědomí a dýchání, při nenormálním dýchání zahájit resuscitaci.",
-            "Volat 155 (nebo nechat volat jiného).",
+            "Zkontrolovat vědomí a dýchání (na zádech, záklon hlavy).",
+            "Volat 155 (nebo nechat volat jiného) – před zahájením resuscitace vždy nejdřív voláme 155.",
+            "Když postižený nedýchá normálně, zahájit resuscitaci.",
             "Ošetřit další poranění a chránit postiženého před prochladnutím.",
           ],
+          tip: "Soubor MV opakuje: „Před zahájením (resuscitace) vždy voláme 155.“ Operátor vám pak s resuscitací poradí.",
+          source: MV("806, 807"),
         },
       ],
     },
@@ -84,9 +88,11 @@ export const content: TopicContent = {
         {
           heading: "Střelné poranění hrudníku",
           paragraphs: [
-            "Rána na hrudníku může nasávat vzduch – při nádechu je slyšet syčení nebo se tvoří bubliny. Ránu co nejdříve překryjte neprodyšným (okluzivním) krytím, ideálně speciálním hrudním krytím s ventilem, jinak třeba fólií přilepenou k okolí.",
-            "Postižený při vědomí bývá nejvíc úlevy v poloze v polosedě. Sledujte dýchání: když se po překrytí rány výrazně zhorší, krytí na chvíli odklopte, aby mohl vzduch uniknout.",
+            "Volejte 155 a postiženého při vědomí usaďte do polosedu. Ránu ničím nepřikrývejte – nechte ji zcela nezakrytou, aby vzduch z hrudníku mohl unikat ven. Neprodyšný obvaz je chyba: vzduch by se hromadil v hrudníku a mohl by stlačit plíci.",
+            "Pokud rána masivně krvácí, zastavte krvácení přímým tlakem v ráně. Jen v případě nezbytnosti lze použít speciální hrudní krytí, které je prodyšné nebo má chlopeň (ventil).",
           ],
+          tip: "U zkoušky je správně: polosed, rána nezakrytá. Odpovědi „přiložíme neprodyšný obvaz“ jsou chybné.",
+          source: MV("819"),
         },
         {
           heading: "Poranění břicha",
@@ -141,10 +147,11 @@ export const content: TopicContent = {
         {
           heading: "Zotavovací poloha",
           paragraphs: [
-            "Postiženého v bezvědomí, který normálně dýchá, můžete otočit do zotavovací (stabilizované) polohy na boku, aby mu případné zvratky nevtekly do dýchacích cest. Dýchání kontrolujte pravidelně – a když přestane normálně dýchat, otočte ho na záda a resuscitujte.",
+            "Základní postup u bezvědomí podle souboru MV: postiženého uložte na záda, zakloňte mu hlavu a zkontrolujte dýchání. Dýchá-li normálně, volejte 155, držte záklon hlavy a kontrolujte dýchání do příjezdu pomoci. Nedýchá-li, nebo přestane dýchat, volejte 155 a zahajte resuscitaci.",
+            "Zotavovací (stabilizovaná) poloha na boku je pro člověka v bezvědomí, který normálně dýchá – ale použijte ji, když jste na místě sami a musíte od postiženého odejít (třeba pro pomoc), nebo když hrozí vdechnutí zvratků, krve či slin. Spodní ruka je natažená před tělo, horní ruka podpírá hlavu a horní noha je pokrčená.",
           ],
-          tip: "Jazyk se rukou nevytahuje. Dýchací cesty uvolní záklon hlavy.",
-          source: ERC,
+          tip: "Jazyk se rukou nevytahuje. Dýchací cesty uvolní záklon hlavy. Do stabilizované polohy nikdy nedávejte člověka, u kterého jste ještě nezkontrolovali dýchání.",
+          source: MV("805, 811"),
         },
       ],
     },
@@ -168,11 +175,15 @@ export const content: TopicContent = {
         {
           heading: "Zlomeniny a popáleniny",
           bullets: [
-            "Zlomeninu znehybněte v poloze, ve které ji najdete, včetně sousedních kloubů. Nenapravujte ji.",
-            "U otevřené zlomeniny zastavte krvácení a ránu sterilně překryjte. Kosti nezasouvejte.",
-            "Popáleninu chlaďte co nejdříve chladnou až vlažnou čistou vodou (ne ledem ani ledovou vodou), alespoň 20 minut (doporučení ERC 2021).",
-            "U rozsáhlých popálenin a u dětí hlídejte podchlazení. Puchýře nepropichujte, přiškvařený oděv nestrhávejte.",
+            "Základní pravidlo: zlomeniny nedlahujeme, nezatěžujeme a nehýbeme s nimi. Nic nenapravujte a improvizovanou dlahu (klacek, deštník) nepřikládejte.",
+            "Horní končetina: postižený si ji drží u těla vlastní rukou, případně ji zavěsíte do šátku. Dopravte ho k lékaři nebo volejte pomoc.",
+            "Dolní končetina: ideálně volejte 155 a do příjezdu záchranky kontrolujte stav postiženého.",
+            "Otevřená zlomenina: volejte 155 a s končetinou nehýbejte. Masivní krvácení zastavte zaškrcovadlem. Když rána masivně nekrvácí, můžete ji lehce přikrýt obvazem, ale bez tlaku a utahování. Kosti nezasouvejte.",
+            "Popáleninu nebo opařeninu malé plochy chlaďte pod tekoucí vodou 15–20 minut, ne ledem. Sundejte šperky (kvůli otoku) a po zchlazení ránu sterilně překryjte.",
+            "Nic na popáleninu nemažte (mast, olej). U rozsáhlých popálenin a u dětí hlídejte podchlazení. Puchýře nepropichujte, přiškvařený oděv nestrhávejte.",
           ],
+          tip: "U zkoušky jsou chybné odpovědi typu „zafixujeme klackem a šátkem“ nebo „ihned dlahujeme“. Správně: nedlahujeme, nezatěžujeme, nehýbeme.",
+          source: MV("800, 813, 815, 816, 822"),
         },
         {
           heading: "Cévní mozková příhoda (FAST)",
@@ -189,7 +200,7 @@ export const content: TopicContent = {
           bullets: [
             "Chraňte postiženého před poraněním – odstraňte okolní předměty, podložte hlavu.",
             "Nic mu nevkládejte do úst a násilím ho nedržte.",
-            "Po záchvatu zkontrolujte dýchání. Pokud dýchá normálně, dejte ho do zotavovací polohy.",
+            "Křeče nechte volně proběhnout. Po jejich odeznění zkontrolujte vědomí a dýchání.",
             "Volejte 155, pokud záchvat trvá déle než 5 minut, opakuje se, došlo ke zranění, nebo jde o první záchvat.",
           ],
         },
@@ -197,8 +208,12 @@ export const content: TopicContent = {
           heading: "Cukrovka a otravy",
           paragraphs: [
             "Při nízké hladině cukru (hypoglykemii) bývá postižený opocený, třese se, je zmatený nebo agresivní – může působit jako opilý. Pokud je při vědomí a umí polykat, dejte mu sladký nápoj nebo cukr. V bezvědomí mu nic do úst nedávejte a postupujte jako u bezvědomí.",
-            "U otrav myslete hlavně na vlastní bezpečí (oxid uhelnatý, plyny – nevstupujte, větrejte). Volejte 155, zjistěte, co a kolik postižený požil, a schovejte obal. Zvracení nevyvolávejte. Radu poskytne i Toxikologické informační středisko.",
+            "U otrav myslete hlavně na vlastní bezpečí (oxid uhelnatý, plyny – nevstupujte, větrejte). Volejte 155, zjistěte, co a kolik postižený požil, a schovejte obal. Radu poskytne i Toxikologické informační středisko.",
+            "Otrava léky podle souboru MV: volejte 155, a je-li postižený při vědomí, pokuste se vyvolat zvracení; můžete podat tablety černého uhlí. Zjistěte, o jaký lék jde, a další postup konzultujte s 155 nebo s Toxikologickým informačním střediskem.",
+            "Zvracení se naopak nikdy nevyvolává u otravy kyselinami, zásadami (louhy) a pěnidly – poleptání by se zhoršilo.",
           ],
+          tip: "Současná odborná doporučení vyvolávání zvracení obecně nedoporučují. Soubor MV ale u otravy léky uvádí jako správnou odpověď pokus o vyvolání zvracení u postiženého při vědomí – u zkoušky volte tuto odpověď.",
+          source: MV("830, 831"),
         },
       ],
     },
@@ -210,8 +225,8 @@ export const content: TopicContent = {
     { term: "KPR", topic: T, definition: "Kardiopulmonální resuscitace: stlačování hrudníku 100–120/min do hloubky 5–6 cm, případně s vdechy v poměru 30 : 2.", source: ERC },
     { term: "AED", topic: T, definition: "Automatizovaný externí defibrilátor. Sám vyhodnotí srdeční rytmus a hlasem vede zachránce.", source: ERC },
     { term: "Lapavé dechy", topic: T, definition: "Ojedinělé, nepravidelné vdechy při zástavě oběhu. Nejsou normálním dýcháním – je nutné zahájit KPR." },
-    { term: "Zotavovací poloha", topic: T, definition: "Stabilizovaná poloha na boku pro postiženého v bezvědomí, který normálně dýchá." },
-    { term: "Okluzivní krytí", topic: T, definition: "Neprodyšné krytí rány na hrudníku, které brání nasávání vzduchu do hrudníku." },
+    { term: "Zotavovací poloha", topic: T, definition: "Stabilizovaná poloha na boku pro postiženého v bezvědomí, který normálně dýchá. Používá se, když zachránce musí od postiženého odejít, nebo hrozí vdechnutí tekutin. Jinak se drží záklon hlavy vleže na zádech.", source: MV("805, 811") },
+    { term: "Otevřený pneumotorax", topic: T, definition: "Pronikající poranění hrudníku, kterým se do hrudníku dostává vzduch. Laik ránu nechává nezakrytou a postiženého při vědomí usadí do polosedu; neprodyšný obvaz se nepřikládá.", source: MV("819") },
     { term: "Šok", topic: T, definition: "Selhání krevního oběhu, typicky po velké ztrátě krve: bledost, studený pot, rychlý slabý tep, neklid." },
     { term: "FAST", topic: T, definition: "Pomůcka k rozpoznání cévní mozkové příhody: obličej (Face), paže (Arm), řeč (Speech), čas (Time)." },
     { term: "Hypoglykemie", topic: T, definition: "Nízká hladina cukru v krvi, typicky u diabetika. Při vědomí pomůže sladký nápoj nebo cukr." },
@@ -228,7 +243,7 @@ export const content: TopicContent = {
     { id: "zdravoveda-k07", topic: T, front: "Kam přiložit zaškrcovadlo?", back: "Nad ránu (blíže k srdci), na paži nebo stehno, ne přes kloub." },
     { id: "zdravoveda-k08", topic: T, front: "Co po přiložení zaškrcovadla?", back: "Zapsat čas přiložení a už ho nepovolovat." },
     { id: "zdravoveda-k09", topic: T, front: "Tlakový obvaz prosakuje – co dělat?", back: "Přidat další vrstvu. Původní obvaz nesundávat." },
-    { id: "zdravoveda-k10", topic: T, front: "Rána na hrudníku nasává vzduch?", back: "Překrýt neprodyšným (okluzivním) krytím, postižený v polosedě, sledovat dýchání." },
+    { id: "zdravoveda-k10", topic: T, front: "Střelné poranění hrudníku, postižený při vědomí?", back: "Volat 155, usadit do polosedu, ránu ničím nepřikrývat. Neprodyšný obvaz ne." },
     { id: "zdravoveda-k11", topic: T, front: "Předmět zaklíněný v ráně?", back: "Nevytahovat, obložit a zafixovat." },
     { id: "zdravoveda-k12", topic: T, front: "Poranění břicha – jídlo a pití?", back: "Nic jíst ani pít." },
     { id: "zdravoveda-k13", topic: T, front: "Jak uvolnit dýchací cesty?", back: "Záklonem hlavy a zvednutím brady. Jazyk se nevytahuje." },
@@ -237,15 +252,17 @@ export const content: TopicContent = {
     { id: "zdravoveda-k16", topic: T, front: "Frekvence a hloubka stlačení hrudníku?", back: "100–120 za minutu, hloubka 5–6 cm." },
     { id: "zdravoveda-k17", topic: T, front: "Poměr stlačení a vdechů?", back: "30 : 2. Laik může jen stlačovat bez vdechů." },
     { id: "zdravoveda-k18", topic: T, front: "Co dělat s AED?", back: "Zapnout a řídit se hlasovými pokyny. Při analýze a výboji se postiženého nedotýkat." },
-    { id: "zdravoveda-k19", topic: T, front: "Kdy použít zotavovací polohu?", back: "U bezvědomí s normálním dýcháním. Dýchání dál pravidelně kontrolovat." },
+    { id: "zdravoveda-k19", topic: T, front: "Kdy použít zotavovací polohu?", back: "U bezvědomí s normálním dýcháním, když musíte od postiženého odejít nebo hrozí vdechnutí tekutin. Jinak na zádech se záklonem hlavy." },
+    { id: "zdravoveda-k28", topic: T, front: "Bezvědomí – postup?", back: "Na záda, záklon hlavy, kontrola dýchání. Dýchá: 155, držet záklon, kontrolovat. Nedýchá: 155 a resuscitace." },
     { id: "zdravoveda-k20", topic: T, front: "Příznaky šoku?", back: "Bledá studená opocená kůže, rychlý slabý tep, neklid, žízeň, zmatenost." },
     { id: "zdravoveda-k21", topic: T, front: "Protišoková opatření?", back: "Zastavit krvácení, uložit vleže (nohy nahoru, pokud nejsou poraněné), chránit před chladem, uklidnit, nic pít, volat 155." },
-    { id: "zdravoveda-k22", topic: T, front: "Jak ošetřit zlomeninu?", back: "Znehybnit v nalezené poloze včetně sousedních kloubů. Nenapravovat." },
-    { id: "zdravoveda-k23", topic: T, front: "Jak chladit popáleninu?", back: "Chladnou až vlažnou čistou vodou alespoň 20 minut, ne ledem. Hlídat podchlazení." },
+    { id: "zdravoveda-k22", topic: T, front: "Základní pravidlo u zlomenin?", back: "Nedlahujeme, nezatěžujeme a nehýbeme s nimi. Nenapravovat." },
+    { id: "zdravoveda-k23", topic: T, front: "Jak chladit popáleninu malé plochy?", back: "Pod tekoucí vodou 15–20 minut, ne ledem. Sundat šperky, po zchlazení sterilně překrýt." },
     { id: "zdravoveda-k24", topic: T, front: "Co znamená FAST?", back: "Face (obličej), Arm (paže), Speech (řeč), Time (čas – volat 155)." },
     { id: "zdravoveda-k25", topic: T, front: "Epileptický záchvat – co nedělat?", back: "Nic nevkládat do úst a postiženého násilím nedržet." },
     { id: "zdravoveda-k26", topic: T, front: "Diabetik zmatený, opocený, při vědomí?", back: "Pravděpodobně hypoglykemie – dát sladký nápoj nebo cukr, pokud umí polykat." },
-    { id: "zdravoveda-k27", topic: T, front: "Otrava – vyvolat zvracení?", back: "Ne. Volat 155, zjistit co a kolik, schovat obal." },
+    { id: "zdravoveda-k27", topic: T, front: "Otrava léky – postup podle souboru MV?", back: "Volat 155. Je-li při vědomí, pokusit se vyvolat zvracení, lze podat černé uhlí. Zjistit, o jaký lék jde." },
+    { id: "zdravoveda-k29", topic: T, front: "Kdy se zvracení nikdy nevyvolává?", back: "U kyselin, zásad (louhů) a pěnidel." },
   ],
 
   questions: [
@@ -316,18 +333,18 @@ export const content: TopicContent = {
     {
       id: "zdravoveda-x09", topic: T,
       question: "Kdy uložíte postiženého do zotavovací polohy?",
-      options: ["Když nedýchá a nemáte AED", "Vždy, když krvácí z končetiny", "Když je v bezvědomí, ale normálně dýchá"],
+      options: ["Ihned u každého bezvědomí, ještě než zkontroluji dýchání", "Vždy, když krvácí z končetiny", "Když je v bezvědomí, normálně dýchá a já musím odejít nebo hrozí vdechnutí zvratků"],
       correct: 2,
-      explanation: "Zotavovací poloha chrání dýchací cesty. Dýchání je nutné dál pravidelně kontrolovat.",
-      source: ERC,
+      explanation: "Zotavovací poloha je pro bezvědomí s normálním dýcháním, když zachránce musí odejít nebo hrozí vdechnutí tekutin. Jinak postižený leží na zádech se zakloněnou hlavou a zachránce kontroluje dýchání. Dýchání se kontroluje vždy jako první.",
+      source: MV("805, 811"),
     },
     {
       id: "zdravoveda-x10", topic: T,
-      question: "Po střelném poranění hrudníku rána při nádechu „syčí“ a nasává vzduch. Co uděláte?",
-      options: ["Ránu překryji neprodyšným krytím a postiženého při vědomí posadím do polosedu.", "Ránu nechám volně otevřenou a postiženého položím na břicho.", "Ránu vypláchnu vodou a dám postiženému napít."],
+      question: "Postižený se střelným poraněním hrudníku je při vědomí. Co uděláte?",
+      options: ["Volám 155, posadím ho do polosedu a ránu nechám nezakrytou.", "Na ránu přiložím neprodyšný obvaz a uložím ho na záda.", "Na ránu přiložím neprodyšný obvaz, uložím ho na bok a dám mu hodně pít."],
       correct: 0,
-      explanation: "Neprodyšné (okluzivní) krytí brání nasávání vzduchu do hrudníku. Polosed usnadňuje dýchání. Pokud se dýchání po překrytí zhorší, krytí se na chvíli odklopí.",
-      source: "zdravotnické minimum",
+      explanation: "Rána na hrudníku se ničím nepřikrývá, aby vzduch mohl z hrudníku unikat. Polosed usnadňuje dýchání. Masivní krvácení se zastaví přímým tlakem v ráně a jen v nezbytnosti se použije speciální prodyšné krytí nebo krytí s chlopní.",
+      source: MV("819"),
     },
     {
       id: "zdravoveda-x11", topic: T,
@@ -339,19 +356,19 @@ export const content: TopicContent = {
     },
     {
       id: "zdravoveda-x12", topic: T,
-      question: "Jak ošetříte zavřenou zlomeninu bérce?",
-      options: ["Zkusím kost narovnat do správné polohy.", "Nechám postiženého chodit, aby nohu rozhýbal.", "Znehybním ji v nalezené poloze včetně sousedních kloubů."],
+      question: "Jak postupujete u zavřené zlomeniny bérce?",
+      options: ["Zkusím kost narovnat a nohu přivážu k dlaze z klacku.", "Nohu svážu se zdravou nohou a postiženého odvezu autem k lékaři.", "Nohu nedlahuji, nezatěžuji a nehýbu s ní, volám 155 a kontroluji stav postiženého."],
       correct: 2,
-      explanation: "Napravování zlomeniny patří lékaři. Laik zlomeninu fixuje tak, jak ji našel, a volá pomoc.",
-      source: "zdravotnické minimum",
+      explanation: "Podle souboru MV se zlomeniny nedlahují, nezatěžují a nehýbe se s nimi. U dolní končetiny se ideálně volá 155 a do příjezdu záchranky se kontroluje stav postiženého.",
+      source: MV("816, 822"),
     },
     {
       id: "zdravoveda-x13", topic: T,
-      question: "Jak správně chladit popáleninu?",
-      options: ["Chladnou až vlažnou čistou vodou, ne ledem", "Ledem přiloženým přímo na kůži", "Vůbec nechladit, jen namazat krémem"],
+      question: "Jak správně ošetřit popáleninu malé plochy?",
+      options: ["Chladit pod tekoucí vodou 15–20 minut, ne ledem, sundat šperky a po zchlazení sterilně překrýt", "Ihned přiložit led nebo obklad z mrazáku", "Nechladit, jen namazat mastí nebo olejem a zavázat"],
       correct: 0,
-      explanation: "Led může tkáň dál poškodit. Chladí se co nejdříve vodou, u rozsáhlých popálenin a u dětí je potřeba hlídat podchlazení.",
-      source: ERC,
+      explanation: "Led může tkáň dál poškodit a mast nebo olej na popáleninu nepatří. Šperky se sundávají kvůli otoku. U rozsáhlých popálenin a u dětí je potřeba hlídat podchlazení.",
+      source: MV("800"),
     },
     {
       id: "zdravoveda-x14", topic: T,

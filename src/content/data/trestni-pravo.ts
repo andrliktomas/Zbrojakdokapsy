@@ -119,9 +119,9 @@ export const content: TopicContent = {
           heading: "Situace 2: Útočník utíká",
           paragraphs: [
             "Zloděj vám vytrhne tašku a utíká pryč. Nikoho neohrožuje. Vystřelíte mu do zad.",
-            "Rozbor: útok na život ani zdraví nehrozí a útočník neútočí na vás. Střelba na utíkajícího člověka kvůli tašce je zcela zjevně nepřiměřená. Nejde o nutnou obranu – hrozí trestní stíhání.",
+            "Rozbor: útok na majetek ještě trvá, dokud zloděj nemá tašku v klidné držbě – bránit se tedy v zásadě smíte. Jenže život ani zdraví nikoho neohrožuje a výstřel do zad kvůli tašce je obrana zcela zjevně nepřiměřená způsobu útoku. Nejde o nutnou obranu – hrozí trestní stíhání.",
           ],
-          tip: "Když útok skončil, skončilo i právo na nutnou obranu. Volejte policii.",
+          tip: "U útoku na majetek rozhoduje přiměřenost: smrtící zbraň proti zloději, který nikoho neohrožuje, je zcela zjevně nepřiměřená. Volejte policii.",
         },
         {
           heading: "Situace 3: Obrana po skončení útoku",

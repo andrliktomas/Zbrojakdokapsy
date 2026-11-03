@@ -50,6 +50,7 @@ Obsah je v kódu (verzovaný v gitu), databáze drží jen pokrok uživatelů:
 - `src/content/exam.ts` – parametry zkoušky,
 - `docs/research/legislativa.md` – **rešerše legislativy se zdroji a mírou ověření**.
 
-> ⚠️ Před ostrým spuštěním je potřeba projít body v kap. 4 rešerše („Shrnutí nejistot“) – zejména ověřit
-> parametry testu v plném znění NV č. 238/2025 Sb. a čísla paragrafů v zákoně č. 90/2024 Sb.
+> Rešerše byla 3. 11. 2026 ověřena proti konsolidovanému znění zákona č. 90/2024 Sb. a NV č. 238/2025 Sb.
+> a obsah aplikace porovnán se správnými odpověďmi souboru MV (kap. 4 a 7 rešerše). Před ostrým spuštěním
+> zbývá jednorázová kontrola klíčových ustanovení přímo v e-Sbírce a právní posouzení užití souboru otázek MV.
 > Otázky jsou vlastní parafráze, ne doslovné znění oficiálního souboru MV ČR.

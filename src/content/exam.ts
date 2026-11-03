@@ -1,5 +1,6 @@
-// Parametry teoretické části zkoušky podle rešerše (docs/research/legislativa.md, kap. 2.3).
-// Stav [ČÁSTEČNĚ] – před ostrým spuštěním ověřit v plném znění NV č. 238/2025 Sb.
+// Parametry teoretické části zkoušky (docs/research/legislativa.md, kap. 2.3), ověřeno v textu předpisů:
+// - 30 otázek, 40 minut, 26 (obecné ZO) / 28 (rozšířené ZO): § 20 odst. 3 písm. a) zákona č. 90/2024 Sb.
+// - 3 možnosti, 1 správná, skladba 17/5/5/3: § 12 odst. 2 NV č. 238/2025 Sb.
 
 export type PermitType = "obecne" | "rozsirene";
 

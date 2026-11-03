@@ -23,8 +23,8 @@ export const content: TopicContent = {
           bullets: [
             "R1 (zakázaná, zhruba dřívější A) – samočinné (automatické) zbraně, zákeřné zbraně, zbraně zvláště účinné.",
             "R2 (zakázaná, zhruba dřívější A-I) – samonabíjecí zbraně se středovým zápalem s nadlimitním zásobníkem, samonabíjecí zbraně vzniklé úpravou ze samočinných, dlouhé samonabíjecí zbraně se sklopnou pažbou zkrátitelné pod 600 mm.",
-            "R3 (zhruba dřívější B) – běžné samonabíjecí pistole se zásobníkem na 10–20 ran, samonabíjecí dlouhé zbraně se zásobníkem na 3–10 ran, krátké jednotlivě nabíjené zbraně se středovým zápalem, signální zbraně ráže 26,5 mm.",
-            "R4 (zhruba dřívější C) – opakovací kulovnice a malorážky, brokové kozlice a dvojky, krátké jednotlivě nabíjené zbraně s okrajovým zápalem o délce alespoň 280 mm.",
+            "R3 (zhruba dřívější B) – běžné samonabíjecí pistole se zásobníkem na 10–20 ran, samonabíjecí dlouhé zbraně, do jejichž zásobníku a nábojové komory se dohromady vejde více než 3 a nejvýše 10 nábojů, krátké jednotlivě nabíjené zbraně se středovým zápalem, signální zbraně ráže 26,5 mm.",
+            "R4 (zhruba dřívější C) – opakovací kulovnice a malorážky, brokové kozlice a dvojky, krátké jednotlivě nabíjené zbraně s okrajovým zápalem o délce alespoň 280 mm, samonabíjecí dlouhé zbraně s drážkovaným vývrtem, do jejichž zásobovacího ústrojí a komory se dohromady vejdou nejvýše 3 náboje (a nejde je běžně upravit na víc).",
             "PO (zhruba dřívější C-I) – poplašné a signalizační zbraně, neletální zneschopňující prostředky na principu palné nebo plynové zbraně, jednoranové a dvouranové zbraně pro dělené střelivo, zbraně znehodnocené podle předpisu EU.",
             "NO (zhruba dřívější D) – expanzní přístroje, historické zbraně (vyrobené do 31. 12. 1890), plynové zbraně do ráže 6,35 mm, airsoft a paintball.",
           ],
@@ -61,7 +61,7 @@ export const content: TopicContent = {
             "S3 – běžné náboje, např. s celoplášťovou (FMJ) nebo poloplášťovou (SP) střelou a náboje Flobert.",
             "S4 – aktivní komponenty (zápalky, prachy), nábojky a signální náboje do 16 mm.",
           ],
-          tip: "Deformační (expanzní) náboje do pistole nejsou „běžné“ S3 – patří do zakázané S2.",
+          tip: "Do zakázané S2 patří jen náboje pro krátké zbraně se střelou s řízenou deformací nebo fragmentací určenou ke zvýšení ranivého účinku. Běžné náboje s poloplášťovou (SP) střelou jsou S3.",
           source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 540–554)",
         },
         {
@@ -136,7 +136,7 @@ export const content: TopicContent = {
     { term: "Tlumič hluku výstřelu", topic: T, definition: "Regulovaná součást snižující hluk výstřelu alespoň o 10 dB; nakládá se s ní jako se zbraní R4.", source: "soubor MV ot. č. 43, 502" },
     { term: "Historická zbraň", topic: T, definition: "Palná zbraň včetně všech hlavních částí vyrobená nejpozději 31. 12. 1890; kategorie NO.", source: "soubor MV ot. č. 475" },
     { term: "ČÚZZS", topic: T, definition: "Český úřad pro zkoušení zbraní a střeliva; mimo jiné stanoví kategorii zbraně či střeliva v nejasných případech.", source: "soubor MV ot. č. 420" },
-    { term: "Zakázané střelivo", topic: T, definition: "Střelivo kategorie S1 (průbojné, výbušné, zápalné, nezjistitelné) a S2 (deformační pro krátké zbraně, svítící).", source: "soubor MV ot. č. 540–554" },
+    { term: "Zakázané střelivo", topic: T, definition: "Střelivo kategorie S1 (průbojné, výbušné, zápalné, nezjistitelné) a S2 (pro krátké zbraně se střelou s řízenou deformací nebo fragmentací, svítící).", source: "soubor MV ot. č. 540–554" },
   ],
 
   flashcards: [
@@ -222,11 +222,11 @@ export const content: TopicContent = {
     },
     {
       id: "kategorie-x08", topic: T,
-      question: "Do které kategorie patří deformační (expanzní) náboje do pistole?",
+      question: "Do které kategorie patří náboje do pistole se střelou s řízenou deformací nebo fragmentací určenou ke zvýšení ranivého účinku?",
       options: ["S3", "S2", "S4"],
       correct: 1,
-      explanation: "Deformační nebo fragmentační náboje pro krátké zbraně jsou zakázaným střelivem kategorie S2.",
-      source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 540–554)",
+      explanation: "Takové náboje pro krátké zbraně jsou zakázaným střelivem kategorie S2. Pozor: běžné náboje s poloplášťovou (SP) střelou jsou S3.",
+      source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 544, 551)",
     },
     {
       id: "kategorie-x09", topic: T,

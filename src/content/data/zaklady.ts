@@ -12,7 +12,7 @@ export const content: TopicContent = {
         {
           heading: "Jaký zákon dnes platí",
           paragraphs: [
-            "Od 1. 1. 2026 je účinný zákon č. 90/2024 Sb., o zbraních a střelivu. Nahradil dlouholetý zákon č. 119/2002 Sb., podle kterého se vydávaly zbrojní průkazy skupin A až E.",
+            "Od 1. 1. 2026 je účinný zákon č. 90/2024 Sb., o zbraních a střelivu. Nahradil dlouholetý zákon č. 119/2002 Sb., podle kterého se vydávaly zbrojní průkazy skupin A až F.",
             "Vedle něj platí samostatný zákon č. 91/2024 Sb., o munici. Ten řeší civilní nakládání s municí, neaktivní muniční předměty a pyrotechnický průzkum – tedy věci, které do „zbraňového“ zákona nepatří.",
           ],
           bullets: [
@@ -83,7 +83,7 @@ export const content: TopicContent = {
             "Zbraň se obecně nosí skrytě. Viditelně ji lze nosit jen při akcích, kde to dává smysl – například při lovu, sportovní střelbě, výcviku, kulturní akci nebo rekonstrukci bitvy.",
             "Ke skrytému nošení zbraně podléhající registraci k ochraně života, zdraví a majetku je potřeba rozšířené zbrojní oprávnění.",
           ],
-          source: "§ 81 zákona č. 90/2024 Sb. (soubor MV ot. č. 322–328)",
+          source: "§ 80 (skryté nošení, rozšířené ZO) a § 81 (viditelné nošení) zákona č. 90/2024 Sb. (soubor MV ot. č. 322–328)",
         },
         {
           heading: "Regulované součásti",
@@ -170,7 +170,7 @@ export const content: TopicContent = {
     { id: "zaklady-k08", topic: T, front: "Kde ještě získám zbrojní list?", back: "Na KŘP nebo na Czech POINTu." },
     { id: "zaklady-k09", topic: T, front: "Nošení zbraně = ?", back: "Na místě veřejnosti přístupném při sobě nabitou NEBO viditelně." },
     { id: "zaklady-k10", topic: T, front: "Nenabitá dlouhá zbraň v neprůhledném pouzdře na ulici – nošení?", back: "Ne, taková zbraň se „nenosí“." },
-    { id: "zaklady-k11", topic: T, front: "Jak se zbraň nosí obecně?", back: "Skrytě. Viditelně jen při lovu, sportu, výcviku, kulturních akcích apod. (§ 81)." },
+    { id: "zaklady-k11", topic: T, front: "Jak se zbraň nosí obecně?", back: "Skrytě. Viditelně jen při lovu, sportu, výcviku, kulturních akcích apod. (§ 80 a § 81)." },
     { id: "zaklady-k12", topic: T, front: "Vyjmenujte regulované součásti.", back: "Hlavní část, součást pro samočinnou střelbu, polotovar hlavní části, tlumič, nadlimitní zásobník." },
     { id: "zaklady-k13", topic: T, front: "Je noktovizor regulovaná součást?", back: "Ne." },
     { id: "zaklady-k14", topic: T, front: "Co musí každý neprodleně ohlásit Policii ČR?", back: "Ztrátu nebo odcizení zbraně R1–R4 nebo PO a ostrou střelbu v nutné obraně či krajní nouzi." },
@@ -191,7 +191,7 @@ export const content: TopicContent = {
     },
     {
       id: "zaklady-x02", topic: T,
-      question: "Který předpis nahradil zákon č. 90/2024 Sb.?",
+      question: "Kterou dosavadní právní úpravu nahradil od 1. 1. 2026 nový zákon č. 90/2024 Sb., o zbraních a střelivu?",
       options: ["Zákon č. 119/2002 Sb., o zbraních", "Zákon č. 40/2009 Sb., trestní zákoník", "Zákon č. 91/2024 Sb., o munici"],
       correct: 0,
       explanation: "Nový zákon o zbraních a střelivu nahradil zákon č. 119/2002 Sb. Trestní zákoník platí dál a zákon o munici je samostatný předpis přijatý současně.",
@@ -283,7 +283,7 @@ export const content: TopicContent = {
       options: ["Kdykoli, má-li zbraň pojistku", "Například při lovu, sportovní střelbě, výcviku nebo kulturní akci", "Jen s rozšířeným zbrojním oprávněním, kdekoli"],
       correct: 1,
       explanation: "Zbraň se obecně nosí skrytě. Viditelné nošení zákon připouští jen při určitých akcích, jako je lov, sport, výcvik, kultura či rekonstrukce bitev.",
-      source: "§ 81 zákona č. 90/2024 Sb. (soubor MV ot. č. 322–328)",
+      source: "§ 80 a § 81 zákona č. 90/2024 Sb. (soubor MV ot. č. 322–328)",
     },
     {
       id: "zaklady-x14", topic: T,

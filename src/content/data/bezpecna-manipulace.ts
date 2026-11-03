@@ -64,7 +64,7 @@ export const content: TopicContent = {
             "Vyjměte zásobník (vždy jako první!).",
             "Natáhněte závěr, tím vyhodíte případný náboj z komory, a zajistěte závěr v zadní poloze.",
             "Zrakem (a případně hmatem) zkontrolujte nábojovou komoru a zásobníkovou šachtu.",
-            "Zbraň odkládejte se závěrem v zadní poloze, bez zásobníku, ústím do bezpečného směru.",
+            "Po kontrole lze závěr ponechat v zadní poloze (pokud to konstrukce umožňuje), nebo ho vypustit do přední polohy – v přední poloze se pak provede rána jistoty. Zbraň odkládejte bez zásobníku, ústím do bezpečného směru.",
           ],
           tip: "Pořadí je zásadní: když nejdřív natáhnete závěr a až pak vyjmete zásobník, závěr do komory zasune další náboj.",
           source: NV,
@@ -188,9 +188,11 @@ export const content: TopicContent = {
         {
           heading: "Alkohol, léky a návykové látky",
           paragraphs: [
-            "Se zbraní se nesmí nakládat pod vlivem alkoholu nebo jiné návykové látky. Pozor i na léky, které ovlivňují pozornost a reakce – čtěte příbalové informace.",
+            "Nikdo nesmí střílet nebo nosit zbraň pod vlivem alkoholu nebo jiné návykové látky, ani když je jeho schopnost bezpečně se zbraní zacházet snížena léky nebo zdravotním stavem.",
+            "Zakázáno je i manipulovat se zbraní nebo střelivem pod vlivem alkoholu či návykové látky tak, že tím ohrozíte život, zdraví nebo majetek jiné osoby. Pozor i na léky, které ovlivňují pozornost a reakce – čtěte příbalové informace.",
           ],
-          source: "zákon č. 90/2024 Sb.",
+          tip: "Žádná „povolená“ hladina alkoholu pro střelbu nebo nošení zbraně neexistuje.",
+          source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 71, 72)",
         },
         {
           heading: "Uložení a přenášení",
@@ -206,7 +208,7 @@ export const content: TopicContent = {
   glossary: [
     { term: "Bezpečný směr", topic: T, definition: "Směr, ve kterém by případný výstřel nikoho neohrozil a nezpůsobil škodu. Ústí hlavně v něm musí být po celou dobu manipulace." },
     { term: "Kontrola zbraně", topic: T, definition: "Postup, kterým se ověří, že ve zbrani není náboj, a zbraň se uvede do bezpečného stavu (vyjmout zásobník, otevřít závěr, zkontrolovat komoru).", source: NV },
-    { term: "Bezpečný stav", topic: T, definition: "Zbraň je vybitá, zkontrolovaná a odložená s otevřeným závěrem (nebo vyklopeným válcem) ústím do bezpečného směru." },
+    { term: "Bezpečný stav", topic: T, definition: "Zbraň je vybitá a zkontrolovaná, bez zásobníku, ústím do bezpečného směru; závěr otevřený, nebo vypuštěný dopředu po ráně jistoty (u revolveru vyklopený válec).", source: NV },
     { term: "Selhač", topic: T, definition: "Náboj po úderu na zápalku nevystřelil. Je nutné vyčkat alespoň 10 s se zbraní v bezpečném směru.", source: NV },
     { term: "Opožděný zážeh", topic: T, definition: "Náboj vystřelí se zpožděním po stisku spouště. Proto se po selhači čeká." },
     { term: "Slabá rána", topic: T, definition: "Nezvykle slabý výstřel s menším zpětným rázem. Střela mohla uvíznout v hlavni, proto se musí přestat střílet a hlaveň zkontrolovat." },
@@ -224,7 +226,7 @@ export const content: TopicContent = {
     { id: "bezpecna-manipulace-k05", topic: T, front: "Co je bezpečný směr?", back: "Směr, kde by případný výstřel nikoho neohrozil – na střelnici obvykle k terčům a do záchytného valu." },
     { id: "bezpecna-manipulace-k06", topic: T, front: "Co uděláte s pistolí při kontrole jako první?", back: "Vyjmete zásobník. Teprve pak natáhnete závěr." },
     { id: "bezpecna-manipulace-k07", topic: T, front: "Proč nejdřív zásobník a až pak závěr?", back: "Jinak by závěr při zasunutí dopředu nabil do komory další náboj ze zásobníku." },
-    { id: "bezpecna-manipulace-k08", topic: T, front: "Jak se odkládá zkontrolovaná pistole?", back: "Bez zásobníku, se závěrem zajištěným v zadní poloze, ústím do bezpečného směru." },
+    { id: "bezpecna-manipulace-k08", topic: T, front: "Jak se odkládá zkontrolovaná pistole?", back: "Bez zásobníku, ústím do bezpečného směru; závěr v zadní poloze, nebo vypuštěný dopředu a provedená rána jistoty." },
     { id: "bezpecna-manipulace-k09", topic: T, front: "Jak se kontroluje revolver?", back: "Vyklopit válec, vyjmout náboje a nábojnice, zkontrolovat všechny komory. Odložit s vyklopeným válcem." },
     { id: "bezpecna-manipulace-k10", topic: T, front: "Co je selhač?", back: "Náboj po úderu na zápalku nevystřelil." },
     { id: "bezpecna-manipulace-k11", topic: T, front: "Jak dlouho čekat po selhači?", back: "Alespoň 10 sekund (nebo déle podle výrobce) se zbraní v bezpečném směru." },
@@ -261,10 +263,10 @@ export const content: TopicContent = {
     {
       id: "bezpecna-manipulace-x03", topic: T,
       question: "Jak se odkládá zkontrolovaná samonabíjecí pistole?",
-      options: ["Se zasunutým prázdným zásobníkem a zavřeným závěrem", "S napnutým kohoutem a zajištěná pojistkou", "Bez zásobníku, se závěrem v zadní poloze, ústím do bezpečného směru"],
+      options: ["Se zasunutým prázdným zásobníkem, závěrem vpředu a napnutým kohoutem", "S nábojem v komoře, ale zajištěná pojistkou", "Bez zásobníku, ústím do bezpečného směru – závěr v zadní poloze, nebo vypuštěný dopředu s provedenou ránou jistoty"],
       correct: 2,
-      explanation: "Otevřený závěr a chybějící zásobník umožní každému na první pohled vidět, že je zbraň v bezpečném stavu.",
-      source: NV,
+      explanation: "Po kontrole lze závěr nechat v zadní poloze (umožňuje-li to konstrukce), nebo ho vypustit dopředu a provést ránu jistoty. Zásobník ve zbrani být nemá.",
+      source: `${NV} (soubor MV ot. č. 578)`,
     },
     {
       id: "bezpecna-manipulace-x04", topic: T,
@@ -300,11 +302,11 @@ export const content: TopicContent = {
     },
     {
       id: "bezpecna-manipulace-x08", topic: T,
-      question: "Kdo smí na střelnici zavelet zastavení palby?",
-      options: ["Pouze správce střelnice", "Pouze zkušební komisař", "Kdokoli, kdo zjistí nebezpečí"],
-      correct: 2,
-      explanation: "Bezpečnost má přednost. Každý, kdo vidí nebezpečí (např. osobu v prostoru terčů), má okamžitě volat zastavení palby.",
-      source: "zásady bezpečného zacházení se zbraní",
+      question: "Při střelbě zjistíte, že se v prostoru terčů pohybuje člověk. Co uděláte?",
+      options: ["Pokračuji ve střelbě, za bezpečnost odpovídá jen správce střelnice.", "Přestanu střílet, zbraň držím v bezpečném směru a okamžitě upozorním řídícího střelby (zavolám „stop“).", "Počkám, až člověk odejde, a mezitím přebiji."],
+      correct: 1,
+      explanation: "Pokyny na střelnici dává správce střelnice a řídící střelby, ale nebezpečí musí okamžitě ohlásit každý. Střelba se přeruší, prst jde mimo lučík a zbraň zůstává v bezpečném směru.",
+      source: "zásady bezpečného zacházení se zbraní; soubor MV ot. č. 255, 257",
     },
     {
       id: "bezpecna-manipulace-x09", topic: T,
@@ -332,11 +334,11 @@ export const content: TopicContent = {
     },
     {
       id: "bezpecna-manipulace-x12", topic: T,
-      question: "Smíte nakládat se zbraní po dvou pivech, pokud se cítíte v pořádku?",
-      options: ["Ano, pokud nestřílíte na veřejném místě.", "Ano, pokud máte rozšířené zbrojní oprávnění.", "Ne, se zbraní se nesmí nakládat pod vlivem alkoholu."],
+      question: "Smíte po dvou pivech střílet nebo nosit zbraň, pokud se cítíte v pořádku?",
+      options: ["Ano, pokud nestřílíte na veřejném místě.", "Ano, pokud máte rozšířené zbrojní oprávnění.", "Ne, střílet ani nosit zbraň pod vlivem alkoholu nesmí nikdo."],
       correct: 2,
-      explanation: "Zákon zakazuje nakládat se zbraní pod vlivem alkoholu nebo jiné návykové látky. Subjektivní pocit nehraje roli.",
-      source: "zákon č. 90/2024 Sb.",
+      explanation: "Zákon zakazuje střílet nebo nosit zbraň pod vlivem alkoholu nebo jiné návykové látky. Subjektivní pocit nehraje roli.",
+      source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 72)",
     },
     {
       id: "bezpecna-manipulace-x13", topic: T,
