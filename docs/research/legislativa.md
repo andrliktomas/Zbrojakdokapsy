@@ -358,14 +358,11 @@ na mv.gov.cz; případné sněmovní návrhy novel; právní posouzení doslovn�
 Test nanečisto: 17 (`zaklady` … `trestni-pravo`) + 5 (`nauka`) + 5 (`bezpecna-manipulace`) + 3 (`zdravoveda`),
 40 minut, obecné 26/30, rozšířené 28/30.
 
-**Pokrytí souboru MV v aplikaci** (podle čísel otázek, na které obsah odkazuje): oddíl I asi 58 %, II 85 %,
-III 97 %, **IV 97 %** (doplněno 3. 11. 2026; z původních 3 %), V asi 26 %. V oddílu IV zbývá jen 5 čistě
-obrazových otázek (674, 676, 677, 679, 680 – směr šipek a čísla dílů na fotografii, předmět munice), jejichž
-pojmy výklad pokrývá textem. Zbývající mezery: výjimky a povolení (199–218), zbrojní licence (164–196), provoz
-střelnic a příloha 3 (244–267, 555–561), zadržení a zajištění zbraně (400–410), znehodnocení a přebíjení
-(359–374), přeshraniční přemístění (376–384), definice přílohy 1 (450–492) a další stavy zdravovědy (poleptání,
-mdloba, páteř, krvácení z nosu).
-
+**Pokrytí souboru MV v aplikaci** (podle čísel otázek, na které obsah odkazuje; stav 3. 11. 2026):
+oddíl I 561/561, II 48/48, III 39/39, IV 146/151, V 38/38 – **celkem 832 z 837 otázek (99,4 %)**. Chybí jen
+5 čistě obrazových otázek oddílu IV (674, 676, 677, 679, 680 – směr šipek a čísla dílů na fotografii, předmět
+munice), jejichž pojmy výklad pokrývá textem. Obsah aplikace: 61 lekcí, 203 pojmů, 451 kartiček, 405 otázek
+(vlastní parafráze).
 ---
 
 ## 6. Ustanovení zákona č. 90/2024 Sb. podle témat [OVĚŘENO-TEXT]
@@ -425,7 +422,16 @@ nábojnic, školní náboj, Flobert, dostřely podle MV, krytí a zahrdlení, lo
 havárie zbraně, zkušební značky, pojmy ze střelnice), pojmy z 14 na 49, kartičky z 25 na 55, otázky z 18 na 54.
 Okruh `bezpecna-manipulace` doplněn o zásady bezpečného zacházení z ot. č. 784–799 (+6 otázek, +5 kartiček).
 
-**Doporučeno dál:** doplnit obsah pro zbývající mezery v pokrytí (kap. 5) a přeformulovat blízké parafráze otázek MV v `research-questions.json` (seznam v auditu: opravneni-10,
+**Doplnění zbývajících oblastí (3. 11. 2026):** základy a obecné povinnosti (§ 11), kategorie a práva ke
+střelivu, zbrojní licence, výjimky a povolení R3, zkušební komisař, střelnice (§ 59–69, příloha č. 3),
+registrace a evidence u držitelů ZL, označování zbraní, úpravy a znehodnocení, přebíjení, přeshraniční
+přemístění, nález, zadržení a zajištění zbraně, státní správa a přestupky, zdravotnické minimum (mdloba,
+páteř, krvácení z nosu, poleptání aj.). Drobné nesoulady MV × zákon zjištěné při psaní (učí se odpověď MV,
+zákon je uveden v tipu): MV 185/186 (horní hranice pokuty u ZL), MV 197/201 (ZL3 u výjimek – opora v § 37
+odst. 5), MV 384 (trvalý dovoz jen držitel ZL × § 108 odst. 1 věta druhá), MV 407 (postup při zajištění ×
+§ 123 a § 15 odst. 4), MV 250 (provozní kniha 36 měsíců), MV 51/52 (nadlimitní zásobník a výjimka R2/S2).
+
+**Doporučeno dál:** přeformulovat blízké parafráze otázek MV v `research-questions.json` (seznam v auditu: opravneni-10,
 zkouska-08, strelnice-x04, kategorie-01/02/05, opravneni-04, nakladani-08, nauka-02, zdravoveda-01/03/04,
 bezpecna-manipulace-02/03, zkouska-07, zaklady-x08, nakladani-x02) – nebo, po právním posouzení, nabídnout
 přímo oficiální znění otázek s uvedením zdroje.
