@@ -6,6 +6,7 @@ import type { TopicContent } from "../types";
 
 const T = "trestni-pravo";
 const TZ = "zákona č. 40/2009 Sb., trestní zákoník";
+const MV = (n: string) => `soubor otázek MV (verze 15. 12. 2025), ot. č. ${n}`;
 
 export const content: TopicContent = {
   lessons: [
@@ -178,6 +179,15 @@ export const content: TopicContent = {
           source: `${TZ}; soubor MV ot. č. 629`,
         },
         {
+          heading: "Dovoz, vývoz a průvoz zbraní",
+          paragraphs: [
+            "Kdo podstatně ohrozí obecný zájem tím, že poruší zákaz, omezení nebo jinou důležitou povinnost stanovenou pro dovoz, vývoz nebo průvoz zboží, spáchá trestný čin porušení předpisů o oběhu zboží ve styku s cizinou (§ 261 trestního zákoníku).",
+            "Týká-li se takový čin zbraně, munice nebo většího množství střeliva, hrozí přísnější trest – odnětí svobody na jeden rok až pět let.",
+          ],
+          tip: "Nejde o pouhý přestupek podle zákona o zbraních ani o daňový delikt. Porušení pravidel pro dovoz, vývoz nebo průvoz zbraní je trestný čin podle § 261 trestního zákoníku.",
+          source: `§ 261 ${TZ}; ${MV("630")}`,
+        },
+        {
           heading: "Další předpisy, které musíte znát",
           bullets: [
             "Listina základních práv a svobod – právo bránit život svůj i jiného i se zbraní; právo nabývat, držet a nosit zbraně za podmínek zákona,",
@@ -208,6 +218,7 @@ export const content: TopicContent = {
     { term: "Subsidiarita", topic: T, definition: "Podmínka krajní nouze: nebezpečí nešlo za daných okolností odvrátit jinak.", source: `§ 28 ${TZ}` },
     { term: "Exces (překročení mezí)", topic: T, definition: "Situace, kdy obránce překročí meze nutné obrany. Nejde o nutnou obranu, ale soud to zohlední jako polehčující okolnost.", source: "soubor MV ot. č. 648" },
     { term: "Nedovolené ozbrojování", topic: T, definition: "Trestný čin, např. výroba nebo přechovávání zbraně bez povolení nebo odstranění označení zbraně.", source: "soubor MV ot. č. 629" },
+    { term: "Porušení předpisů o oběhu zboží ve styku s cizinou", topic: T, definition: "Trestný čin podle § 261 trestního zákoníku: podstatné ohrožení obecného zájmu porušením zákazu, omezení nebo důležité povinnosti při dovozu, vývozu či průvozu zboží. U zbraní, munice nebo většího množství střeliva hrozí 1 až 5 let.", source: `§ 261 ${TZ}; ${MV("630")}` },
     { term: "Neposkytnutí pomoci", topic: T, definition: "Trestný čin podle § 150 a § 151 trestního zákoníku – nesplnění povinnosti poskytnout potřebnou pomoc.", source: `§ 150 a § 151 ${TZ}` },
     { term: "ČÚZZS", topic: T, definition: "Český úřad pro zkoušení zbraní a střeliva – ověřuje zbraně a střelivo a stanoví nejasnou kategorii zbraně.", source: "zákon č. 156/2000 Sb.; soubor MV ot. č. 420, 624–628" },
   ],
@@ -233,6 +244,8 @@ export const content: TopicContent = {
     { id: "trestni-pravo-k18", topic: T, front: "Zákon č. 91/2024 Sb.", back: "Zákon o munici – samostatný režim pro civilní nakládání s municí." },
     { id: "trestni-pravo-k19", topic: T, front: "Kdo ověřuje zbraně a střelivo?", back: "Český úřad pro zkoušení zbraní a střeliva (ČÚZZS)." },
     { id: "trestni-pravo-k20", topic: T, front: "Písmeno „X“ přes zkušební značky", back: "Ověření zbraně je neplatné." },
+    { id: "trestni-pravo-k21", topic: T, front: "Porušení zákazu nebo povinnosti při dovozu, vývozu či průvozu zbraně – co to je?", back: "Trestný čin podle § 261 trestního zákoníku (porušení předpisů o oběhu zboží ve styku s cizinou)." },
+    { id: "trestni-pravo-k22", topic: T, front: "§ 261 TZ – trest, týká-li se čin zbraně, munice nebo většího množství střeliva", back: "Odnětí svobody na jeden rok až pět let." },
   ],
 
   questions: [
