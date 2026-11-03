@@ -251,6 +251,8 @@ export const content: TopicContent = {
     { term: "Selhač", topic: T, definition: "Náboj, který po úderu nevystřelil; u zkoušky je nutné vyčkat alespoň 10 s se zbraní v bezpečném směru.", source: "soubor MV ot. č. 586" },
     { term: "NV č. 238/2025 Sb.", topic: T, definition: "Nařízení vlády o provádění zkoušek: průběh zkoušky, skladba testu 17/5/5/3, pravidla střelby; příloha č. 2 obsahuje postupy manipulace se zbraní. Počet otázek, čas a hranice úspěšnosti stanoví přímo zákon (§ 20 odst. 3).", source: "NV č. 238/2025 Sb." },
     { term: "Soubor testových otázek MV", topic: T, definition: "Oficiální zveřejněný soubor otázek pro teoretickou část (verze 15. 12. 2025, 837 otázek, vždy 3 možnosti a 1 správná).", source: "mv.gov.cz/zbrojni-opravneni" },
+    { term: "Zkouška zkušebního komisaře", topic: T, definition: "Zkouška před komisí jmenovanou MV: písemný test (alespoň 57 z 60 otázek za 60 minut), pohovor a praktická část. Skládá se do 12 měsíců od podání žádosti, opakovat ji lze jednou; komisionální zkouška neexistuje.", source: `§ 34 odst. 2–5 zákona č. 90/2024 Sb.; ${MV("150")}` },
+    { term: "Odvolání zkušebního komisaře", topic: T, definition: "Rozhodnutí MV při závažném či opakovaném porušení povinností, opakovaném znemožňování účelu zkoušky nebo ztrátě podmínky pro jmenování. Odvolání proti němu nemá odkladný účinek.", source: `§ 36 odst. 2 a 4 zákona č. 90/2024 Sb.; ${MV("153, 154")}` },
   ],
 
   flashcards: [
@@ -277,6 +279,13 @@ export const content: TopicContent = {
     { id: "zkouska-k19", topic: T, front: "Selhač – jak dlouho vyčkat?", back: "Alespoň 10 sekund." },
     { id: "zkouska-k20", topic: T, front: "Správní poplatek za žádost o ZO", back: "3 000 Kč, přes Podací portál MV 2 400 Kč." },
     { id: "zkouska-k21", topic: T, front: "Co poplatek nezahrnuje?", back: "Použití zkouškové střelnice a lékařský posudek. Odměnu komisaře platí policie." },
+    { id: "zkouska-k24", topic: T, front: "Na jak dlouho se jmenuje zkušební komisař?", back: "Na 5 let; jmenuje ho ministerstvo vnitra." },
+    { id: "zkouska-k25", topic: T, front: "Neúspěch u zkoušky zkušebního komisaře – co dál?", back: "Jedno opakování v rámci 12 měsíců od podání žádosti. Komisionální zkouška pro komisaře neexistuje." },
+    { id: "zkouska-k26", topic: T, front: "Kdy komisař nesmí zkoušet?", back: "Po dobu pozastavení jeho ZO, během řízení o jeho odvolání a po dobu zařazení na zbrojní úsek KŘP, PP nebo MV." },
+    { id: "zkouska-k27", topic: T, front: "Smí policista ze zbrojního úseku KŘP vykonávat funkci zkušebního komisaře?", back: "Ne, po dobu takového zařazení nesmí – ani se souhlasem MV." },
+    { id: "zkouska-k28", topic: T, front: "Kdo a proč odvolá zkušebního komisaře?", back: "MV: závažné nebo opakované porušení povinností, opakované znemožňování účelu zkoušky, ztráta podmínky pro jmenování." },
+    { id: "zkouska-k29", topic: T, front: "Kdy zaniká oprávnění zkušebního komisaře?", back: "Zánikem jeho ZO, právní mocí rozhodnutí o odvolání, dnem po vzdání se." },
+    { id: "zkouska-k30", topic: T, front: "Komisař přestal splňovat podmínku pro jmenování – zaniká oprávnění samo?", back: "Ne. Je to důvod, aby ho MV odvolalo." },
   ],
 
   questions: [
@@ -407,6 +416,30 @@ export const content: TopicContent = {
       correct: 1,
       explanation: "Poplatek pokrývá odměnu komisaře (hradí ji KŘP) i případné opakování. Použití zkouškové střelnice platí žadatel zvlášť podle ceníku provozovatele.",
       source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 143)",
+    },
+    {
+      id: "zkouska-x17", topic: T,
+      question: "Uchazeč o funkci zkušebního komisaře u zkoušky zkušebního komisaře neuspěl. Jakou má možnost?",
+      options: ["Může ji opakovat neomezeně, dokud nesloží", "Čeká ho komisionální zkouška před Policejním prezidiem", "Může ji jednou opakovat, a to do 12 měsíců od podání žádosti"],
+      correct: 2,
+      explanation: "Zkoušku zkušebního komisaře lze v 12měsíční lhůtě jednou opakovat. Komisionální zkoušku zákon zná jen u žadatelů o zbrojní oprávnění, ne u budoucích komisařů.",
+      source: `§ 34 odst. 2 zákona č. 90/2024 Sb.; ${MV("150")}`,
+    },
+    {
+      id: "zkouska-x18", topic: T,
+      question: "Ve které situaci zkušební komisař NESMÍ vést zkoušku odborné způsobilosti?",
+      options: ["Když žadatel z jeho minulého termínu podal protest", "Když má pozastavené zbrojní oprávnění", "Když v daném měsíci vedl už více než pět zkoušek"],
+      correct: 1,
+      explanation: "Komisař nesmí zkoušet po dobu pozastavení svého zbrojního oprávnění, během řízení o svém odvolání a po dobu zařazení na zbrojní úsek KŘP, Policejního prezidia nebo ministerstva. Protest ani počet zkoušek překážkou nejsou.",
+      source: `§ 36 odst. 1 zákona č. 90/2024 Sb.; ${MV("151, 152")}`,
+    },
+    {
+      id: "zkouska-x19", topic: T,
+      question: "Zkušební komisař přestal splňovat jednu z podmínek pro jmenování. Co následuje?",
+      options: ["Ministerstvo vnitra ho odvolá", "Jeho oprávnění zaniká samo následující den", "Policejní prezidium ho přeřadí do jiného kraje"],
+      correct: 0,
+      explanation: "Ztráta podmínky pro jmenování je důvodem k odvolání ministerstvem vnitra; oprávnění samo nezaniká. Automaticky zaniká jen se zánikem zbrojního oprávnění komisaře, právní mocí rozhodnutí o odvolání nebo dnem po vzdání se.",
+      source: `§ 36 odst. 2 a 3 zákona č. 90/2024 Sb.; ${MV("153–156")}`,
     },
   ],
 };
