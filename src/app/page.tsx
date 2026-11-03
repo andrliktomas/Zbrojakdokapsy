@@ -5,6 +5,14 @@ import { EXAM, TOPICS } from "@/content";
 import { PLANS } from "@/lib/plans";
 import { XP } from "@/lib/gamification";
 import { StreakBadge, XpChip } from "@/components/ui";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Příprava na zkoušku zbrojního oprávnění 2026",
+  path: "/",
+  description:
+    "Příprava na zkoušku odborné způsobilosti podle zákona č. 90/2024 Sb.: výklad 10 okruhů, kartičky, procvičování, trenažér praktické části a test nanečisto 30 otázek / 40 minut.",
+});
 
 // Ikony režimů (z návrhu A-Web): Grafit + jeden signální tah.
 const MODE_ICONS = {

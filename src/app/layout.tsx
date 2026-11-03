@@ -15,10 +15,14 @@ import { HeaderStats } from "@/components/HeaderStats";
 import { Logo } from "@/components/Logo";
 import { NavLinks } from "@/components/NavLinks";
 import { PwaRegister } from "@/components/PwaRegister";
+import { siteUrl, SITE_NAME } from "@/lib/seo";
 import { logout } from "./actions/auth";
 
 export const metadata: Metadata = {
-  title: "Zbroják do kapsy – příprava na zkoušku zbrojního oprávnění",
+  metadataBase: new URL(siteUrl()),
+  title: { default: "Zbroják do kapsy – příprava na zkoušku zbrojního oprávnění", template: "%s | Zbroják do kapsy" },
+  openGraph: { type: "website", siteName: SITE_NAME, locale: "cs_CZ" },
+  twitter: { card: "summary_large_image" },
   description:
     "Interaktivní učebnice ke zkoušce odborné způsobilosti podle zákona č. 90/2024 Sb. – výklad, kartičky, náhodné otázky a cvičné testy.",
   appleWebApp: { capable: true, title: "Zbroják", statusBarStyle: "default" },
@@ -89,6 +93,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             ) : (
               <nav aria-label="Hlavní" className="ml-auto flex items-center gap-0.5 sm:gap-1">
                 <Link href="/#rezimy" className="btn-ghost hidden md:inline-flex">Jak to funguje</Link>
+                <Link href="/clanky" className="btn-ghost hidden sm:inline-flex">Články</Link>
                 <Link href="/cenik" className="btn-ghost px-2.5 max-[359px]:hidden sm:px-3">Ceník</Link>
                 <Link href="/prihlaseni" className="btn-ghost px-2.5 sm:px-3">Přihlásit</Link>
                 <Link href="/registrace" className="btn-primary ml-1 gap-0 px-4">
@@ -122,6 +127,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </div>
             <nav aria-label="Patička">
               <ul className="-mx-2 flex flex-wrap gap-x-1 sm:mx-0 sm:-mr-2 sm:justify-end">
+                <li><Link href="/clanky" className="btn-ghost px-2 text-sm">Články ke zkoušce</Link></li>
                 <li><Link href="/cenik" className="btn-ghost px-2 text-sm">Ceník</Link></li>
                 {user ? (
                   <>

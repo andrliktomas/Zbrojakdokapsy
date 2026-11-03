@@ -5,6 +5,14 @@ import { getAccessEnd } from "@/lib/access";
 import { TOPICS } from "@/content";
 import { CheckIcon, PageHeader, plural } from "@/components/ui";
 import { startCheckout } from "../actions/billing";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Ceník přípravy na zbrojní oprávnění",
+  path: "/cenik",
+  description:
+    "Jednorázové balíčky přípravy na zkoušku zbrojního oprávnění na 3 týdny až 3 měsíce, bez automatického obnovování. Ukázkové okruhy zdarma.",
+});
 
 const FEATURES = [
   "Kompletní výklad všech zkouškových okruhů",

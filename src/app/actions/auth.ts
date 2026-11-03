@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 import { redirect } from "next/navigation";
 import { z } from "zod";
 import { db } from "@/lib/db";
-import { createSession, destroySession } from "@/lib/auth";
+import { createSession, destroySession, safeNextPath } from "@/lib/auth";
 
 export type FormState = { error?: string } | undefined;
 
@@ -42,8 +42,7 @@ export async function login(_: FormState, formData: FormData): Promise<FormState
     return { error: "Nesprávný e-mail nebo heslo" };
   }
   await createSession(user.id);
-  const next = String(formData.get("next") ?? "");
-  redirect(next.startsWith("/") && !next.startsWith("//") ? next : "/prehled");
+  redirect(safeNextPath(String(formData.get("next") ?? "")) ?? "/prehled");
 }
 
 export async function logout() {

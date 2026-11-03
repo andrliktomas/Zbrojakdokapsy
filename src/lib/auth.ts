@@ -1,5 +1,5 @@
 import "server-only";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import { createHash, randomBytes } from "node:crypto";
 import { cache } from "react";
@@ -38,8 +38,17 @@ export const getCurrentUser = cache(async () => {
   return session.user;
 });
 
+/** Bezpečná interní cesta pro přesměrování po přihlášení (žádné //host ani zpětná lomítka). */
+export function safeNextPath(next: string | null | undefined): string | null {
+  if (!next || !next.startsWith("/") || next.startsWith("//") || next.includes("\\")) return null;
+  return next;
+}
+
 export async function requireUser() {
   const user = await getCurrentUser();
-  if (!user) redirect("/prihlaseni");
+  if (!user) {
+    const next = safeNextPath((await headers()).get("x-pathname"));
+    redirect(next && next !== "/prehled" ? `/prihlaseni?next=${encodeURIComponent(next)}` : "/prihlaseni");
+  }
   return user;
 }
