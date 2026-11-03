@@ -1,40 +1,192 @@
 @import "tailwindcss";
 
+/*
+ * Vizuální styl „A · Terč“.
+ * Grafit (ink) + Papír (paper), bílé karty, Signál (oranžová) jen na hlavní akci a zásah,
+ * Zásah (zelená) pro správné odpovědi, Ocel pro sekundární text.
+ *
+ * Starší názvy tokenů (brand-*, accent-*) zůstávají kvůli stránkám, které je používají,
+ * ale mají hodnoty nové značky: brand = grafitová škála, accent = Signál.
+ */
 @theme {
-  --color-brand-50: #f3f6ee;
-  --color-brand-100: #e3ead6;
-  --color-brand-200: #c8d6b0;
-  --color-brand-500: #5f7a3a;
-  --color-brand-600: #4b6229;
-  --color-brand-700: #3b4d21;
-  --color-brand-900: #1f2912;
-  --color-accent-400: #f3b33d;
-  --color-accent-500: #e09a17;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  /* --- Základní barvy značky --- */
+  --color-ink: #15181d; /* Grafit */
+  --color-ink-2: #22272e; /* vyvýšená tmavá plocha */
+  --color-ink-3: #3a4049;
+  --color-paper: #f3f1ec; /* Papír – podklad stránky */
+  --color-line: #dcd7cc;
+  --color-line-strong: #c9c4b8;
+  --color-ocel: #5b6470; /* sekundární text, 5,3:1 na Papíru */
+  --color-ocel-light: #a8b0ba; /* sekundární text na Grafitu */
+  --color-signal: #e8590c; /* pozadí hlavní akce, text vždy Grafit (5:1) */
+  --color-signal-hover: #f06a1f;
+  --color-signal-text: #b8460a; /* oranžový text/odkazy na světlém (4,75:1 na Papíru) */
+  --color-signal-50: #fcebdd;
+  --color-zasah: #276b43; /* správně */
+  --color-zasah-50: #e7f1ea;
+  --color-zasah-700: #1e5435;
+  --color-chyba: #c0392b; /* chyba */
+  --color-chyba-50: #fbedeb;
+
+  /* --- Kompatibilní tokeny (brand = grafit, accent = signál) --- */
+  --color-brand-50: #eeebe4;
+  --color-brand-100: #e4e0d6;
+  --color-brand-200: #dcd7cc;
+  --color-brand-300: #c9c4b8;
+  --color-brand-400: #8a919b;
+  --color-brand-500: #3a4049;
+  --color-brand-600: #22272e;
+  --color-brand-700: #15181d;
+  --color-brand-800: #101317;
+  --color-brand-900: #0b0d10;
+  --color-accent-300: #f06a1f;
+  --color-accent-400: #e8590c;
+  --color-accent-500: #d24e08;
+  --color-accent-600: #b8460a;
+  --color-accent-700: #9c3b08;
+
+  /* Neutrální škála sladěná se značkou (Ocel místo teplé hnědošedé). */
+  --color-stone-50: #f7f6f2;
+  --color-stone-100: #eceae3;
+  --color-stone-200: #dcd7cc;
+  --color-stone-300: #c9c4b8;
+  --color-stone-400: #8a919b;
+  --color-stone-500: #5b6470;
+  --color-stone-600: #4d5560;
+  --color-stone-700: #3d444d;
+  --color-stone-800: #262b32;
+  --color-stone-900: #15181d;
+  --color-red-600: #c0392b;
+  --color-red-700: #a12f24;
+
+  /* --- Písmo --- */
+  --font-sans: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* --- Zaoblení: tlačítka 6 px, karty 8–10 px --- */
+  --radius-xl: 0.5rem;
+  --radius-2xl: 0.625rem;
+  --radius-3xl: 0.75rem;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: 8rem;
 }
 
 body {
-  @apply bg-stone-50 text-stone-900 antialiased;
+  @apply bg-paper font-sans text-ink antialiased;
+  overflow-x: clip;
 }
 
+@keyframes xp-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+::selection {
+  background: var(--color-signal-50);
+  color: var(--color-ink);
+}
+
+/*
+ * Viditelný fokus všude (Signál má ≥3:1 na Papíru, bílé i Grafitu).
+ * Barvu obrysu nastavujeme předem, aby ji `transition-colors` neanimoval z Grafitu.
+ */
+:where(a, button, input, select, textarea, summary, [tabindex]) {
+  outline-color: var(--color-signal);
+}
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--color-signal);
+  outline-offset: 2px;
+}
+
+/* ---------- Tlačítka ---------- */
 @utility btn {
-  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed;
+  @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-md border-2 border-transparent px-5 py-2 text-[15px] leading-tight font-bold transition-colors select-none disabled:cursor-not-allowed disabled:opacity-50;
 }
+/* Pracovní hlavní tlačítko – Grafit. */
 @utility btn-primary {
-  @apply btn bg-brand-600 text-white hover:bg-brand-700;
+  @apply btn bg-ink text-paper hover:bg-ink-2 hover:text-white;
 }
+/* Obrysové tlačítko. */
 @utility btn-secondary {
-  @apply btn bg-white text-stone-800 ring-1 ring-stone-300 hover:bg-stone-100;
+  @apply btn border-ink bg-transparent text-ink hover:bg-ink/5;
 }
+/* Signálová výzva k akci – střídmě, jedna na obrazovku. */
 @utility btn-accent {
-  @apply btn bg-accent-400 text-stone-900 hover:bg-accent-500;
+  @apply btn bg-signal font-extrabold text-ink hover:bg-signal-hover;
 }
+/* Nenápadné tlačítko / odkaz v navigaci. */
+@utility btn-ghost {
+  @apply btn px-3 font-semibold text-ink hover:bg-ink/5;
+}
+
+/* ---------- Plochy ---------- */
 @utility card {
-  @apply rounded-2xl bg-white p-5 shadow-sm ring-1 ring-stone-200;
+  @apply rounded-[10px] bg-white p-5 ring-1 ring-line;
 }
+
+/* ---------- Formuláře ---------- */
 @utility input {
-  @apply w-full rounded-xl border border-stone-300 bg-white px-3 py-2.5 outline-none focus:border-brand-500 focus:ring-2 focus:ring-brand-200;
+  @apply min-h-11 w-full rounded-md border-2 border-line-strong bg-white px-3 py-2 text-base text-ink transition-colors placeholder:text-ocel hover:border-ocel focus:border-ink;
 }
 @utility label {
-  @apply mb-1 block text-sm font-medium text-stone-700;
+  @apply mb-1.5 block text-sm font-semibold text-ink;
+}
+
+/* ---------- Drobné prvky ---------- */
+/* Malý popisek v mono verzálkách (OTÁZKA 07/20, LHŮTA, § …). */
+@utility eyebrow {
+  @apply font-mono text-xs font-semibold tracking-[0.14em] text-ocel uppercase;
+}
+/* Štítek v mono – plný Grafit. */
+@utility chip {
+  @apply inline-flex items-center gap-1.5 rounded-sm bg-ink px-2 py-1 font-mono text-[11px] leading-none font-semibold tracking-[0.12em] text-paper uppercase;
+}
+/* Štítek v mono – obrysový. */
+@utility chip-outline {
+  @apply inline-flex items-center gap-1.5 rounded-sm border-[1.5px] border-current px-2 py-1 font-mono text-[11px] leading-none font-semibold tracking-[0.12em] uppercase;
+}
+/* XP odznak: Grafit + mono. */
+@utility xp-chip {
+  @apply inline-flex items-center gap-1.5 rounded-md bg-ink px-2.5 py-1.5 font-mono text-sm leading-none font-semibold whitespace-nowrap text-paper;
+  word-spacing: -0.3em;
+}
+/* Filtrační přepínač (okruhy u kartiček, procvičování). */
+@utility pill {
+  @apply inline-flex min-h-11 shrink-0 items-center gap-1.5 rounded-md border-2 border-line-strong bg-white px-3 text-sm font-semibold whitespace-nowrap text-ink transition-colors hover:border-ink;
+}
+@utility pill-active {
+  @apply pill border-ink bg-ink text-paper hover:border-ink;
+}
+/* Odkaz v textu – Signál text. */
+@utility link {
+  @apply font-semibold text-signal-text underline decoration-2 underline-offset-[3px] hover:text-ink;
+}
+/* Čísla, lhůty, paragrafy v textu (mezery v mono jsou široké, proto je zúžíme). */
+@utility num {
+  @apply font-mono font-semibold tabular-nums;
+  word-spacing: -0.3em;
+}
+/*
+ * Pás přes celou šířku okna uvnitř centrovaného obsahu. Pozadí se kreslí přes border-image
+ * s přesahem do stran – nezabírá místo v layoutu a nevyrobí vodorovný posuvník.
+ */
+@utility bleed-band {
+  border-image: linear-gradient(
+      var(--color-line) 0 1px,
+      #fff 1px calc(100% - 1px),
+      var(--color-line) calc(100% - 1px)
+    )
+    fill 0 / 0 / 0 100vmax;
+}
+@utility bleed-ink {
+  border-image: linear-gradient(var(--color-ink) 0 0) fill 0 / 0 / 0 100vmax;
 }

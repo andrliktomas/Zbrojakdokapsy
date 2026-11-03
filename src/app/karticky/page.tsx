@@ -5,7 +5,7 @@ import { db } from "@/lib/db";
 import { FLASHCARDS, FREE_TOPICS, TOPICS, topicBySlug } from "@/content";
 import { accessibleTopics } from "@/lib/content-access";
 import { FlashcardDeck } from "@/components/FlashcardDeck";
-import { Paywall } from "@/components/ui";
+import { LockIcon, PageHeader, Paywall } from "@/components/ui";
 import { shuffle } from "@/lib/gamification";
 
 const SESSION_SIZE = 20;
@@ -33,15 +33,39 @@ export default async function CardsPage({ searchParams }: { searchParams: Promis
 
   return (
     <div className="space-y-6">
-      <div className="flex flex-wrap items-center gap-2">
-        <h1 className="mr-auto text-2xl font-bold">Učební kartičky</h1>
-        <Link href="/karticky" className={`rounded-full px-3 py-1 text-sm ${!okruh ? "bg-brand-600 text-white" : "bg-stone-200"}`}>Vše</Link>
-        {TOPICS.map((t) => (
-          <Link key={t.slug} href={`/karticky?okruh=${t.slug}`} className={`rounded-full px-3 py-1 text-sm ${okruh === t.slug ? "bg-brand-600 text-white" : "bg-stone-200"}`}>
-            {t.icon} {t.title}{!paid && !FREE_TOPICS.has(t.slug) ? " 🔒" : ""}
-          </Link>
-        ))}
-      </div>
+      <PageHeader eyebrow="Chytré opakování" title="Učební kartičky">
+        Co umíte, uvidíte méně často. Co neumíte, vrátí se ještě v této sadě.
+      </PageHeader>
+      <nav aria-label="Výběr okruhu" className="-mx-4 sm:mx-0">
+        <ul className="flex gap-2 overflow-x-auto px-4 pb-1 [scrollbar-width:thin] sm:flex-wrap sm:overflow-visible sm:px-0">
+          <li>
+            <Link href="/karticky" aria-current={!okruh ? "page" : undefined} className={!okruh ? "pill-active" : "pill"}>
+              Vše
+            </Link>
+          </li>
+          {TOPICS.map((t) => {
+            const locked = !paid && !FREE_TOPICS.has(t.slug);
+            const active = okruh === t.slug;
+            return (
+              <li key={t.slug}>
+                <Link
+                  href={`/karticky?okruh=${t.slug}`}
+                  aria-current={active ? "page" : undefined}
+                  className={`${active ? "pill-active" : "pill"} ${locked ? "text-ocel" : ""}`}
+                >
+                  {t.title}
+                  {locked && (
+                    <>
+                      <LockIcon size={13} />
+                      <span className="sr-only">(v placeném balíčku)</span>
+                    </>
+                  )}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </nav>
       <FlashcardDeck key={okruh ?? "all"} cards={session} />
     </div>
   );
