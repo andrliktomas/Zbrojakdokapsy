@@ -3,38 +3,62 @@ import { requireUser } from "@/lib/auth";
 import { hasAccess } from "@/lib/access";
 import { computeTopicStats } from "@/lib/progress";
 import { LESSONS, FREE_TOPICS } from "@/content";
-import { ProgressBar, pct } from "@/components/ui";
+import { LockIcon, PageHeader, ProgressBar, pct, plural } from "@/components/ui";
 
 export default async function TopicsPage() {
   const user = await requireUser();
   const [paid, { stats }] = await Promise.all([hasAccess(user.id), computeTopicStats(user.id)]);
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-bold">Výklad podle okruhů</h1>
-        <p className="text-stone-600">Každý okruh obsahuje výklad, vysvětlivky pojmů, kartičky a otázky k procvičení.</p>
-      </div>
-      <div className="grid gap-4 md:grid-cols-2">
-        {stats.map((s) => {
-          const locked = !paid && !FREE_TOPICS.has(s.topic.slug);
+      <PageHeader eyebrow={`${stats.length} ${plural(stats.length, "okruh", "okruhy", "okruhů")} podle zkoušky`} title="Výklad podle okruhů">
+        Každý okruh obsahuje výklad, vysvětlivky pojmů, kartičky a otázky k procvičení.
+      </PageHeader>
+      {!paid && (
+        <p className="flex flex-wrap items-center gap-x-3 gap-y-2 rounded-md border-l-4 border-signal bg-white px-4 py-3 ring-1 ring-line">
+          <span>Okruhy označené <span className="chip-outline text-zasah">Zdarma</span> máte k dispozici hned. Ostatní odemkne balíček.</span>
+          <Link href="/cenik" className="link">Ceník</Link>
+        </p>
+      )}
+      <ol className="grid gap-3 sm:grid-cols-2 sm:gap-4">
+        {stats.map((s, i) => {
+          const free = FREE_TOPICS.has(s.topic.slug);
+          const locked = !paid && !free;
+          const lessons = LESSONS.filter((l) => l.topic === s.topic.slug).length;
           return (
-            <Link key={s.topic.slug} href={`/okruhy/${s.topic.slug}`} className="card block transition hover:shadow-md">
-              <div className="flex items-start justify-between gap-2">
-                <h2 className="text-lg font-bold">{s.topic.icon} {s.topic.title}</h2>
-                {locked ? <span title="V placeném balíčku">🔒</span> : FREE_TOPICS.has(s.topic.slug) && !paid ? <span className="rounded-full bg-brand-100 px-2 text-xs font-semibold text-brand-700">zdarma</span> : null}
-              </div>
-              <p className="mt-1 text-sm text-stone-600">{s.topic.summary}</p>
-              <div className="mt-3 flex items-center gap-3">
-                <ProgressBar value={s.mastery} />
-                <span className="text-sm font-semibold">{pct(s.mastery)}</span>
-              </div>
-              <p className="mt-1 text-xs text-stone-500">
-                {LESSONS.filter((l) => l.topic === s.topic.slug).length} lekcí · {s.questions.total} otázek · {s.cardsTotal} kartiček
-              </p>
-            </Link>
+            <li key={s.topic.slug}>
+              <Link
+                href={`/okruhy/${s.topic.slug}`}
+                className="card group flex h-full flex-col gap-3 transition-shadow hover:ring-2 hover:ring-ink"
+              >
+                <div className="flex items-start gap-3">
+                  <span className="pt-1 font-mono text-sm font-semibold text-ocel">{String(i + 1).padStart(2, "0")}</span>
+                  <h2 className="flex-1 text-lg leading-snug font-extrabold group-hover:underline group-hover:decoration-2 group-hover:underline-offset-4">
+                    {s.topic.title}
+                  </h2>
+                  {locked ? (
+                    <span className="chip-outline mt-0.5 shrink-0 text-ocel">
+                      <LockIcon size={12} />
+                      Balíček
+                    </span>
+                  ) : free && !paid ? (
+                    <span className="chip-outline mt-0.5 shrink-0 text-zasah">Zdarma</span>
+                  ) : null}
+                </div>
+                <p className="text-sm leading-relaxed text-stone-700">{s.topic.summary}</p>
+                <div className="mt-auto flex items-center gap-3 pt-1">
+                  <ProgressBar value={s.mastery} label={`Zvládnutí okruhu ${s.topic.title}`} />
+                  <span className="num w-12 shrink-0 text-right text-sm">{pct(s.mastery)}</span>
+                </div>
+                <p className="font-mono text-xs text-ocel [word-spacing:-0.2em]">
+                  {lessons} {plural(lessons, "lekce", "lekce", "lekcí")} · {s.questions.total}{" "}
+                  {plural(s.questions.total, "otázka", "otázky", "otázek")} · {s.cardsTotal}{" "}
+                  {plural(s.cardsTotal, "kartička", "kartičky", "kartiček")}
+                </p>
+              </Link>
+            </li>
           );
         })}
-      </div>
+      </ol>
     </div>
   );
 }

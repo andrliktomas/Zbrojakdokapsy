@@ -1,8 +1,10 @@
+import Link from "next/link";
 import { PLANS } from "@/lib/plans";
 import { getCurrentUser } from "@/lib/auth";
 import { getAccessEnd } from "@/lib/access";
+import { TOPICS } from "@/content";
+import { CheckIcon, PageHeader, plural } from "@/components/ui";
 import { startCheckout } from "../actions/billing";
-import Link from "next/link";
 
 const FEATURES = [
   "Kompletní výklad všech zkouškových okruhů",
@@ -13,42 +15,96 @@ const FEATURES = [
   "Body, levely, série a odznaky",
 ];
 
+const perDay = (price: number, days: number) =>
+  (price / days).toLocaleString("cs-CZ", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
 export default async function PricingPage({ searchParams }: { searchParams: Promise<{ expired?: string; zruseno?: string }> }) {
   const [user, sp] = await Promise.all([getCurrentUser(), searchParams]);
   const accessEnd = user ? await getAccessEnd(user.id) : null;
+  const freeTopics = TOPICS.filter((t) => t.free);
+
   return (
     <div className="space-y-8">
-      <div className="text-center">
-        <h1 className="text-3xl font-extrabold">Vyberte si délku přípravy</h1>
-        <p className="mt-2 text-stone-600">Jednorázová platba, žádné automatické obnovování. Nový balíček navazuje na stávající.</p>
-        {sp.expired && <p className="mx-auto mt-4 max-w-md rounded-lg bg-amber-50 px-3 py-2 text-amber-800">Pro tuto část potřebujete aktivní balíček.</p>}
-        {sp.zruseno && <p className="mx-auto mt-4 max-w-md rounded-lg bg-stone-100 px-3 py-2">Platba byla zrušena.</p>}
-        {accessEnd && <p className="mt-4 text-brand-700">Máte přístup do {accessEnd.toLocaleDateString("cs-CZ")}. Další balíček se připojí na konec.</p>}
-      </div>
-      <div className="grid gap-4 md:grid-cols-4">
+      <PageHeader eyebrow="Ceník" title="Vyberte si délku přípravy">
+        Jednorázová platba, žádné automatické obnovování. Nový balíček navazuje na stávající.
+      </PageHeader>
+
+      {(sp.expired || sp.zruseno || accessEnd) && (
+        <div className="space-y-2">
+          {sp.expired && (
+            <p className="rounded-md border-l-4 border-signal bg-signal-50 px-4 py-3 font-semibold">
+              Pro tuto část potřebujete aktivní balíček.
+            </p>
+          )}
+          {sp.zruseno && (
+            <p className="rounded-md border-l-4 border-line-strong bg-white px-4 py-3">Platba byla zrušena. Nic se nestrhlo.</p>
+          )}
+          {accessEnd && (
+            <p className="rounded-md border-l-4 border-zasah bg-zasah-50 px-4 py-3">
+              Máte přístup do <span className="num">{accessEnd.toLocaleDateString("cs-CZ")}</span>. Další balíček se připojí na konec.
+            </p>
+          )}
+        </div>
+      )}
+
+      <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {PLANS.map((p) => (
-          <div key={p.id} className={`card flex flex-col ${p.highlight ? "ring-2 ring-brand-500" : ""}`}>
-            {p.highlight && <span className="mb-2 self-start rounded-full bg-brand-100 px-2 py-0.5 text-xs font-semibold text-brand-700">Nejoblíbenější</span>}
-            <h2 className="text-xl font-bold">{p.name}</h2>
-            <p className="text-sm text-stone-500">{p.tagline}</p>
-            <div className="my-4 text-3xl font-extrabold">{p.priceCzk} Kč</div>
-            <div className="mb-4 text-xs text-stone-500">≈ {Math.round(p.priceCzk / p.days * 10) / 10} Kč / den</div>
+          <li
+            key={p.id}
+            className={`card relative flex flex-col p-6 ${p.highlight ? "ring-2 ring-ink" : ""}`}
+          >
+            {p.highlight && <span className="chip absolute -top-2.5 left-5">Doporučujeme</span>}
+            <h2 className="text-xl font-extrabold">{p.name}</h2>
+            <p className="mt-1 text-sm leading-snug text-ocel lg:min-h-10">{p.tagline}</p>
+            <p className="mt-5 flex items-baseline gap-1.5">
+              <span className="font-mono text-[40px] leading-none font-semibold tracking-tight">{p.priceCzk}</span>
+              <span className="text-lg font-bold">Kč</span>
+            </p>
+            <p className="mt-2 flex flex-col font-mono text-xs font-semibold text-ocel uppercase [word-spacing:-0.2em]">
+              <span>{p.days} {plural(p.days, "den", "dny", "dní")} přístupu</span>
+              <span>≈ {perDay(p.priceCzk, p.days)} Kč/den</span>
+            </p>
+            <div className="mt-6 flex-1" />
             {user ? (
-              <form action={startCheckout} className="mt-auto">
+              <form action={startCheckout}>
                 <input type="hidden" name="planId" value={p.id} />
-                <button className={p.highlight ? "btn-primary w-full" : "btn-secondary w-full"}>Koupit</button>
+                <button className={`${p.highlight ? "btn-accent" : "btn-secondary"} w-full`}>
+                  Koupit {p.name}
+                </button>
               </form>
             ) : (
-              <Link href="/registrace" className="btn-secondary mt-auto w-full">Založit účet</Link>
+              <Link href="/registrace" className={`${p.highlight ? "btn-accent" : "btn-secondary"} w-full`}>
+                Založit účet
+              </Link>
             )}
-          </div>
+          </li>
         ))}
-      </div>
-      <div className="card mx-auto max-w-xl">
-        <h3 className="font-bold">Každý balíček obsahuje</h3>
-        <ul className="mt-2 grid gap-1 text-stone-700">
-          {FEATURES.map((f) => <li key={f}>✔ {f}</li>)}
-        </ul>
+      </ul>
+
+      <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr]">
+        <div className="card p-6">
+          <h2 className="text-lg font-extrabold">Každý balíček obsahuje</h2>
+          <ul className="mt-3 grid gap-2.5 sm:grid-cols-2">
+            {FEATURES.map((f) => (
+              <li key={f} className="flex items-start gap-2.5">
+                <CheckIcon className="mt-0.5 shrink-0 text-zasah" />
+                <span>{f}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="card p-6">
+          <h2 className="text-lg font-extrabold">Zdarma i bez balíčku</h2>
+          <p className="mt-2 text-stone-700">Po registraci můžete hned projít ukázkové okruhy:</p>
+          <ul className="mt-2 space-y-1.5">
+            {freeTopics.map((t) => (
+              <li key={t.slug} className="flex items-start gap-2.5 font-semibold">
+                <span className="chip-outline mt-0.5 shrink-0 text-zasah">Zdarma</span>
+                {t.title}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
