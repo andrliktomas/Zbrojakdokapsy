@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PLANS } from "@/lib/plans";
+import { PLANS, SEAT_PACKAGES, pricePerSeat } from "@/lib/plans";
 import { getCurrentUser } from "@/lib/auth";
 import { getAccessEnd } from "@/lib/access";
 import { TOPICS } from "@/content";
@@ -88,6 +88,21 @@ export default async function PricingPage({ searchParams }: { searchParams: Prom
           </li>
         ))}
       </ul>
+
+      <section className="card p-6 md:flex md:items-center md:justify-between md:gap-6" aria-labelledby="b2b-title">
+        <div>
+          <p className="eyebrow">Pro instruktory a střelnice</p>
+          <h2 id="b2b-title" className="mt-1 text-xl font-extrabold">Připravte celý kurz najednou</h2>
+          <p className="mt-1 text-stone-700">
+            Založte skupinu pro svůj kurz, sledujte pokrok studentů a zaplaťte jim přístup hromadně – od{" "}
+            <span className="num">{Math.min(...SEAT_PACKAGES.map(pricePerSeat))} Kč</span> za studenta.
+          </p>
+        </div>
+        <div className="mt-4 flex shrink-0 flex-wrap gap-2 md:mt-0">
+          <Link href={user ? "/skupiny" : "/registrace"} className="btn-primary">Založit skupinu</Link>
+          <Link href="/aktivovat" className="btn-secondary">Mám aktivační kód</Link>
+        </div>
+      </section>
 
       <div className="grid gap-4 lg:grid-cols-[1.4fr_1fr]">
         <div className="card p-6">

@@ -31,6 +31,18 @@ model User {
   tests        TestResult[]
   achievements Achievement[]
   lessonsRead  LessonRead[]
+
+  // Doporučení (referral) – kód se vygeneruje při prvním zobrazení odkazu.
+  referralCode     String?    @unique
+  referralsMade    Referral[] @relation("ReferralsMade")
+  referralReceived Referral?  @relation("ReferralReceived")
+
+  // Skupiny pro instruktory a střelnice
+  groupsTaught    Group[]          @relation("GroupInstructor")
+  groupMembership GroupMember[]
+  seatOrders      SeatOrder[]
+  codesRedeemed   ActivationCode[] @relation("CodeRedeemer")
+  redeemAttempts  RedeemAttempt[]
 }
 
 model Session {
@@ -141,4 +153,104 @@ model AiUsage {
   updatedAt DateTime @updatedAt
 
   @@id([userId, day])
+}
+
+// --- Skupiny pro instruktory a střelnice (B2B) ---
+
+model Group {
+  id           String   @id @default(cuid())
+  name         String
+  instructorId String
+  joinCode     String   @unique // krátký kód pro odkaz /skupina/pripojit/<kód>
+  createdAt    DateTime @default(now())
+  instructor   User     @relation("GroupInstructor", fields: [instructorId], references: [id], onDelete: Cascade)
+
+  members    GroupMember[]
+  seatOrders SeatOrder[]
+  codes      ActivationCode[]
+
+  @@index([instructorId])
+}
+
+/// Člen skupiny = student, který souhlasil se sdílením pokroku s instruktorem.
+model GroupMember {
+  groupId   String
+  userId    String
+  joinedAt  DateTime @default(now())
+  consentAt DateTime // okamžik souhlasu se sdílením pokroku
+  group     Group    @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([groupId, userId])
+  @@index([userId])
+}
+
+/// Nákup balíčku míst (aktivačních kódů) instruktorem. Idempotentní přes providerRef.
+model SeatOrder {
+  id          String   @id @default(cuid())
+  groupId     String
+  buyerId     String
+  packageId   String
+  seats       Int
+  planId      String // balíček přístupu, který aktivuje každý kód
+  amountCzk   Int
+  provider    String // "stripe" | "dev"
+  providerRef String   @unique // Stripe checkout session id
+  createdAt   DateTime @default(now())
+  group       Group    @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  buyer       User     @relation(fields: [buyerId], references: [id], onDelete: Cascade)
+
+  codes ActivationCode[]
+
+  @@index([groupId])
+  @@index([buyerId])
+}
+
+/// Jednorázový aktivační kód. Uplatnění vytvoří Purchase (provider "code", providerRef "code_<id>").
+model ActivationCode {
+  id           String    @id @default(cuid())
+  code         String    @unique // normalizovaný tvar bez pomlček
+  groupId      String
+  orderId      String
+  planId       String
+  createdAt    DateTime  @default(now())
+  redeemedAt   DateTime?
+  redeemedById String?
+  group        Group     @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  order        SeatOrder @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  redeemedBy   User?     @relation("CodeRedeemer", fields: [redeemedById], references: [id], onDelete: SetNull)
+
+  @@index([groupId, redeemedAt])
+  @@index([orderId])
+  @@index([redeemedById])
+}
+
+/// Pokusy o uplatnění kódu / připojení ke skupině – pro omezení hádání kódů.
+model RedeemAttempt {
+  id        String   @id @default(cuid())
+  userId    String
+  kind      String // "code" | "join"
+  ipHash    String?
+  success   Boolean
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, kind, createdAt])
+  @@index([ipHash, kind, createdAt])
+}
+
+// --- Doporučení (referral) ---
+
+model Referral {
+  id          String    @id @default(cuid())
+  referrerId  String
+  referredId  String    @unique // každý účet může být doporučen jen jednou (při registraci)
+  status      String    @default("pending") // "pending" | "rewarded" | "capped"
+  createdAt   DateTime  @default(now())
+  qualifiedAt DateTime? // první aktivace přístupu doporučeného
+  rewardMonth String? // "YYYY-MM" (Europe/Prague) – pro měsíční limit odměn doporučujícího
+  referrer    User      @relation("ReferralsMade", fields: [referrerId], references: [id], onDelete: Cascade)
+  referred    User      @relation("ReferralReceived", fields: [referredId], references: [id], onDelete: Cascade)
+
+  @@index([referrerId, status, rewardMonth])
 }

@@ -133,11 +133,13 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                   <>
                     <li><Link href="/slovnicek" className="btn-ghost px-2 text-sm">Slovníček</Link></li>
                     <li><Link href="/ucet" className="btn-ghost px-2 text-sm">Můj účet</Link></li>
+                    <li><Link href="/skupiny" className="btn-ghost px-2 text-sm">Pro instruktory</Link></li>
                   </>
                 ) : (
                   <>
                     <li><Link href="/prihlaseni" className="btn-ghost px-2 text-sm">Přihlášení</Link></li>
                     <li><Link href="/registrace" className="btn-ghost px-2 text-sm">Registrace</Link></li>
+                    <li><Link href="/aktivovat" className="btn-ghost px-2 text-sm">Mám aktivační kód</Link></li>
                   </>
                 )}
               </ul>

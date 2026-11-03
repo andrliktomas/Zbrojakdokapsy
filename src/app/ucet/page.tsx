@@ -4,6 +4,7 @@ import { db } from "@/lib/db";
 import { getPlan } from "@/lib/plans";
 import { displayedStreak, levelFromXp, levelTitle, pragueDay } from "@/lib/gamification";
 import { PageHeader, ProgressBar, StreakBadge, XpChip, num, plural } from "@/components/ui";
+import { ReferralCard } from "@/components/referral/ReferralCard";
 
 export default async function AccountPage({ searchParams }: { searchParams: Promise<{ zaplaceno?: string }> }) {
   const user = await requireUser();
@@ -64,6 +65,21 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
           </p>
         </section>
       </div>
+
+      <ReferralCard userId={user.id} />
+
+      <section className="card p-6" aria-labelledby="ucet-kody">
+        <h2 id="ucet-kody" className="eyebrow">Kódy a skupiny</h2>
+        <p className="mt-2 text-stone-700">
+          Máte aktivační kód od instruktora nebo střelnice? Uplatněte ho. Vedete kurz? Založte skupinu a sledujte pokrok
+          svých studentů.
+        </p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          <Link href="/aktivovat" className="btn-secondary">Uplatnit aktivační kód</Link>
+          <Link href="/skupina" className="btn-secondary">Moje skupiny</Link>
+          <Link href="/skupiny" className="btn-secondary">Pro instruktory</Link>
+        </div>
+      </section>
 
       <section className="card p-6" aria-labelledby="ucet-profil">
         <h2 id="ucet-profil" className="eyebrow">Přihlášen jako</h2>

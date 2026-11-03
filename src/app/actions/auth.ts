@@ -5,6 +5,8 @@ import { redirect } from "next/navigation";
 import { z } from "zod";
 import { db } from "@/lib/db";
 import { createSession, destroySession, safeNextPath } from "@/lib/auth";
+import { attachReferralFromCookie } from "@/lib/referral.server";
+import { consumeAfterRegisterPath } from "@/lib/groups.server";
 
 export type FormState = { error?: string } | undefined;
 
@@ -25,8 +27,11 @@ export async function register(_: FormState, formData: FormData): Promise<FormSt
   const user = await db.user.create({
     data: { name, email, passwordHash: await bcrypt.hash(password, 12) },
   });
+  // Doporučení z odkazu /r/<kód> (cookie) – jen při registraci nového účtu.
+  await attachReferralFromCookie(user);
   await createSession(user.id);
-  redirect("/prehled?vitej=1");
+  // Návrat na připojení ke skupině / uplatnění kódu, pokud uživatel přišel odtud.
+  redirect((await consumeAfterRegisterPath()) ?? "/prehled?vitej=1");
 }
 
 const loginSchema = z.object({
