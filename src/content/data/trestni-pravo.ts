@@ -453,5 +453,17 @@ export const content: TopicContent = {
       explanation: "Souběžně se zákonem o zbraních a střelivu platí samostatný zákon č. 91/2024 Sb., o munici.",
       source: "zákon č. 91/2024 Sb.; soubor MV ot. č. 236, 620",
     },
+    {
+      id: "trestni-pravo-x18", topic: T,
+      question: "Cestující převeze přes hranici větší množství střeliva v rozporu se zákazem vývozu a podstatně tím ohrozí obecný zájem. Jak se jeho jednání posoudí?",
+      options: [
+        "Jen jako přestupek, protože nejde o zbraň, ale o střelivo.",
+        "Jako trestný čin porušení předpisů o oběhu zboží ve styku s cizinou (§ 261 trestního zákoníku).",
+        "Nijak, vývoz střeliva žádný předpis neomezuje.",
+      ],
+      correct: 1,
+      explanation: "Jde o trestný čin porušení předpisů o oběhu zboží ve styku s cizinou podle § 261 trestního zákoníku. U zbraní, munice nebo většího množství střeliva hrozí odnětí svobody na jeden rok až pět let.",
+      source: `§ 261 ${TZ}; ${MV("630")}`,
+    },
   ],
 };

@@ -1,6 +1,7 @@
 import type { TopicContent } from "../types";
 
 const T = "zkouska";
+const MV = (n: string) => `soubor otázek MV (verze 15. 12. 2025), ot. č. ${n}`;
 
 export const content: TopicContent = {
   lessons: [
@@ -179,6 +180,62 @@ export const content: TopicContent = {
             "zvlášť platíte použití zapsané zkouškové střelnice podle ceníku provozovatele a lékařský posudek.",
           ],
           source: "položka 30 bod 1 sazebníku zákona č. 634/2004 Sb.; sleva 20 % podle § 9 téhož zákona; § 31 zákona č. 90/2024 Sb. (soubor MV ot. č. 143)",
+        },
+      ],
+    },
+    {
+      id: "zkouska-l5",
+      topic: T,
+      title: "Zkušební komisař: zkouška, překážky, odvolání a zánik",
+      sections: [
+        {
+          heading: "Jak se stát zkušebním komisařem",
+          paragraphs: [
+            "O jmenování rozhoduje ministerstvo vnitra, a to na 5 let. Žadatel musí mít alespoň 30 let, maturitu a rozšířené zbrojní oprávnění nejméně 3 roky. Musí také složit zkoušku zkušebního komisaře před komisí, kterou ministerstvo jmenuje ze zástupců ministerstva a policie.",
+            "Zkouška má písemný test (60 otázek za 60 minut, nutno alespoň 57 správně), pohovor a ověření praktických dovedností potřebných k vedení praktické části ZOZ. Vykonává se osobně, bez tlumočníka nebo podpůrce.",
+            "Na složení zkoušky má žadatel 12 měsíců od podání žádosti. Když neuspěje, může ji v této lhůtě jednou opakovat. Komisionální zkoušku tu zákon nezná – ta je jen pro žadatele o zbrojní oprávnění.",
+            "Ministerstvo zapíše jmenovaného komisaře do CRZ a vyznačí kraj, ve kterém smí zkoušet. Je to kraj jeho místa pobytu, nebo na žádost jiný kraj se souhlasem dotčených KŘP.",
+          ],
+          tip: "Soubor MV počítá lhůtu „ode dne podání žádosti o vykonání zkoušky“, zákon (§ 34 odst. 2) „ode dne podání žádosti ministerstvu“. Pro test si zapamatujte: 12 měsíců, jedno opakování, žádná komisionální zkouška.",
+          source: `§ 34 a § 35 zákona č. 90/2024 Sb.; ${MV("149, 150")}`,
+        },
+        {
+          heading: "Kdy komisař nesmí zkoušet",
+          paragraphs: [
+            "Zákon stanoví překážky, po jejichž dobu zkušební komisař nesmí svou činnost vykonávat. Oprávnění mu přitom nezaniká – jen ho dočasně nesmí využívat.",
+          ],
+          bullets: [
+            "po dobu pozastavení jeho zbrojního oprávnění,",
+            "po dobu řízení o jeho odvolání,",
+            "po dobu, kdy je zařazen k plnění úkolů podle zákona o zbraních a střelivu u KŘP, Policejního prezidia nebo ministerstva – typicky policista na zbrojním úseku.",
+          ],
+          tip: "Policista, který na KŘP nebo Policejním prezidiu plní úkoly správního či kontrolního orgánu podle zákona o zbraních, funkci komisaře vykonávat nesmí – ani se souhlasem ministerstva. Protest proti zkoušce ani pozastavení provozu střelnice překážkou nejsou.",
+          source: `§ 36 odst. 1 zákona č. 90/2024 Sb.; ${MV("151, 152")}`,
+        },
+        {
+          heading: "Odvolání zkušebního komisaře",
+          paragraphs: [
+            "Komisaře odvolává ministerstvo vnitra – ne Policejní prezidium ani KŘP. Odvolá ho, pokud komisař:",
+          ],
+          bullets: [
+            "závažným způsobem nebo opakovaně poruší své povinnosti podle zákona nebo prováděcího předpisu,",
+            "opakovaně znemožňuje dosažení účelu zkoušky odborné způsobilosti nebo komisionální zkoušky,",
+            "přestal splňovat některou z podmínek pro jmenování,",
+            "odvolání proti rozhodnutí o odvolání nemá odkladný účinek; kdo byl odvolán kvůli porušení povinností nebo znemožňování zkoušek, nemůže být 5 let znovu jmenován.",
+          ],
+          tip: "Vysoká úspěšnost žadatelů ani samotné přijetí k policii či armádě důvodem k odvolání nejsou. Když komisař přestane splňovat podmínky zbrojního oprávnění, řeší to KŘP odnětím ZO – a se zánikem ZO zanikne i oprávnění komisaře.",
+          source: `§ 34 odst. 1 písm. e) a § 36 odst. 2 a 4 zákona č. 90/2024 Sb.; ${MV("153, 154")}`,
+        },
+        {
+          heading: "Kdy oprávnění komisaře zaniká",
+          paragraphs: ["Oprávnění vykonávat činnost zkušebního komisaře zaniká dnem:"],
+          bullets: [
+            "zániku jeho zbrojního oprávnění,",
+            "nabytí právní moci rozhodnutí o jeho odvolání,",
+            "následujícím po dni, kdy se oprávnění vzdá.",
+          ],
+          tip: "Ztráta některé podmínky pro jmenování oprávnění sama neukončí – je to důvod, aby ministerstvo komisaře odvolalo. Zařazení na zbrojní úsek policie je jen překážka, ne zánik.",
+          source: `§ 36 odst. 3 zákona č. 90/2024 Sb.; ${MV("155, 156")}`,
         },
       ],
     },
