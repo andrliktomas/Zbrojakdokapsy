@@ -1,0 +1,42 @@
+{
+  "$comment": "Přiřazení otázek souboru MV (verze 15. 12. 2025) k okruhům aplikace podle čísla otázky. Vychází z taxonomie v docs/research/legislativa.md kap. 5; překryvy v rešerši jsou rozhodnuty podle obsahu otázek a odkazů v src/content/data. Rozsahy musí pokrýt 1–837 bez mezer a překryvů (hlídá src/lib/mv-questions.test.ts). Skupina testu (group) odpovídá EXAM.groups v src/content/exam.ts.",
+  "sections": [
+    { "key": "I", "title": "Zákon o zbraních a střelivu", "from": 1, "to": 561 },
+    { "key": "II", "title": "Prováděcí právní předpisy", "from": 562, "to": 609 },
+    { "key": "III", "title": "Jiné právní předpisy", "from": 610, "to": 648 },
+    { "key": "IV", "title": "Nauka o zbraních a střelivu", "from": 649, "to": 799 },
+    { "key": "V", "title": "Zdravotnické minimum", "from": 800, "to": 837 }
+  ],
+  "groups": {
+    "zaklady": "pravo",
+    "kategorie": "pravo",
+    "opravneni": "pravo",
+    "zkouska": "pravo",
+    "nakladani": "pravo",
+    "strelnice": "pravo",
+    "trestni-pravo": "pravo",
+    "nauka": "nauka",
+    "bezpecna-manipulace": "zachazeni",
+    "zdravoveda": "zdravoveda"
+  },
+  "ranges": [
+    { "from": 1, "to": 17, "topic": "zaklady" },
+    { "from": 18, "to": 54, "topic": "kategorie" },
+    { "from": 55, "to": 77, "topic": "zaklady" },
+    { "from": 78, "to": 113, "topic": "opravneni" },
+    { "from": 114, "to": 120, "topic": "zkouska" },
+    { "from": 121, "to": 132, "topic": "opravneni" },
+    { "from": 133, "to": 156, "topic": "zkouska" },
+    { "from": 157, "to": 227, "topic": "opravneni" },
+    { "from": 228, "to": 267, "topic": "strelnice" },
+    { "from": 268, "to": 445, "topic": "nakladani" },
+    { "from": 446, "to": 555, "topic": "kategorie" },
+    { "from": 556, "to": 561, "topic": "strelnice" },
+    { "from": 562, "to": 596, "topic": "bezpecna-manipulace" },
+    { "from": 597, "to": 609, "topic": "nakladani" },
+    { "from": 610, "to": 648, "topic": "trestni-pravo" },
+    { "from": 649, "to": 783, "topic": "nauka" },
+    { "from": 784, "to": 799, "topic": "bezpecna-manipulace" },
+    { "from": 800, "to": 837, "topic": "zdravoveda" }
+  ]
+}
