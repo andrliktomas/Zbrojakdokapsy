@@ -5,6 +5,7 @@ import { content as kategorie } from "./kategorie";
 import { content as opravneni } from "./opravneni";
 import { content as zkouska } from "./zkouska";
 import { content as nakladani } from "./nakladani";
+import { content as nakladani2 } from "./nakladani-2";
 import { content as strelnice } from "./strelnice";
 import { content as nauka } from "./nauka";
 import { content as bezpecnaManipulace } from "./bezpecna-manipulace";
@@ -12,7 +13,7 @@ import { content as trestniPravo } from "./trestni-pravo";
 import { content as zdravoveda } from "./zdravoveda";
 
 const ALL: TopicContent[] = [
-  zaklady, kategorie, opravneni, zkouska, nakladani, strelnice, nauka, bezpecnaManipulace, trestniPravo, zdravoveda,
+  zaklady, kategorie, opravneni, zkouska, nakladani, nakladani2, strelnice, nauka, bezpecnaManipulace, trestniPravo, zdravoveda,
 ];
 
 export const LESSONS = ALL.flatMap((c) => c.lessons);
