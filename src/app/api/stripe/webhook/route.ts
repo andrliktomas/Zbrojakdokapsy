@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { fulfillCheckoutSession, stripe } from "@/lib/billing";
+import { fulfillCheckoutSession, fulfillSeatCheckoutSession, isSeatCheckout, settleReferralRewards, stripe } from "@/lib/billing";
 
 export async function POST(req: Request) {
   const secret = process.env.STRIPE_WEBHOOK_SECRET;
@@ -15,7 +15,15 @@ export async function POST(req: Request) {
   }
 
   if (event.type === "checkout.session.completed" || event.type === "checkout.session.async_payment_succeeded") {
-    await fulfillCheckoutSession(event.data.object);
+    const session = event.data.object;
+    if (isSeatCheckout(session)) {
+      // Balíček míst pro instruktora → vygenerovat aktivační kódy (idempotentně).
+      await fulfillSeatCheckoutSession(session);
+    } else {
+      const purchase = await fulfillCheckoutSession(session);
+      // Odměna za doporučení: chyba zde vrátí 500 a Stripe webhook zopakuje (vše je idempotentní).
+      if (purchase) await settleReferralRewards(purchase.userId);
+    }
   }
   return NextResponse.json({ received: true });
 }
