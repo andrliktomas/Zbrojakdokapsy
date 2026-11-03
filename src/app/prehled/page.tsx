@@ -1,13 +1,20 @@
 import Link from "next/link";
 import { requireUser } from "@/lib/auth";
 import { getAccessEnd } from "@/lib/access";
-import { getDashboard } from "@/lib/progress";
+import { getDashboard, getExamPlan } from "@/lib/progress";
 import { ProgressBar, Stat, pct } from "@/components/ui";
+import { ExamPlanCard } from "@/components/plan/ExamPlanCard";
 import { EXAM } from "@/content";
 
 export default async function DashboardPage({ searchParams }: { searchParams: Promise<{ vitej?: string }> }) {
   const user = await requireUser();
-  const [d, accessEnd, sp] = await Promise.all([getDashboard(user.id), getAccessEnd(user.id), searchParams]);
+  const accessEndPromise = getAccessEnd(user.id);
+  const [d, accessEnd, examPlan, sp] = await Promise.all([
+    getDashboard(user.id),
+    accessEndPromise,
+    accessEndPromise.then((end) => getExamPlan(user.id, end !== null)),
+    searchParams,
+  ]);
   const maxDay = Math.max(1, ...d.last7.map((x) => x.count));
   const readiness = d.overall;
 
@@ -25,6 +32,8 @@ export default async function DashboardPage({ searchParams }: { searchParams: Pr
           <Link href="/cenik" className="btn-accent">Odemknout vše</Link>
         </div>
       )}
+
+      <ExamPlanCard data={examPlan} />
 
       <div className="grid gap-4 md:grid-cols-4">
         <div className="card md:col-span-2">

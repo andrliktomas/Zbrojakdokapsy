@@ -13,7 +13,16 @@ import {
   questionMastery,
   topicMastery,
 } from "./gamification";
-import { TOPICS, cardCountByTopic, questionIdsByTopic } from "@/content";
+import { FREE_TOPICS, LESSONS, TOPICS, cardCountByTopic, questionIdsByTopic } from "@/content";
+import {
+  buildDailyPlan,
+  daysUntil,
+  parsePermit,
+  predictExam,
+  startOfPragueDay,
+  summarizeAttempts,
+  type PlanTopic,
+} from "./plan";
 
 /** Připíše XP, posune sérii dní a zkontroluje nové odznaky. Vrací nově získané odznaky. */
 export async function recordActivity(userId: string, xpGain: number) {
@@ -134,3 +143,64 @@ export async function getDashboard(userId: string) {
     totalAnswers: attempts.length,
   };
 }
+
+/**
+ * Plán podle termínu zkoušky: načte data z DB a předá je čisté logice v ./plan.
+ * Dnešní plán se skládá z pokroku do včerejška (během dne se nepřeskupuje),
+ * odhad výsledku testu bere v úvahu všechny odpovědi včetně dnešních.
+ */
+export async function getExamPlan(userId: string, paid: boolean, now = new Date()) {
+  const today = pragueDay(now);
+  const dayStart = startOfPragueDay(today);
+  const [user, attempts, cards, lessonsRead, lastTest] = await Promise.all([
+    db.user.findUniqueOrThrow({ where: { id: userId }, select: { examDate: true, targetPermit: true } }),
+    db.questionAttempt.findMany({ where: { userId }, select: { topic: true, correct: true, createdAt: true } }),
+    db.cardProgress.findMany({ where: { userId }, select: { dueAt: true, updatedAt: true } }),
+    db.lessonRead.findMany({ where: { userId }, select: { lessonId: true, createdAt: true }, orderBy: { createdAt: "desc" } }),
+    db.testResult.findFirst({ where: { userId }, orderBy: { createdAt: "desc" }, select: { createdAt: true } }),
+  ]);
+
+  const permit = parsePermit(user.targetPermit);
+  const beforeToday = summarizeAttempts(attempts.filter((a) => a.createdAt < dayStart), now);
+  const answeredToday: Record<string, number> = {};
+  for (const a of attempts) if (a.createdAt >= dayStart) answeredToday[a.topic] = (answeredToday[a.topic] ?? 0) + 1;
+
+  const read = new Set(lessonsRead.map((l) => l.lessonId));
+  const readToday = lessonsRead.find((l) => l.createdAt >= dayStart);
+  const lessonToday = readToday ? LESSONS.find((l) => l.id === readToday.lessonId) : undefined;
+
+  const questionCounts = Object.fromEntries(Object.entries(questionIdsByTopic()).map(([t, ids]) => [t, ids.length]));
+  const topics: PlanTopic[] = TOPICS.map((t) => ({
+    slug: t.slug,
+    title: t.title,
+    accessible: paid || FREE_TOPICS.has(t.slug),
+    evidence: beforeToday[t.slug],
+    answeredToday: answeredToday[t.slug] ?? 0,
+    unreadLessons: LESSONS.filter((l) => l.topic === t.slug && !read.has(l.id)).map((l) => ({ id: l.id, title: l.title })),
+  }));
+
+  const plan = buildDailyPlan({
+    today,
+    examDate: user.examDate,
+    permit,
+    topics,
+    questionCounts,
+    dueCards: cards.filter((c) => c.dueAt <= now).length,
+    cardsReviewedToday: cards.filter((c) => c.updatedAt >= dayStart).length,
+    lessonReadToday: lessonToday ? { id: lessonToday.id, title: lessonToday.title, topic: lessonToday.topic } : null,
+    hasTestAccess: paid,
+    lastTestDay: lastTest ? pragueDay(lastTest.createdAt) : null,
+  });
+
+  return {
+    today,
+    examDate: user.examDate,
+    permit,
+    permitChosen: user.targetPermit !== null,
+    daysLeft: user.examDate ? daysUntil(user.examDate, today) : null,
+    plan,
+    prediction: predictExam(summarizeAttempts(attempts, now), questionCounts, permit),
+  };
+}
+
+export type ExamPlanData = Awaited<ReturnType<typeof getExamPlan>>;

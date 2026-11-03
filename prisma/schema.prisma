@@ -20,6 +20,10 @@ model User {
   bestStreak     Int       @default(0)
   lastActiveDay  String? // YYYY-MM-DD v Europe/Prague
 
+  // Plán podle termínu zkoušky (nepovinné; bez nich se plán sestaví bez odpočtu)
+  examDate       String? // YYYY-MM-DD – den zkoušky (kalendářní den v Europe/Prague)
+  targetPermit   String? // "obecne" | "rozsirene"
+
   sessions     Session[]
   purchases    Purchase[]
   attempts     QuestionAttempt[]
