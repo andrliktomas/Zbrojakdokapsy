@@ -113,3 +113,28 @@ model LessonRead {
 
   @@id([userId, lessonId])
 }
+
+// AI vysvětlení chyby: sdílená cache (stejná otázka + stejná zvolená možnost = stejný text pro všechny).
+// promptHash = otisk přesného promptu (otázka, možnosti, vysvětlení, zdroj, systémový prompt);
+// při úpravě otázky nebo promptu se vysvětlení vygeneruje znovu a řádek se přepíše.
+model AiExplanation {
+  questionId  String
+  chosenIndex Int // -1 = nezodpovězeno (test nanečisto)
+  promptHash  String
+  text        String
+  model       String
+  createdAt   DateTime @default(now())
+
+  @@id([questionId, chosenIndex])
+}
+
+// Denní počitadlo AI vysvětlení na uživatele (den v Europe/Prague, YYYY-MM-DD).
+// Záměrně bez relace na User, aby změna schématu zůstala čistě aditivní.
+model AiUsage {
+  userId    String
+  day       String
+  count     Int      @default(0)
+  updatedAt DateTime @updatedAt
+
+  @@id([userId, day])
+}
