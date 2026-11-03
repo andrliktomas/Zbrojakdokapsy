@@ -2,7 +2,7 @@ import type { TopicContent } from "../types";
 
 // Zdroj faktů: docs/research/legislativa.md (kap. 1.1, 1.8, 3.2).
 // § 28 a § 29 trestního zákoníku – obsah ověřen souborem MV (ot. č. 632–648).
-// U nedovoleného ozbrojování a u článku Listiny rešerše číslo neověřila, proto ho neuvádíme.
+// Nedovolené ozbrojování: § 279 TZ (ověřeno v konsolidovaném znění trestního zákoníku).
 
 const T = "trestni-pravo";
 const TZ = "zákona č. 40/2009 Sb., trestní zákoník";
@@ -174,9 +174,10 @@ export const content: TopicContent = {
         {
           heading: "Nedovolené ozbrojování",
           paragraphs: [
-            "Trestní zákoník zná trestný čin nedovoleného ozbrojování. Spáchá ho například ten, kdo bez povolení vyrobí nebo přechovává zbraň, nebo kdo odstraní označení zbraně.",
+            "Trestní zákoník zná trestný čin nedovoleného ozbrojování. Spáchá ho ten, kdo bez povolení vyrobí, opatří nebo přechovává střelnou zbraň nebo její hlavní části, tlumič, munici, větší množství střeliva nebo polotovary hlavních částí – a také ten, kdo padělá, pozmění nebo odstraní jedinečné označení zbraně.",
+            "Hrozí odnětí svobody až na dvě léta, zákaz činnosti nebo propadnutí věci.",
           ],
-          source: `${TZ}; soubor MV ot. č. 629`,
+          source: `§ 279 ${TZ}; soubor MV ot. č. 629`,
         },
         {
           heading: "Dovoz, vývoz a průvoz zbraní",
@@ -217,7 +218,7 @@ export const content: TopicContent = {
     { term: "Zcela zjevná nepřiměřenost", topic: T, definition: "Hranice nutné obrany. Obrana smí být silnější než útok, ale nesmí být zcela zjevně nepřiměřená jeho způsobu.", source: `§ 29 ${TZ}` },
     { term: "Subsidiarita", topic: T, definition: "Podmínka krajní nouze: nebezpečí nešlo za daných okolností odvrátit jinak.", source: `§ 28 ${TZ}` },
     { term: "Exces (překročení mezí)", topic: T, definition: "Situace, kdy obránce překročí meze nutné obrany. Nejde o nutnou obranu, ale soud to zohlední jako polehčující okolnost.", source: "soubor MV ot. č. 648" },
-    { term: "Nedovolené ozbrojování", topic: T, definition: "Trestný čin, např. výroba nebo přechovávání zbraně bez povolení nebo odstranění označení zbraně.", source: "soubor MV ot. č. 629" },
+    { term: "Nedovolené ozbrojování", topic: T, definition: "Trestný čin, např. výroba nebo přechovávání zbraně bez povolení nebo odstranění označení zbraně.", source: "§ 279 zákona č. 40/2009 Sb.; soubor MV ot. č. 629" },
     { term: "Porušení předpisů o oběhu zboží ve styku s cizinou", topic: T, definition: "Trestný čin podle § 261 trestního zákoníku: podstatné ohrožení obecného zájmu porušením zákazu, omezení nebo důležité povinnosti při dovozu, vývozu či průvozu zboží. U zbraní, munice nebo většího množství střeliva hrozí 1 až 5 let.", source: `§ 261 ${TZ}; ${MV("630")}` },
     { term: "Neposkytnutí pomoci", topic: T, definition: "Trestný čin podle § 150 a § 151 trestního zákoníku – nesplnění povinnosti poskytnout potřebnou pomoc.", source: `§ 150 a § 151 ${TZ}` },
     { term: "ČÚZZS", topic: T, definition: "Český úřad pro zkoušení zbraní a střeliva – ověřuje zbraně a střelivo a stanoví nejasnou kategorii zbraně.", source: "zákon č. 156/2000 Sb.; soubor MV ot. č. 420, 624–628" },
@@ -379,7 +380,7 @@ export const content: TopicContent = {
       ],
       correct: 1,
       explanation: "Nedovoleného ozbrojování se dopustí např. ten, kdo bez povolení vyrábí nebo přechovává zbraň, nebo kdo odstraní její označení.",
-      source: `${TZ}, nedovolené ozbrojování; soubor MV ot. č. 629`,
+      source: `§ 279 ${TZ}; soubor MV ot. č. 629`,
     },
     {
       id: "trestni-pravo-x12", topic: T,
