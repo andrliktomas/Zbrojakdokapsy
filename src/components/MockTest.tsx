@@ -5,6 +5,8 @@ import { useCallback, useEffect, useRef, useState, useTransition } from "react";
 import { submitTest } from "@/app/actions/learning";
 import type { PublicQuestion } from "./Practice";
 import { PERMIT_LABEL, type PermitType } from "@/content/exam";
+import { Figure } from "./figures";
+import { questionFigure } from "./figures/question-figures";
 
 type Result = Awaited<ReturnType<typeof submitTest>>;
 
@@ -76,9 +78,11 @@ export function MockTest({ questions, permitType, timeLimitMin, passScore }: Pro
         <h2 className="text-lg font-bold">Rozbor odpovědí</h2>
         {questions.map((q, i) => {
           const r = byId.get(q.id)!;
+          const fig = questionFigure(q);
           return (
             <div key={q.id} className={`card ring-2 ${r.correct ? "ring-brand-200" : "ring-red-200"}`}>
               <p className="font-semibold">{i + 1}. {q.question}</p>
+              {fig && <Figure figure={fig} mode="question" className="mt-2 max-w-md" />}
               <ul className="mt-2 space-y-1 text-sm">
                 {q.options.map((o, j) => (
                   <li key={j} className={j === r.correctIndex ? "font-semibold text-brand-700" : j === r.chosen ? "text-red-600 line-through" : "text-stone-600"}>
@@ -95,6 +99,7 @@ export function MockTest({ questions, permitType, timeLimitMin, passScore }: Pro
   }
 
   const q = questions[current];
+  const figure = questionFigure(q);
   const answered = Object.keys(answers).length;
   const mm = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
   const ss = String(secondsLeft % 60).padStart(2, "0");
@@ -123,6 +128,7 @@ export function MockTest({ questions, permitType, timeLimitMin, passScore }: Pro
       <div className="card">
         <p className="text-sm text-stone-500">Otázka {current + 1}</p>
         <h2 className="mt-1 text-lg font-semibold">{q.question}</h2>
+        {figure && <Figure figure={figure} mode="question" className="mt-3 -mx-3 sm:mx-0" />}
         <div className="mt-4 space-y-2">
           {q.options.map((opt, i) => (
             <label key={i} className={`flex cursor-pointer items-start gap-3 rounded-xl p-3 ring-1 ${answers[q.id] === i ? "bg-brand-50 ring-brand-500" : "ring-stone-200 hover:bg-stone-50"}`}>

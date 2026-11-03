@@ -15,6 +15,7 @@ export const content: TopicContent = {
       sections: [
         {
           heading: "Hlavní části každé palné zbraně",
+          figure: { id: "pistole" },
           paragraphs: [
             "Ať jde o pistoli, revolver, nebo pušku, vždy najdete několik stejných stavebních prvků. Kdo je zná, snadno pochopí, jak zbraň funguje a kde se může stát chyba.",
           ],
@@ -45,6 +46,7 @@ export const content: TopicContent = {
         },
         {
           heading: "Samonabíjecí pistole",
+          figure: { id: "pistole-rozlozena" },
           paragraphs: [
             "Samonabíjecí pistole se rozebírá na pět základních dílů: kluzný pistolový závěr, hlaveň, vratnou (předsuvnou) pružinu s vodítkem, tělo a zásobník. Hlavními částmi z nich jsou jen závěr, hlaveň a tělo.",
             "U pistolí s uzamčeným závěrem nese hlaveň uzamykací ozuby a odemykací kulisu. Vratná pružina tlačí na závěr a po výstřelu ho vrací do přední polohy.",
@@ -56,6 +58,7 @@ export const content: TopicContent = {
         },
         {
           heading: "Revolver",
+          figure: { id: "revolver" },
           paragraphs: [
             "Revolver je krátká zbraň s pevnou hlavní a otáčivým válcem. Nábojové komory nejsou součástí hlavně, ale válce, a mezi výstřely se postupně natáčejí do osy vývrtu hlavně.",
             "U většiny moderních revolverů se válec vyklápí do strany na výklopné konzoli. Válec se natáčí ručním natažením kohoutu nebo stiskem spouště, proto je revolver až na výjimky zbraní opakovací.",
@@ -66,6 +69,7 @@ export const content: TopicContent = {
         },
         {
           heading: "Dlouhé zbraně",
+          figure: { id: "kulovnice-stred" },
           paragraphs: [
             "Mezi dlouhé zbraně patří kulovnice (střílejí jednotnou střelou z drážkované hlavně), brokovnice (střílejí broky, případně jednotnou střelou) a kombinované zbraně (mají hlavně s různým vývrtem).",
             "Na opakovací malorážce s odsuvným závěrem najdete pažbu, lučík a spoušť, kliku závěru, závěr, pouzdro závěru, hmatník pojistky, výhozné okénko, hlaveň, hledí a dno zásobníku.",
@@ -115,6 +119,7 @@ export const content: TopicContent = {
         },
         {
           heading: "Bicí a spoušťový mechanismus",
+          figure: { id: "revolver", highlight: "kohout", caption: "Kohoutový bicí mechanismus: zvýrazněný kohout revolveru při spuštění udeří na zápalník." },
           bullets: [
             "Bicí mechanismus – způsobuje úder na zápalku (iniciační mechanismus).",
             "Spoušťové ústrojí – ovládá bicí mechanismus.",
@@ -165,6 +170,7 @@ export const content: TopicContent = {
       sections: [
         {
           heading: "Z čeho se skládá náboj",
+          figure: { id: "kulovy-naboj" },
           bullets: [
             "Nábojnice – pouzdro, které drží všechny části pohromadě a při výstřelu utěsní komoru.",
             "Zápalka – obsahuje zápalkovou slož, která se nárazem (nebo jinak) vznítí a zažehne výmetnou (prachovou) náplň.",
@@ -185,6 +191,7 @@ export const content: TopicContent = {
         },
         {
           heading: "Tvar a dno nábojnice",
+          figure: { id: "dna-nabojnic" },
           bullets: [
             "Lahvovitá nábojnice – za střelou se zužuje do krčku; typická pro puškové náboje (např. 7,5×55 Swiss, 7,62×54 R).",
             "Nábojnice s okrajem (rim) – dno přesahuje průměr těla nábojnice. Má ho např. .22 LR, 9 mm Flobert nebo 7,62×54 R (písmeno R = rimmed).",
@@ -204,6 +211,7 @@ export const content: TopicContent = {
         },
         {
           heading: "Brokový náboj",
+          figure: { id: "brokovy-naboj" },
           bullets: [
             "Nábojnice brokového náboje má kovové dno, kterému se říká kování; v jeho středu je zápalka.",
             "Uvnitř je prachová náplň, ucpávka (nebo kontejner) a hromadná střela – broky, případně jednotná střela, např. typu Brenneke.",
@@ -242,6 +250,7 @@ export const content: TopicContent = {
         },
         {
           heading: "Typy střel",
+          figure: { id: "brokovy-naboj-brenneke", highlight: "brenneke", caption: "Jednotná střela Brenneke v brokovém náboji – horní polovina v řezu." },
           bullets: [
             "FMJ (celoplášťová) – olověné jádro celé kryté pláštěm. Málo se deformuje, používá se hlavně na střelnici.",
             "SP (poloplášťová, soft point) – plášť nechává odkrytou olověnou špičku, střela se v cíli deformuje. Běžný SP náboj je střelivo kategorie S3.",
@@ -326,6 +335,7 @@ export const content: TopicContent = {
       sections: [
         {
           heading: "Názvy loveckých dlouhých zbraní",
+          figure: { id: "kozlice-dvojka" },
           bullets: [
             "Jednuška – jednohlavňová jednoranová brokovnice.",
             "Dvojka – dvouhlavňová brokovnice s hlavněmi vedle sebe.",
@@ -352,6 +362,7 @@ export const content: TopicContent = {
         },
         {
           heading: "Brokovnice s lůžkovým závěrem",
+          figure: { id: "brokovnice" },
           paragraphs: [
             "Většina dvouhlavňových brokovnic (dvojky, kozlice) má lůžkový závěr a sklopný hlavňový svazek. Svazek se odjistí temenní kličkou a sklopí dolů, tím se otevřou nábojové komory.",
             "Řada brokovnic má automatickou pojistku, která zbraň zajistí při každém sklopení hlavní. Před výstřelem je nutné ji odjistit – ovládací prvek bývá na hřbetě krku pažby.",
@@ -976,6 +987,205 @@ export const content: TopicContent = {
       correct: 0,
       explanation: "Samonabíjecí pušky pro náboje jako .223 Remington nebo 7,62×39 mm využívají tlak plynů: odběrem z hlavně (uzamčený závěr), nebo tlakem na dno nábojnice (bržděný závěr).",
       source: MV("737"),
+    },
+    // --- Obrázkové otázky (vlastní schematické obrázky, src/components/figures) ---
+    {
+      id: "nauka-x100", topic: T,
+      figure: { id: "brokovy-naboj" },
+      question: "Které číslo na obrázku brokového náboje označuje kování?",
+      options: ["4", "2", "6"],
+      correct: 1,
+      explanation: "Kování je kovové dno nábojnice (č. 2), v jeho středu sedí zápalka (č. 3). Číslem 4 je označena prachová náplň, číslem 6 broky.",
+      source: MV("652"),
+    },
+    {
+      id: "nauka-x101", topic: T,
+      figure: { id: "brokovy-naboj", highlight: "zapalka", callouts: "highlight" },
+      question: "Jak se nazývá součást brokového náboje, na kterou ukazuje šipka?",
+      options: ["Ucpávka", "Kování", "Zápalka"],
+      correct: 2,
+      explanation: "Šipka ukazuje na zápalku uprostřed kování. Při úderu se vznítí zápalková slož a zažehne prachovou náplň.",
+      source: MV("653, 654"),
+    },
+    {
+      id: "nauka-x102", topic: T,
+      figure: { id: "brokovy-naboj", highlight: "ucpavka", callouts: "highlight" },
+      question: "Jak se nazývá zvýrazněná součást brokového náboje?",
+      options: ["Ucpávka", "Broky", "Kování"],
+      correct: 0,
+      explanation: "Zvýrazněná je ucpávka (případně plastový kontejner), která odděluje prachovou náplň od broků. Kování je kovové dno nábojnice.",
+      source: MV("652–655"),
+    },
+    {
+      id: "nauka-x103", topic: T,
+      figure: { id: "brokovy-naboj-brenneke", callouts: "none" },
+      question: "Jakou střelu obsahuje brokový náboj na obrázku?",
+      options: ["Hromadnou střelu – broky", "Celoplášťovou střelu (FMJ)", "Jednotnou střelu typu Brenneke"],
+      correct: 2,
+      explanation: "V řezu je místo broků jediná masivní žebrovaná střela. Jednotná střela Brenneke se z brokovnice používá hlavně na velkou zvěř.",
+      source: MV("650"),
+    },
+    {
+      id: "nauka-x104", topic: T,
+      figure: { id: "kulovy-naboj" },
+      question: "Kterým číslem je na obrázku kulového náboje označena nábojnice?",
+      options: ["1", "4", "3"],
+      correct: 2,
+      explanation: "Nábojnice (č. 3) drží všechny části náboje pohromadě. Číslo 1 je střela, číslo 4 prachová náplň.",
+      source: MV("660, 673"),
+    },
+    {
+      id: "nauka-x105", topic: T,
+      figure: { id: "kulovy-naboj", highlight: "strela", callouts: "highlight" },
+      question: "Jak se nazývá zvýrazněná část kulového náboje?",
+      options: ["Střela (projektil)", "Zápalka", "Krček nábojnice"],
+      correct: 0,
+      explanation: "Zvýrazněná je střela – jediná část náboje, která při výstřelu opouští hlaveň. Náboj je celek, střela jen jeho část.",
+      source: MV("675"),
+    },
+    {
+      id: "nauka-x106", topic: T,
+      figure: { id: "kulovy-naboj", callouts: "none" },
+      question: "Jaký tvar má nábojnice náboje na obrázku?",
+      options: ["Válcový, bez zúžení", "Lahvovitý", "Kuželový s okrajem"],
+      correct: 1,
+      explanation: "Nábojnice se za střelou zužuje do krčku, je tedy lahvovitá. Tento tvar je typický pro puškové náboje.",
+      source: MV("659"),
+    },
+    {
+      id: "nauka-x107", topic: T,
+      figure: { id: "dna-nabojnic" },
+      question: "Které číslo označuje nábojnici s okrajem, jakou má například náboj 7,62×54 R?",
+      options: ["3", "2", "1"],
+      correct: 2,
+      explanation: "U nábojnice s okrajem (č. 1) dno přesahuje průměr těla nábojnice. Číslo 2 je polookraj (např. 7,65 mm Browning), číslo 3 nábojnice s drážkou (např. 9 mm Luger).",
+      source: MV("661, 672"),
+    },
+    {
+      id: "nauka-x108", topic: T,
+      figure: { id: "dna-nabojnic", highlight: "drazka", callouts: "highlight" },
+      question: "Jak se nazývá provedení dna zvýrazněné nábojnice?",
+      options: ["Nábojnice s okrajem", "Nábojnice s drážkou", "Polookraj (semi-rim)"],
+      correct: 1,
+      explanation: "Před dnem je vybrání pro vytahovač a dno nepřesahuje průměr těla – jde o nábojnici s drážkou, jakou má např. 9 mm Luger.",
+      source: MV("661, 672"),
+    },
+    {
+      id: "nauka-x109", topic: T,
+      figure: { id: "pistole" },
+      question: "Kterým číslem je na obrázku pistole označen lučík?",
+      options: ["8", "9", "7"],
+      correct: 0,
+      explanation: "Lučík (č. 8) je oblouk kolem spouště, který ji chrání před nechtěným stiskem. Spoušť má číslo 9, tělo zbraně číslo 7.",
+      source: MV("680, 726"),
+    },
+    {
+      id: "nauka-x110", topic: T,
+      figure: { id: "pistole" },
+      question: "Které číslo na obrázku pistole označuje výhozné okénko?",
+      options: ["1", "2", "3"],
+      correct: 1,
+      explanation: "Výhozným okénkem (č. 2) zbraň vyhazuje vystřelenou nábojnici; je v něm vidět hlaveň s nábojovou komorou (č. 3). Číslo 1 je kluzný závěr.",
+      source: MV("698, 725"),
+    },
+    {
+      id: "nauka-x111", topic: T,
+      figure: { id: "pistole" },
+      question: "Kterým číslem je na obrázku pistole označeno ústí hlavně?",
+      options: ["4", "6", "5"],
+      correct: 2,
+      explanation: "Ústí (č. 5) je přední konec hlavně, kterým střela opouští zbraň. Čísla 4 a 6 označují mířidla – mušku a hledí.",
+      source: MV("699, 710"),
+    },
+    {
+      id: "nauka-x112", topic: T,
+      figure: { id: "pistole-rozlozena" },
+      question: "Pod kterými čísly jsou na obrázku rozložené pistole hlavní části zbraně podle zákona?",
+      options: ["5, 6 a 7", "1, 2 a 6", "1, 5 a 7"],
+      correct: 1,
+      explanation: "Hlavními částmi jsou závěr (č. 1), hlaveň (č. 2) a tělo zbraně (č. 6). Vratná pružina s vodítkem (č. 5) ani zásobník (č. 7) hlavními částmi nejsou.",
+      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 700–702)",
+    },
+    {
+      id: "nauka-x113", topic: T,
+      figure: { id: "pistole-rozlozena", highlight: "pruzina", callouts: "highlight" },
+      question: "Jak se nazývá zvýrazněný díl rozložené samonabíjecí pistole?",
+      options: ["Bicí pružina s úderníkem", "Podavač zásobníku", "Vratná (předsuvná) pružina s vodítkem"],
+      correct: 2,
+      explanation: "Vratná pružina s vodítkem tlačí na závěr a po výstřelu ho vrací do přední polohy. Hlavní částí zbraně není.",
+      source: MV("705"),
+    },
+    {
+      id: "nauka-x114", topic: T,
+      figure: { id: "pistole-rozlozena", highlight: "hlaven", callouts: "highlight" },
+      question: "Zvýrazněný díl nese uzamykací ozuby a odemykací kulisu. Jak se nazývá?",
+      options: ["Hlaveň", "Kluzný pistolový závěr", "Tělo zbraně"],
+      correct: 0,
+      explanation: "U pistolí s uzamčeným závěrem nese uzamykací ozuby a odemykací kulisu hlaveň. Hlaveň je hlavní částí zbraně.",
+      source: MV("704"),
+    },
+    {
+      id: "nauka-x115", topic: T,
+      figure: { id: "revolver" },
+      question: "Kterým číslem je na obrázku revolveru označen kohout?",
+      options: ["5", "3", "6"],
+      correct: 0,
+      explanation: "Kohout (č. 5) je vzadu nahoře na rámu; při spuštění udeří na zápalník. Číslo 3 je výklopná konzole, číslo 6 spoušť.",
+      source: MV("685"),
+    },
+    {
+      id: "nauka-x116", topic: T,
+      figure: { id: "revolver", highlight: "valec", callouts: "highlight" },
+      question: "Jak se nazývá zvýrazněná součást revolveru a je hlavní částí zbraně?",
+      options: ["Výklopná konzole; hlavní částí zbraně není", "Revolverový válec; je hlavní částí zbraně", "Revolverový válec; hlavní částí zbraně není"],
+      correct: 1,
+      explanation: "Zvýrazněný je revolverový válec s nábojovými komorami. Zákon ho výslovně řadí mezi hlavní části zbraně.",
+      source: MV("683"),
+    },
+    {
+      id: "nauka-x117", topic: T,
+      figure: { id: "kozlice-dvojka", highlight: "kozlice", callouts: "highlight" },
+      question: "Jak se nazývá brokovnice, jejíž hlavně jsou na obrázku zvýrazněné?",
+      options: ["Dvojka", "Lankasterka", "Kozlice"],
+      correct: 2,
+      explanation: "Zvýrazněná zbraň má dvě brokové hlavně nad sebou – je to broková kozlice. Dvojka má hlavně vedle sebe, lankasterka je dvojka s vnějšími kohouty.",
+      source: MV("690, 746"),
+    },
+    {
+      id: "nauka-x118", topic: T,
+      figure: { id: "brokovnice", highlight: "klicka", callouts: "highlight" },
+      question: "Jak se nazývá zvýrazněný ovládací prvek brokovnice s lůžkovým závěrem?",
+      options: ["Klika závěru", "Temenní klička", "Hmatník pojistky"],
+      correct: 1,
+      explanation: "Temenní kličkou se odjistí hlavňový svazek a pak se sklopí dolů. Klika závěru patří k odsuvnému závěru kulovnice.",
+      source: MV("689"),
+    },
+    {
+      id: "nauka-x119", topic: T,
+      figure: { id: "brokovnice" },
+      question: "Které číslo na obrázku brokovnice označuje předpažbí?",
+      options: ["6", "3", "2"],
+      correct: 2,
+      explanation: "Předpažbí (č. 2) je pod hlavněmi a drží se za ně slabou rukou. Pažba (č. 6) se opírá o rameno, číslo 3 je lůžkový závěr.",
+      source: MV("692"),
+    },
+    {
+      id: "nauka-x120", topic: T,
+      figure: { id: "kulovnice-stred" },
+      question: "Kterým číslem je na obrázku opakovací malorážky označena klika závěru?",
+      options: ["6", "5", "7"],
+      correct: 0,
+      explanation: "Klikou závěru (č. 6) střelec otáčí a odsouvá závěr (č. 5). Číslo 7 je hmatník pojistky.",
+      source: MV("712, 713"),
+    },
+    {
+      id: "nauka-x121", topic: T,
+      figure: { id: "kulovnice-stred", highlight: "dno", callouts: "highlight" },
+      question: "Jak se nazývá zvýrazněná část opakovací malorážky?",
+      options: ["Dno zásobníku", "Lučík", "Pouzdro závěru"],
+      correct: 0,
+      explanation: "Zvýrazněné je dno zásobníku pod pouzdrem závěru. Lučík kryje spoušť, pouzdro závěru je kovová část, ve které se pohybuje závěr.",
+      source: MV("713"),
     },
   ],
 };

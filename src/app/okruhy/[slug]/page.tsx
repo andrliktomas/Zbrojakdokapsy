@@ -6,6 +6,7 @@ import { db } from "@/lib/db";
 import { FREE_TOPICS, GLOSSARY, LESSONS, topicBySlug } from "@/content";
 import { LessonReadButton } from "@/components/LessonReadButton";
 import { Paywall } from "@/components/ui";
+import { Figure } from "@/components/figures";
 
 export default async function TopicPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -40,6 +41,7 @@ export default async function TopicPage({ params }: { params: Promise<{ slug: st
                     {s.bullets.map((b, j) => <li key={j}>{b}</li>)}
                   </ul>
                 )}
+                {s.figure && <Figure figure={s.figure} className="mt-3 -mx-3 sm:mx-0" />}
                 {s.tip && <p className="mt-2 rounded-lg border-l-4 border-accent-400 bg-amber-50 px-3 py-2 text-sm">💡 {s.tip}</p>}
                 {s.source && <p className="mt-1 text-xs text-stone-500">Zdroj: {s.source}</p>}
               </div>

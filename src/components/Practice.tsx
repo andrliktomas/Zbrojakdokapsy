@@ -6,8 +6,11 @@ import { useState, useTransition } from "react";
 import { answerQuestion } from "@/app/actions/learning";
 import type { AchievementDef } from "@/lib/gamification";
 import { XpToast } from "./XpToast";
+import { Figure } from "./figures";
+import { questionFigure } from "./figures/question-figures";
+import type { FigureRef } from "@/content/types";
 
-export type PublicQuestion = { id: string; topic: string; topicTitle: string; question: string; options: string[] };
+export type PublicQuestion = { id: string; topic: string; topicTitle: string; question: string; options: string[]; figure?: FigureRef };
 
 type Feedback = { correct: boolean; correctIndex: number; explanation: string; source?: string };
 
@@ -48,6 +51,7 @@ export function Practice({ questions }: { questions: PublicQuestion[] }) {
   }
 
   const q = questions[index];
+  const figure = questionFigure(q);
 
   function choose(i: number) {
     if (feedback || pending) return;
@@ -78,6 +82,7 @@ export function Practice({ questions }: { questions: PublicQuestion[] }) {
       </div>
       <div className="card">
         <h2 className="text-lg font-semibold">{q.question}</h2>
+        {figure && <Figure figure={figure} mode="question" className="mt-3 -mx-3 sm:mx-0" />}
         <div className="mt-4 space-y-2">
           {q.options.map((opt, i) => {
             let cls = "ring-stone-200 hover:bg-stone-50";
