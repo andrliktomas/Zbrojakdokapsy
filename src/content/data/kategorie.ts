@@ -1,6 +1,7 @@
 import type { TopicContent } from "../types";
 
 const T = "kategorie";
+const MV = (n: string) => `soubor otázek MV (verze 15. 12. 2025), ot. č. ${n}`;
 
 export const content: TopicContent = {
   lessons: [
@@ -16,7 +17,7 @@ export const content: TopicContent = {
             "Zakázanými zbraněmi jsou kategorie R1 a R2. Zakázaná neznamená „pro civilistu zcela nedostupná“, ale vyžaduje zvláštní výjimku nebo zbrojní licenci.",
           ],
           tip: "Zapamatujte si: R1 a R2 = zakázané, R3 = povolení, R4 = stačí ZO, PO = ohlášení, NO = bez ohlášení.",
-          source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 18–22)",
+          source: "§ 4 a příloha č. 2 zákona č. 90/2024 Sb. (soubor MV ot. č. 18–22)",
         },
         {
           heading: "Přehled kategorií a typických zbraní",
@@ -29,7 +30,7 @@ export const content: TopicContent = {
             "NO (zhruba dřívější D) – expanzní přístroje, historické zbraně (vyrobené do 31. 12. 1890), plynové zbraně do ráže 6,35 mm, airsoft a paintball.",
           ],
           tip: "Srovnání se starými kategoriemi je jen orientační. V testu se ptají na nové kategorie, ne na stará písmena.",
-          source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 505–538)",
+          source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 505–538)",
         },
         {
           heading: "Kdo smí se kterou kategorií nakládat",
@@ -104,7 +105,8 @@ export const content: TopicContent = {
             "krátká zbraň: > 20 nábojů = nadlimitní,",
             "dlouhá zbraň: > 10 nábojů = nadlimitní.",
           ],
-          source: "zákon č. 90/2024 Sb., příloha č. 1",
+          tip: "Držitel ZO smí se samonabíjecí zbraní s vloženým nadlimitním zásobníkem nakládat na základě výjimky R2, nebo výjimky S2 vydané pro nadlimitní zásobníky (§ 10 odst. 3). Podrobně v lekci o střelivu a regulovaných součástech.",
+          source: `příloha č. 1 bod 3.5, příloha č. 2 bod 1.2.2 a § 10 odst. 3 zákona č. 90/2024 Sb.; ${MV("51, 52")}`,
         },
         {
           heading: "Tlumič hluku výstřelu",
@@ -170,7 +172,7 @@ export const content: TopicContent = {
       options: ["R1", "R2", "R3"],
       correct: 0,
       explanation: "Samočinné zbraně jsou spolu se zákeřnými a zvláště účinnými zbraněmi v nejpřísnější zakázané kategorii R1.",
-      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 505–509)",
+      source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 505–509)",
     },
     {
       id: "kategorie-x02", topic: T,
@@ -178,7 +180,7 @@ export const content: TopicContent = {
       options: ["R3", "R2", "R4"],
       correct: 1,
       explanation: "Samonabíjecí zbraň vzniklá úpravou ze samočinné zbraně patří do zakázané kategorie R2, i když už samočinně střílet neumí.",
-      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 512–515)",
+      source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 512–515)",
     },
     {
       id: "kategorie-x03", topic: T,
@@ -186,7 +188,7 @@ export const content: TopicContent = {
       options: ["R3", "PO", "R4"],
       correct: 2,
       explanation: "Brokové kozlice a dvojky (stejně jako opakovací kulovnice) patří do kategorie R4, se kterou smí držitel ZO nakládat bez dalšího povolení.",
-      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 523–530)",
+      source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 523–530)",
     },
     {
       id: "kategorie-x04", topic: T,
@@ -194,7 +196,7 @@ export const content: TopicContent = {
       options: ["PO", "NO", "R4"],
       correct: 0,
       explanation: "Poplašné a signalizační zbraně podléhají ohlášení – kategorie PO.",
-      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 531–534)",
+      source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 531–534)",
     },
     {
       id: "kategorie-x05", topic: T,
@@ -202,7 +204,7 @@ export const content: TopicContent = {
       options: ["PO", "NO", "R3"],
       correct: 1,
       explanation: "Plynové zbraně do ráže 6,35 mm nepodléhají ohlášení, patří tedy do kategorie NO.",
-      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 536–538)",
+      source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 536–538)",
     },
     {
       id: "kategorie-x06", topic: T,
@@ -282,7 +284,7 @@ export const content: TopicContent = {
       options: ["R4", "R3", "R2"],
       correct: 2,
       explanation: "Dlouhé samonabíjecí zbraně se sklopnou pažbou zkrátitelné pod 600 mm jsou zakázanou kategorií R2.",
-      source: "zákon č. 90/2024 Sb., příloha č. 1 (soubor MV ot. č. 512–515)",
+      source: "zákon č. 90/2024 Sb., příloha č. 2 (soubor MV ot. č. 512–515)",
     },
   ],
 };

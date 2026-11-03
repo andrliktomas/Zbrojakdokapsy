@@ -1,6 +1,7 @@
 import type { TopicContent } from "../types";
 
 const T = "opravneni";
+const MV = (n: string) => `soubor otázek MV (verze 15. 12. 2025), ot. č. ${n}`;
 
 export const content: TopicContent = {
   lessons: [
@@ -65,6 +66,15 @@ export const content: TopicContent = {
           source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 82, 84)",
         },
         {
+          heading: "Cizinci: kdy lze žádost zamítnout",
+          paragraphs: [
+            "I když cizinec splní všech šest podmínek, může KŘP jeho žádost z důvodu ochrany vnitřního pořádku nebo bezpečnosti zamítnout. Týká se to cizince, který není občanem státu EU (případně EHP nebo Švýcarska) ani státu NATO.",
+            "Toto zamítnutí nehrozí ani cizincům se zvláštním postavením – například s azylem, s trvalým pobytem a postavením dlouhodobě pobývajícího rezidenta nebo rodinným příslušníkům občana EU s pobytovou kartou.",
+          ],
+          tip: "Zbrojní oprávnění se nevydává „podmíněně“, v omezeném rozsahu ani se zkrácenou platností. KŘP ho buď vydá, nebo žádost zamítne. Občana jiného státu NATO takto odmítnout nelze.",
+          source: `§ 13 odst. 2 zákona č. 90/2024 Sb.; ${MV("85")}`,
+        },
+        {
           heading: "Věk: 18 / 21 / 15",
           bullets: [
             "obecné ZO: 18 let,",
@@ -88,9 +98,11 @@ export const content: TopicContent = {
             "ošetřující lékař, který zjistí vylučující nemoc, to musí oznámit policii; zda je pacient držitelem oprávnění, si ověří v CRZ.",
           ],
           paragraphs: [
+            "Zdravotně způsobilý není ten, jehož způsobilost bezpečně nakládat se zbraní nebo střelivem je vyloučena nebo omezena kvůli stanovené nemoci, vadě nebo stavu.",
             "Seznam nemocí, vad a stavů, které zdravotní způsobilost vylučují nebo omezují, stanoví nařízení vlády č. 351/2025 Sb.",
           ],
-          source: "§ 15–17 a § 21 odst. 1 písm. b) zákona č. 90/2024 Sb.; lhůta 90 dnů: zákon č. 373/2011 Sb.; NV č. 351/2025 Sb. (soubor MV ot. č. 90–101)",
+          tip: "Zdravotní nezpůsobilost vždy vychází z nemoci, vady nebo stavu ze seznamu v nařízení vlády. Nižší věk je samostatná podmínka ZO, nikoli zdravotní důvod.",
+          source: "§ 15–17 a § 21 odst. 1 písm. b) zákona č. 90/2024 Sb.; lhůta 90 dnů: zákon č. 373/2011 Sb.; NV č. 351/2025 Sb. (soubor MV ot. č. 89–101)",
         },
         {
           heading: "Bezúhonnost",

@@ -1,6 +1,7 @@
 import type { TopicContent } from "../types";
 
 const T = "zaklady";
+const MV = (n: string) => `soubor otázek MV (verze 15. 12. 2025), ot. č. ${n}`;
 
 export const content: TopicContent = {
   lessons: [
@@ -144,6 +145,146 @@ export const content: TopicContent = {
         },
       ],
     },
+    {
+      id: "zaklady-l4",
+      topic: T,
+      title: "Co zákon upravuje a základní pojmy",
+      sections: [
+        {
+          heading: "Co zákon o zbraních a střelivu upravuje",
+          paragraphs: [
+            "Zákon č. 90/2024 Sb. upravuje tři oblasti: nakládání se zbraněmi a střelivem, provozování střelnic a výkon státní správy v této oblasti. Zároveň zapracovává předpisy Evropské unie a navazuje na přímo použitelné předpisy EU.",
+            "Munici zákon o zbraních a střelivu neupravuje. Na ni je samostatný zákon č. 91/2024 Sb., o munici. Neupravuje ani zahraniční obchod se strojním zařízením pro zbrojní výrobu.",
+          ],
+          tip: "Odpověď „upravuje nakládání se zbraněmi, střelivem a municí“ je chyták. Munice do tohoto zákona nepatří. Pozor i na „předpisy OSN“ – zákon navazuje na předpisy Evropské unie.",
+          source: `§ 1 odst. 2 zákona č. 90/2024 Sb.; ${MV("2")}`,
+        },
+        {
+          heading: "Vyňaté veřejnoprávní instituce",
+          paragraphs: [
+            "Některé státní instituce jsou z působnosti zákona až na drobné výjimky vyňaty. Pokud samy nakládají se zbraněmi nebo střelivem nebo provozují střelnici, zákon se na ně použije jen tam, kde to výslovně stanoví.",
+          ],
+          bullets: [
+            "Ministerstvo vnitra,",
+            "Ministerstvo obrany,",
+            "ozbrojené síly České republiky (např. Armáda ČR),",
+            "bezpečnostní sbory České republiky (např. Policie ČR),",
+            "Český úřad pro zkoušení zbraní a střeliva (ČÚZZS).",
+          ],
+          tip: "Obecní (městská) policie není bezpečnostním sborem, takže vyňatou institucí není. Nejsou jí ani Poslanecká sněmovna a Senát. Kdo pro vyňatou instituci užívá střelnici provozovanou podle zákona, musí i tak dodržovat její provozní řád.",
+          source: `§ 1 odst. 3 a 4 zákona č. 90/2024 Sb.; ${MV("3")}`,
+        },
+        {
+          heading: "Co je pro zákon zbraň a co střelivo",
+          paragraphs: [
+            "Zbraní je palná zbraň, plynová zbraň a další zařízení nebo přístroj, které jsou zařazeny do některé kategorie zbraní. Zbraní je i to, na co se podle § 9 použijí ustanovení o zbrani určité kategorie (např. regulované součásti).",
+            "Střelivem jsou náboje, nábojky a aktivní komponenty střeliva (zápalky, střeliviny a střely s aktivní náplní), pokud jsou zařazeny do některé kategorie střeliva.",
+          ],
+          tip: "Chladné zbraně (nože, meče, šavle) zákon o zbraních a střelivu neupravuje. Expanzní přístroje nebo airsoft naopak ano – patří do kategorie NO. Munice ani pasivní komponenty (prázdná nábojnice, běžná střela bez aktivní náplně) nejsou střelivem.",
+          source: `§ 2 odst. 2 a 3 zákona č. 90/2024 Sb.; ${MV("4, 5")}`,
+        },
+        {
+          heading: "Regulované součásti podrobněji",
+          paragraphs: [
+            "Regulované součásti vyjmenovává přímo zákon a podrobně je popisuje jeho příloha č. 1. Nejde o seznam, který by si určovalo ministerstvo, a nezáleží ani na tom, z jakého materiálu je součást vyrobena.",
+          ],
+          bullets: [
+            "hlavní části zbraně – hlaveň, tělo, revolverový válec, závěr,",
+            "součásti umožňující samočinnou střelbu – např. samočinné spouště a spušťadla (spoušťové mechanismy samočinných zbraní), vyřazovače přerušovačů nebo dynamické pažby (bump-fire stock),",
+            "polotovar hlavní části zbraně – hlavňovina s dokončeným drážkovaným vývrtem,",
+            "tlumič hluku výstřelu – snižuje hluk výstřelu alespoň o 10 dB,",
+            "nadlimitní zásobník.",
+          ],
+          tip: "Regulovanou součástí NENÍ: střelivo, lafeta (ani lafeta bezzákluzové zbraně), sklopná pažba či ramenní opěra, úsťová zařízení jako tlumič plamene, zaměřovače a noktovizory. Tlumič hluku ano, tlumič plamene ne.",
+          source: `§ 2 odst. 4 a příloha č. 1 bod 3 zákona č. 90/2024 Sb.; ${MV("9–12")}`,
+        },
+        {
+          heading: "Co je nakládání se zbraní",
+          paragraphs: [
+            "Nakládáním se zbraní nebo střelivem je jakékoli fyzické zacházení s nimi, a to včetně zajištění jejich přepravy nebo uložení. Nakládáte tedy i tehdy, když zbraň jen vezete na střelnici nebo ji máte uloženou v trezoru.",
+            "Právní jednání (např. uzavření kupní smlouvy) se za nakládání považuje i bez fyzického kontaktu se zbraní, ale jen v případech, které zákon o zbraních a střelivu výslovně upravuje.",
+          ],
+          tip: "Přeprava a uložení zbraně nakládáním jsou. Munice do této definice nepatří – řídí se samostatným zákonem.",
+          source: `§ 3 písm. a) zákona č. 90/2024 Sb.; ${MV("13, 14")}`,
+        },
+        {
+          heading: "Sběratelská činnost",
+          paragraphs: [
+            "Sběratelská činnost je shromažďování a uchovávání zbraní, jejich hlavních částí nebo střeliva pro historické, kulturní, vědecké, technické, vzdělávací nebo památkové účely.",
+          ],
+          tip: "Sběratelství není praktické testování zbraní ani překročení nějakého množstevního limitu. Rozhoduje účel – shromažďovat a uchovávat.",
+          source: `§ 3 písm. f) zákona č. 90/2024 Sb.; ${MV("17")}`,
+        },
+      ],
+    },
+    {
+      id: "zaklady-l5",
+      topic: T,
+      title: "Obecné povinnosti a zákazy (§ 11)",
+      sections: [
+        {
+          heading: "Kde smím střílet",
+          paragraphs: [
+            "Každý smí střílet ze zbraně, se kterou nakládá, jen v místech, kde je k tomu oprávněn podle zákona o zbraních a střelivu nebo podle jiného právního předpisu.",
+            "Nemusí jít jen o střelnici. Jiný předpis může střelbu dovolit i jinde, typicky při lovu.",
+          ],
+          tip: "Nestačí, že na místě „nikoho neohrozíte“. Rozhoduje, zda vás ke střelbě na daném místě opravňuje zákon.",
+          source: `§ 11 odst. 1 písm. c) zákona č. 90/2024 Sb.; ${MV("61")}`,
+        },
+        {
+          heading: "Čí pokyny musíte poslechnout",
+          bullets: [
+            "na akci, při které se nakládá se zbraněmi (soutěž, lov, kurz) – pokyny pořadatele, které směřují k zajištění bezpečného nakládání se zbraněmi a střelivem,",
+            "na střelnici – provozní řád střelnice a pokyny správce střelnice, které směřují k zajištění bezpečného nakládání se zbraněmi a střelivem.",
+          ],
+          tip: "Zákon nemluví o pokynech pro „plánovaný průběh akce“, o pokynech jiného držitele zbrojního oprávnění ani o radách zkušených štamgastů. Na střelnici jde o provozní řád (ne „technický řád“) a o správce střelnice (ne o provozovatele).",
+          source: `§ 11 odst. 1 písm. d) a e) zákona č. 90/2024 Sb.; ${MV("62, 63")}`,
+        },
+        {
+          heading: "Alkohol a návykové látky",
+          paragraphs: [
+            "Kdo nakládá se zbraní nebo střelivem, musí se na výzvu policisty podrobit vyšetření, zda není ovlivněn alkoholem nebo jinou návykovou látkou. Vyšetření se provádí podle zákona o ochraně zdraví před škodlivými účinky návykových látek.",
+            "Nikdo také nesmí střílet ani nosit zbraň pod vlivem alkoholu nebo jiné návykové látky, ani když je jeho schopnost bezpečně nakládat se zbraní snížena léky nebo zdravotním stavem.",
+          ],
+          tip: "Zákon o zbraních a střelivu nestanoví žádnou „povolenou“ hranici, třeba 0,5 ‰. Vyšetřením se zjišťuje jen to, zda jste alkoholem nebo jinou návykovou látkou ovlivněni.",
+          source: `§ 11 odst. 1 písm. f) a odst. 3 písm. e) zákona č. 90/2024 Sb.; ${MV("64")}`,
+        },
+        {
+          heading: "Evropský zbrojní pas a cesta přes hranice",
+          bullets: [
+            "ztrátu nebo odcizení evropského zbrojního pasu musí jeho držitel ohlásit bez zbytečného odkladu krajskému ředitelství policie,",
+            "na hraničním přechodu musí každý oznámit policii, že cestuje se zbraní nebo se střelivem.",
+          ],
+          tip: "Rozlišujte: ztráta zbraně se hlásí policii neprodleně, ztráta evropského zbrojního pasu krajskému ředitelství policie bez zbytečného odkladu. Povinností je ztrátu ohlásit – ne automaticky žádat o duplikát. Předkládat pas bez vyzvání zákon neukládá.",
+          source: `§ 11 odst. 1 písm. g) a h) zákona č. 90/2024 Sb.; ${MV("65, 66")}`,
+        },
+        {
+          heading: "Co nikdo nesmí",
+          paragraphs: [
+            "Tyto zákazy platí pro každého – pro držitele oprávnění i pro ostatní.",
+          ],
+          bullets: [
+            "nakládat se zbraní nebo střelivem, pokud k tomu není oprávněn,",
+            "převést zbraň nebo střelivo nebo jinak umožnit nakládání s nimi osobě, která k tomu není oprávněna,",
+            "dodat na trh zbraň nebo střelivo jako zbraň nebo střelivo jiné kategorie, než odpovídá jejich konstrukčním vlastnostem nebo funkčnímu principu,",
+            "nakládat se zbraní nebo střelivem tak, že ohrozí život, zdraví nebo majetek jiné osoby, protože nedbá zvýšené opatrnosti odpovídající povaze a stavu zbraně nebo střeliva,",
+            "ohrozit život, zdraví nebo majetek jiné osoby použitím zbraně nebo střeliva ve špatném technickém stavu nebo takových, které neodpovídají zákonu o ověřování zbraní a střeliva.",
+          ],
+          tip: "Rozhoduje oprávnění, ne „vyškolení“ nebo znalost konstrukce. Zákazy nemají výjimky typu „přenechání na méně než 30 dní“, „zážitková střelba“ nebo „pro držitele ZL1“. Zákaz ohrožení chrání jiné osoby, ne vás samotné.",
+          source: `§ 11 odst. 3 písm. a) až d) a j) zákona č. 90/2024 Sb.; ${MV("67–70, 77")}`,
+        },
+        {
+          heading: "Střelnice, neregistrovaná zbraň a hranice",
+          bullets: [
+            "nikdo nesmí bez povolení provozovat střelnici, jejíž provozování podléhá povolení podle zákona,",
+            "nikdo nesmí nosit zbraň podléhající registraci, která nebyla zaregistrována – výjimkou je zbraň přenechaná držitelem zbrojní licence skupiny ZL1,",
+            "nikdo nesmí provést přeshraniční přemístění zbraně nebo střeliva v rozporu se zákonem o zbraních a střelivu nebo s jiným předpisem.",
+          ],
+          tip: "Přeshraniční přemístění nemá výjimku pro státy EU ani pro střelecké soutěže. U střelnic zákon nezná výjimku „méně než 26 dní v roce“ ani souhlas krajského úřadu. Neregistrovanou zbraň smíte nosit, jen když vám ji přenechal držitel ZL1 – žádná „lhůta 10 dnů“ tu neplatí.",
+          source: `§ 11 odst. 3 písm. f), g) a i) zákona č. 90/2024 Sb.; ${MV("73, 74, 76")}`,
+        },
+      ],
+    },
   ],
 
   glossary: [
@@ -157,6 +298,13 @@ export const content: TopicContent = {
     { term: "Hlavní části zbraně", topic: T, definition: "Hlaveň (i vložná), tělo (i rám revolveru), revolverový válec a závěr.", source: "soubor MV ot. č. 493–498" },
     { term: "KŘP", topic: T, definition: "Krajské ředitelství policie – úřad, který vede řízení o zbrojním oprávnění a zapisuje údaje do CRZ.", source: "zákon č. 90/2024 Sb." },
     { term: "Nabytí na dálku", topic: T, definition: "Koupě spotřebitelskou smlouvou uzavřenou na dálku (e-shop); u zbraní R1–R4, PO, palných zbraní NO a střeliva zakázáno.", source: "soubor MV ot. č. 53" },
+    { term: "Vyňatá veřejnoprávní instituce", topic: T, definition: "Ministerstvo vnitra, Ministerstvo obrany, ozbrojené síly ČR, bezpečnostní sbory ČR a ČÚZZS. Zákon se na ně použije, jen pokud to výslovně stanoví. Obecní policie mezi ně nepatří.", source: `§ 1 odst. 3 zákona č. 90/2024 Sb.; ${MV("3")}` },
+    { term: "Zbraň (pro účely zákona)", topic: T, definition: "Palná zbraň, plynová zbraň a další zařízení nebo přístroj zařazené do kategorie zbraní nebo posuzované podle § 9. Chladné zbraně sem nepatří.", source: `§ 2 odst. 2 zákona č. 90/2024 Sb.; ${MV("4")}` },
+    { term: "Střelivo (pro účely zákona)", topic: T, definition: "Náboje, nábojky a aktivní komponenty střeliva, které jsou zařazeny do některé kategorie střeliva.", source: `§ 2 odst. 3 zákona č. 90/2024 Sb.; ${MV("5")}` },
+    { term: "Nakládání se zbraní nebo střelivem", topic: T, definition: "Jakékoli fyzické zacházení se zbraní nebo střelivem včetně zajištění přepravy nebo uložení. Právní jednání jen tam, kde to zákon výslovně upravuje.", source: `§ 3 písm. a) zákona č. 90/2024 Sb.; ${MV("13, 14")}` },
+    { term: "Sběratelská činnost", topic: T, definition: "Shromažďování a uchovávání zbraní, jejich hlavních částí nebo střeliva pro historické, kulturní, vědecké, technické, vzdělávací nebo památkové účely.", source: `§ 3 písm. f) zákona č. 90/2024 Sb.; ${MV("17")}` },
+    { term: "Součást umožňující samočinnou střelbu", topic: T, definition: "Součást nebo doplňkové zařízení nezbytné k úpravě zbraně pro samočinnou nebo obdobnou střelbu, např. samočinná spoušť, vyřazovač přerušovače nebo dynamická pažba (bump-fire stock).", source: `příloha č. 1 bod 3.2 zákona č. 90/2024 Sb.; ${MV("11, 12")}` },
+    { term: "Polotovar hlavní části zbraně", topic: T, definition: "Hlavňovina s dokončeným drážkovaným vývrtem; regulovaná součást zbraně.", source: `příloha č. 1 bod 3.3 zákona č. 90/2024 Sb.; ${MV("12")}` },
   ],
 
   flashcards: [
@@ -178,6 +326,25 @@ export const content: TopicContent = {
     { id: "zaklady-k16", topic: T, front: "Co nelze koupit přes e-shop na dálku?", back: "Zbraně R1–R4, PO, palné zbraně NO a střelivo." },
     { id: "zaklady-k17", topic: T, front: "Vyhotovuje se písemné rozhodnutí o vydání ZO?", back: "Ne, KŘP jen zapíše údaj do CRZ." },
     { id: "zaklady-k18", topic: T, front: "Kterým předpisem bylo do Listiny doplněno právo bránit život i se zbraní?", back: "Ústavním zákonem č. 295/2021 Sb." },
+    { id: "zaklady-k19", topic: T, front: "Co upravuje zákon o zbraních a střelivu?", back: "Nakládání se zbraněmi a střelivem, provozování střelnic a výkon státní správy v této oblasti. Munici ne." },
+    { id: "zaklady-k20", topic: T, front: "Vyňaté veřejnoprávní instituce", back: "MV, MO, ozbrojené síly ČR, bezpečnostní sbory ČR a ČÚZZS." },
+    { id: "zaklady-k21", topic: T, front: "Je obecní (městská) policie vyňatou institucí?", back: "Ne – není bezpečnostním sborem." },
+    { id: "zaklady-k22", topic: T, front: "Upravuje zákon o zbraních a střelivu chladné zbraně?", back: "Ne. Zbraní je palná a plynová zbraň a další zařízení zařazená do kategorie." },
+    { id: "zaklady-k23", topic: T, front: "Co je střelivo podle zákona?", back: "Náboje, nábojky a aktivní komponenty střeliva zařazené do kategorie střeliva." },
+    { id: "zaklady-k24", topic: T, front: "Je střelivo regulovanou součástí zbraně?", back: "Ne. Regulovanou součástí není ani lafeta, sklopná pažba nebo tlumič plamene." },
+    { id: "zaklady-k25", topic: T, front: "Dynamická pažba (bump-fire stock) – regulovaná součást?", back: "Ano, je to součást umožňující samočinnou střelbu." },
+    { id: "zaklady-k26", topic: T, front: "Polotovar hlavní části zbraně", back: "Hlavňovina s dokončeným drážkovaným vývrtem." },
+    { id: "zaklady-k27", topic: T, front: "Je přeprava nebo uložení zbraně „nakládáním“?", back: "Ano. Nakládání = jakékoli fyzické zacházení včetně přepravy a uložení." },
+    { id: "zaklady-k28", topic: T, front: "Kdy je právní jednání nakládáním se zbraní?", back: "Jen když to zákon o zbraních a střelivu výslovně upravuje." },
+    { id: "zaklady-k29", topic: T, front: "Sběratelská činnost", back: "Shromažďování a uchovávání zbraní, hlavních částí nebo střeliva pro historické, kulturní, vědecké, technické, vzdělávací nebo památkové účely." },
+    { id: "zaklady-k30", topic: T, front: "Kde smím střílet?", back: "Jen tam, kde mě k tomu opravňuje zákon o zbraních a střelivu nebo jiný předpis." },
+    { id: "zaklady-k31", topic: T, front: "Čí pokyny musím poslechnout na střelnici?", back: "Provozní řád a pokyny správce střelnice, které směřují k bezpečnému nakládání se zbraněmi." },
+    { id: "zaklady-k32", topic: T, front: "Pokyny pořadatele akce se zbraněmi", back: "Musím uposlechnout ty, které směřují k bezpečnému nakládání se zbraněmi a střelivem." },
+    { id: "zaklady-k33", topic: T, front: "Policista mě při nakládání se zbraní vyzve k vyšetření na alkohol", back: "Musím se podrobit. Zákon nestanoví žádnou povolenou hranici." },
+    { id: "zaklady-k34", topic: T, front: "Ztráta evropského zbrojního pasu", back: "Ohlásit bez zbytečného odkladu krajskému ředitelství policie." },
+    { id: "zaklady-k35", topic: T, front: "Cestuji přes hraniční přechod se zbraní", back: "Musím to na hraničním přechodu oznámit policii." },
+    { id: "zaklady-k36", topic: T, front: "Kdy smím nosit dosud neregistrovanou zbraň R1–R4?", back: "Jen pokud mi ji přenechal držitel zbrojní licence ZL1." },
+    { id: "zaklady-k37", topic: T, front: "Smí se prodávat zbraň jako zbraň jiné kategorie?", back: "Ne. Kategorie musí odpovídat konstrukčním vlastnostem a funkčnímu principu." },
   ],
 
   questions: [
@@ -308,6 +475,110 @@ export const content: TopicContent = {
       correct: 2,
       explanation: "Zákon zakazuje šířit oficiálně sestavené písemné testy určené k ověřování odborné způsobilosti.",
       source: "zákon č. 90/2024 Sb. (soubor MV ot. č. 75)",
+    },
+    {
+      id: "zaklady-x17", topic: T,
+      question: "Co z uvedeného zákon č. 90/2024 Sb., o zbraních a střelivu, NEUPRAVUJE?",
+      options: ["Provozování střelnic", "Civilní nakládání s municí", "Výkon státní správy v oblasti zbraní"],
+      correct: 1,
+      explanation: "Zákon upravuje nakládání se zbraněmi a střelivem, provozování střelnic a výkon státní správy. Munici upravuje samostatný zákon č. 91/2024 Sb.",
+      source: `§ 1 odst. 2 zákona č. 90/2024 Sb.; ${MV("2")}`,
+    },
+    {
+      id: "zaklady-x18", topic: T,
+      question: "Která z uvedených institucí je vyňatou veřejnoprávní institucí podle zákona o zbraních a střelivu?",
+      options: ["Obecní policie", "Senát Parlamentu ČR", "Český úřad pro zkoušení zbraní a střeliva"],
+      correct: 2,
+      explanation: "Vyňatými institucemi jsou Ministerstvo vnitra, Ministerstvo obrany, ozbrojené síly ČR, bezpečnostní sbory ČR a ČÚZZS. Obecní policie ani Parlament mezi ně nepatří.",
+      source: `§ 1 odst. 3 zákona č. 90/2024 Sb.; ${MV("3")}`,
+    },
+    {
+      id: "zaklady-x19", topic: T,
+      question: "Vztahuje se zákon o zbraních a střelivu na chladné zbraně, například nože a meče?",
+      options: ["Ne, zbraní je pro účely zákona palná a plynová zbraň a další zařízení zařazená do kategorie", "Ano, chladné zbraně patří do kategorie NO", "Ano, ale jen u čepele delší než 12 cm"],
+      correct: 0,
+      explanation: "Zákon definuje zbraň jako palnou zbraň, plynovou zbraň a další zařízení zařazená do kategorií nebo posuzovaná podle § 9. Chladné zbraně mezi ně nepatří.",
+      source: `§ 2 odst. 2 zákona č. 90/2024 Sb.; ${MV("4")}`,
+    },
+    {
+      id: "zaklady-x20", topic: T,
+      question: "Co z uvedeného je střelivem ve smyslu zákona o zbraních a střelivu?",
+      options: ["Prázdná nábojnice bez zápalky", "Dělostřelecký granát", "Nábojka"],
+      correct: 2,
+      explanation: "Střelivem jsou náboje, nábojky a aktivní komponenty střeliva zařazené do kategorie. Prázdná nábojnice je pasivní komponent a granát je munice, na kterou platí jiný zákon.",
+      source: `§ 2 odst. 3 zákona č. 90/2024 Sb.; ${MV("5")}`,
+    },
+    {
+      id: "zaklady-x21", topic: T,
+      question: "Které z uvedených zařízení je regulovanou součástí zbraně?",
+      options: ["Tlumič plamene na ústí hlavně", "Dynamická pažba (bump-fire stock)", "Sklopná pažba pušky"],
+      correct: 1,
+      explanation: "Dynamická pažba umožňuje střelbu obdobnou samočinné, a je proto součástí umožňující samočinnou střelbu. Tlumič plamene ani sklopná pažba regulovanými součástmi nejsou.",
+      source: `§ 2 odst. 4 a příloha č. 1 bod 3.2 zákona č. 90/2024 Sb.; ${MV("9–12")}`,
+    },
+    {
+      id: "zaklady-x22", topic: T,
+      question: "Vezete nenabitou zbraň v kufru auta na střelnici. Nakládáte s ní ve smyslu zákona?",
+      options: ["Ano, nakládáním je i zajištění přepravy zbraně", "Ne, nakládáním je jen střelba ze zbraně", "Ne, pokud je zbraň v uzamčeném kufru"],
+      correct: 0,
+      explanation: "Nakládání je jakékoli fyzické zacházení se zbraní nebo střelivem, a to včetně zajištění jejich přepravy nebo uložení.",
+      source: `§ 3 písm. a) zákona č. 90/2024 Sb.; ${MV("13")}`,
+    },
+    {
+      id: "zaklady-x23", topic: T,
+      question: "Kde smíte podle zákona o zbraních a střelivu střílet ze zbraně, se kterou nakládáte?",
+      options: ["Kdekoli, kde nikomu nehrozí újma", "Výhradně na povolené střelnici", "V místech, kde vás ke střelbě opravňuje zákon o zbraních a střelivu nebo jiný právní předpis"],
+      correct: 2,
+      explanation: "Nestačí, že nikomu nic nehrozí. Střílet smíte jen tam, kde vás k tomu opravňuje tento zákon nebo jiný předpis – nemusí jít jen o střelnici.",
+      source: `§ 11 odst. 1 písm. c) zákona č. 90/2024 Sb.; ${MV("61")}`,
+    },
+    {
+      id: "zaklady-x24", topic: T,
+      question: "Policista vás při nakládání se zbraní vyzve k vyšetření na alkohol. Co platí?",
+      options: ["Musíte se podrobit; zjišťuje se, zda nejste ovlivněni alkoholem nebo jinou návykovou látkou", "Musíte se podrobit, ale porušením je až hladina nad 0,5 ‰", "Vyšetření můžete odmítnout, pokud nemáte zbraň nabitou"],
+      correct: 0,
+      explanation: "Kdo nakládá se zbraní nebo střelivem, musí se na výzvu policisty podrobit vyšetření. Zákon o zbraních a střelivu žádnou povolenou hranici alkoholu nestanoví.",
+      source: `§ 11 odst. 1 písm. f) zákona č. 90/2024 Sb.; ${MV("64")}`,
+    },
+    {
+      id: "zaklady-x25", topic: T,
+      question: "Ztratili jste evropský zbrojní pas. Co musíte udělat?",
+      options: ["Do 30 dnů požádat ministerstvo vnitra o duplikát", "Nic, pokud zrovna necestujete do zahraničí", "Bez zbytečného odkladu to ohlásit krajskému ředitelství policie"],
+      correct: 2,
+      explanation: "Držitel evropského zbrojního pasu musí jeho ztrátu nebo odcizení ohlásit bez zbytečného odkladu krajskému ředitelství policie.",
+      source: `§ 11 odst. 1 písm. g) zákona č. 90/2024 Sb.; ${MV("65")}`,
+    },
+    {
+      id: "zaklady-x26", topic: T,
+      question: "Kdy smíte nosit zbraň podléhající registraci, která dosud nebyla zaregistrována?",
+      options: ["Do 10 pracovních dnů od jejího nabytí", "Pokud vám ji přenechal držitel zbrojní licence skupiny ZL1", "Kdykoli, máte-li rozšířené zbrojní oprávnění"],
+      correct: 1,
+      explanation: "Nosit neregistrovanou zbraň podléhající registraci je zakázáno. Jedinou výjimkou je zbraň přenechaná držitelem zbrojní licence skupiny ZL1.",
+      source: `§ 11 odst. 3 písm. g) zákona č. 90/2024 Sb.; ${MV("74")}`,
+    },
+    {
+      id: "zaklady-x27", topic: T,
+      question: "Které tvrzení o zákazech podle zákona o zbraních a střelivu je správné?",
+      options: ["Zbraň lze přenechat neoprávněné osobě, pokud to nepřesáhne 30 dní v roce", "Příležitostnou střelnici lze provozovat bez povolení, je-li využívána méně než 26 dní v roce", "Přeshraniční přemístění zbraně v rozporu se zákonem je zakázáno, a to i do jiného státu EU"],
+      correct: 2,
+      explanation: "Zákaz přeshraničního přemístění v rozporu se zákonem nemá výjimku pro EU ani pro soutěže. Přenechat zbraň neoprávněné osobě nelze nikdy a střelnici podléhající povolení nelze bez povolení provozovat.",
+      source: `§ 11 odst. 3 písm. b), f) a i) zákona č. 90/2024 Sb.; ${MV("68, 73, 76")}`,
+    },
+    {
+      id: "zaklady-x28", topic: T,
+      question: "Střelec použije zbraň v tak špatném technickém stavu, že při výstřelu zraní člověka vedle sebe. Co platí?",
+      options: ["Porušil zákaz ohrozit život, zdraví nebo majetek jiné osoby použitím zbraně ve špatném technickém stavu", "Za technický stav zbraně odpovídá jen správce střelnice", "Zákon to řeší, jen pokud zbraň nebyla ověřena"],
+      correct: 0,
+      explanation: "Nikdo nesmí ohrozit jinou osobu použitím zbraně nebo střeliva ve špatném technickém stavu nebo takových, které neodpovídají zákonu o ověřování zbraní a střeliva.",
+      source: `§ 11 odst. 3 písm. j) zákona č. 90/2024 Sb.; ${MV("77")}`,
+    },
+    {
+      id: "zaklady-x29", topic: T,
+      question: "Co rozhoduje o tom, zda jde o sběratelskou činnost?",
+      options: ["Počet zbraní – sběratelem je ten, kdo má víc než 10 zbraní", "Účel – shromažďování a uchovávání zbraní, hlavních částí nebo střeliva pro historické, kulturní, vědecké a podobné účely", "Zda sběratel zbraně prakticky testuje a výsledky publikuje"],
+      correct: 1,
+      explanation: "Sběratelská činnost je shromažďování a uchovávání zbraní, jejich hlavních částí nebo střeliva pro historické, kulturní, vědecké, technické, vzdělávací nebo památkové účely.",
+      source: `§ 3 písm. f) zákona č. 90/2024 Sb.; ${MV("17")}`,
     },
   ],
 };

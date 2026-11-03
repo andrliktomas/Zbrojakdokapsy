@@ -2,8 +2,10 @@ import type { TopicContent } from "../types";
 
 // Zdroj faktů: docs/research/legislativa.md (kap. 1.2, 1.6, 1.7, 1.8, 3.2).
 // Čísla § ověřena proti konsolidovanému znění zákona č. 90/2024 Sb. k 1. 1. 2026 (revize rešerše 3. 11. 2026).
+// Doplněno podle souboru testových otázek MV (verze 15. 12. 2025, ot. č. 274–358); otázky jsou vlastní parafráze.
 
 const T = "nakladani";
+const MV = (n: string) => `soubor otázek MV (verze 15. 12. 2025), ot. č. ${n}`;
 
 export const content: TopicContent = {
   lessons: [
@@ -50,8 +52,43 @@ export const content: TopicContent = {
           paragraphs: [
             "Hlavní držitel je osoba, které byla zbraň zaregistrována. Na jeho žádost lze zapsat jednoho nebo více vedlejších držitelů – například partnera, se kterým zbraň sdílíte.",
             "Vedlejší držitel musí se zápisem souhlasit a musí být oprávněn se zbraní nakládat. U zbraně R3 tedy potřebuje i vlastní povolení R3.",
+            "Pokud bylo vedlejšímu držiteli zbrojní oprávnění pozastaveno nebo mu zaniklo, uvědomí o tom hlavního držitele bez zbytečného odkladu krajské ředitelství policie.",
           ],
-          source: "zákon č. 90/2024 Sb.; soubor MV ot. č. 276–281",
+          tip: "Hlavního držitele informuje KŘP. Není to povinnost vedlejšího držitele a hlavní držitel nemusí sám navrhovat výmaz.",
+          source: `§ 71 zákona č. 90/2024 Sb.; ${MV("276–282")}`,
+        },
+        {
+          heading: "Zbraně PO: co se ohlašuje a od kdy běží lhůta",
+          paragraphs: [
+            "Zbraně kategorie PO se neregistrují, jen se ohlašují. Patří sem například poplašné a signalizační zbraně, signální zbraně pro signální náboje nejvýše ráže 16 mm, jednoranové a dvouranové zbraně pro dělené střelivo nebo zbraně znehodnocené podle předpisu EU.",
+            "Nabytí zbraně PO ohlásíte krajskému ředitelství policie do 10 pracovních dnů ode dne, kdy jste s ní začali nakládat. Lhůta neběží od výzvy policie ani od jiné události.",
+            "Když zbraň PO převedete na někoho jiného, ohlásíte převod krajskému ředitelství policie do 10 pracovních dnů ode dne, kdy převod proběhl.",
+          ],
+          tip: "Signální zbraň do ráže 16 mm je PO a ohlašuje se. Historická zbraň je NO a nehlásí se. Krátká opakovací zbraň na střelivo se středovým zápalem je R3 a podléhá registraci.",
+          source: `§ 72 a příloha č. 1 zákona č. 90/2024 Sb.; ${MV("284, 285, 287")}`,
+        },
+        {
+          heading: "Zbraň, se kterou nesmíte nakládat",
+          paragraphs: [
+            "Ohlásíte-li nabytí zbraně podléhající registraci, se kterou nejste oprávněni nakládat (třeba pistole R3 bez povolení R3), krajské ředitelství policie rozhodne o odmítnutí registrace a zbraň zadrží.",
+            "U zbraně kategorie PO je postup obdobný: KŘP zápis změny stavu do CRZ neprovede a zbraň zadrží.",
+          ],
+          tip: "Klíčové slovo je „zadrží“. KŘP zbraň neznehodnotí a ani ji nezaregistruje s převzetím do úschovy. Důvodem odmítnutí je to, že se zbraní nesmíte nakládat – ne třeba chybějící kupní smlouva.",
+          source: `§ 70 odst. 3 a § 72 odst. 3 zákona č. 90/2024 Sb.; ${MV("274, 275, 288")}`,
+        },
+        {
+          heading: "Kdy se převod ani nabytí neohlašuje",
+          paragraphs: [
+            "Ohlašovací povinnost se váže na nabytí a převod zbraně. Některé situace převodem nejsou nebo je zákon z povinnosti vyjímá:",
+          ],
+          bullets: [
+            "Předáte zbraň držiteli zbrojní licence skupiny ZL1 (např. puškaři) k opravě nebo do úschovy – nejde o převod, KŘP nic nehlásíte. Pokud mu ji ale prodáte, jde o převod a ten ohlásit musíte.",
+            "Přenechání ani svěření zbraně v souladu se zákonem se jako převod ani nabytí neohlašuje.",
+            "Prodáte zbraň oprávněné osobě, která ji do 10 pracovních dnů ode dne, kdy s ní začala nakládat, v souladu s jiným předpisem trvale přeshraničně přemístí mimo ČR – převod se neohlašuje.",
+            "Držitel zbrojní licence skupiny ZL1 nabytí ani převody KŘP neohlašuje. Místo toho je sám zapisuje do své evidence v CRZ.",
+          ],
+          tip: "Pozor na slovo „trvale“. Výjimka platí pro trvalé přeshraniční přemístění, ne pro dočasný výjezd na lov nebo na závody.",
+          source: `§ 73 zákona č. 90/2024 Sb.; ${MV("289–292")}`,
         },
         {
           heading: "Pravidelné kontroly",
@@ -102,6 +139,47 @@ export const content: TopicContent = {
           tip: "Zapamatujte si dvojici čísel 21 let a 3 roky.",
           source: "zákon č. 90/2024 Sb.; soubor MV ot. č. 314–319",
         },
+        {
+          heading: "Přenechání zbraní PO a NO",
+          paragraphs: [
+            "Zbraň kategorie PO nebo NO a střelivo do ní můžete přenechat osobě, která je oprávněna s nimi nakládat, nebo plně svéprávné zletilé fyzické osobě. Přenechání se nikam nehlásí.",
+            "Vždy ale musíte znát údaje potřebné k určení totožnosti toho, komu zbraň přenecháváte. Neznámému člověku ji přenechat nesmíte.",
+            "Paintballovou, airsoftovou nebo jinou plynovou zbraň kategorie NO lze přenechat i osobě, která dosáhla 15 let. Souhlas s tím musí dát její zákonný zástupce, opatrovník nebo poručník.",
+          ],
+          tip: "Airsoft a paintball: 15 let a souhlas zákonného zástupce. Ne 10 ani 12 let a nikdy bez souhlasu.",
+          source: `§ 78 odst. 4 a 5 zákona č. 90/2024 Sb.; ${MV("310–313")}`,
+        },
+        {
+          heading: "Svěření zbraní PO a NO a povinnosti dohlížejícího",
+          paragraphs: [
+            "Zbraň kategorie PO nebo NO a střelivo do ní lze svěřit jen za dohledu osoby, která je oprávněna s takovou zbraní a střelivem nakládat. Podmínkou je dohled, ne třeba ověření nebo označení zbraně.",
+            "Kdo dohlíží na osobu, které byla svěřena jakákoli zbraň nebo střelivo, musí:",
+          ],
+          bullets: [
+            "poučit ji o bezpečném nakládání se svěřenou zbraní a střelivem,",
+            "dohlížet v potřebném rozsahu tak, aby neporušila povinnost nebo zákaz stanovený zákonem a hlavně neohrozila život nebo zdraví.",
+          ],
+          tip: "Dohlížející nic nehlásí KŘP ani nezapisuje do evidence. Jeho povinností je poučení a dohled.",
+          source: `§ 79 odst. 4 a 5 zákona č. 90/2024 Sb.; ${MV("320, 321")}`,
+        },
+        {
+          heading: "Cesta na akci a zpět",
+          paragraphs: [
+            "Kdo se účastní akce nebo činnosti, při které lze zbraň nosit viditelně (lov, sportovní střelba, výcvik, kulturní akce), smí nenabitou zbraň přepravovat na místo konání a zpět i viditelně.",
+            "Podmínkou je, že to připouští zvolený způsob přepravy a že je to s ohledem na místní podmínky obvyklé, nebo je to přiměřené povaze akce. Na takovou přepravu se obdobně vztahují povinnosti osoby, která zbraň nosí.",
+          ],
+          tip: "Zákon tu nevyžaduje rozšířené ZO ani zbrojní licenci. Rozhoduje nenabitá zbraň, vhodný způsob přepravy a obvyklost nebo přiměřenost.",
+          source: `§ 81 odst. 2 zákona č. 90/2024 Sb.; ${MV("329")}`,
+        },
+        {
+          heading: "Veřejné vystavování zbraní",
+          paragraphs: [
+            "Zbraně a střelivo lze veřejně vystavovat za obdobných podmínek, za jakých lze zbraň viditelně nosit. Účelem může být i účast na specializovaném veletrhu, výstavě nebo předváděcí akci, kde se zbraně nebo střelivo uvádějí na trh. Zvláštní povolení policie zákon nevyžaduje.",
+            "Kdo zbraně nebo střelivo vystavuje, musí je zabezpečit proti zneužití, ztrátě nebo odcizení. Zároveň musí zajistit, aby při vystavování nebyl ohrožen život, zdraví, majetek ani veřejný pořádek.",
+          ],
+          tip: "Tvrzení „vystavovatel nemusí vystavené zbraně zabezpečit“ je nepravdivé. Tuto povinnost má vždy.",
+          source: `§ 82 zákona č. 90/2024 Sb.; ${MV("330–332")}`,
+        },
       ],
     },
     {
@@ -109,6 +187,15 @@ export const content: TopicContent = {
       topic: T,
       title: "Zabezpečení, vozidlo, přeprava a cesty do zahraničí",
       sections: [
+        {
+          heading: "Obecná povinnost zabezpečit",
+          paragraphs: [
+            "Povinnost zabezpečit zbraně a střelivo má vždy ten, kdo s nimi nakládá. Platí pro všechny zbraně a střelivo, nejen pro zbraně podléhající registraci.",
+            "Zbraně a střelivo, které ukládáte mimo svou bezprostřední kontrolu, musíte zabezpečit s ohledem na jejich povahu a místní podmínky tak, aby se zabránilo jejich zneužití, ztrátě, odcizení nebo zašantročení. U zbraní podléhajících registraci a střeliva S1–S3 pak platí konkrétní technické požadavky podle počtu ukládaných kusů (viz další část).",
+          ],
+          tip: "Zapamatujte si čtveřici zneužití – ztráta – odcizení – zašantročení. Zákon nepožaduje, aby místo uložení bylo utajené, ani aby se zabezpečení řídilo pokyny výrobce zbraně.",
+          source: `§ 83 odst. 1 zákona č. 90/2024 Sb.; ${MV("333–335")}`,
+        },
         {
           heading: "Zabezpečení doma",
           paragraphs: [
@@ -122,6 +209,24 @@ export const content: TopicContent = {
           ],
           tip: "Chyták: rozhoduje počet SOUČASNĚ ukládaných zbraní, ne celkový počet zbraní v registru.",
           source: "§ 83 zákona č. 90/2024 Sb.; NV č. 187/2025 Sb.; soubor MV ot. č. 336–341",
+        },
+        {
+          heading: "Nezletilí a jiný způsob zabezpečení",
+          paragraphs: [
+            "Nakládá-li se zbraní nezletilá osoba, musí její zákonný zástupce, opatrovník nebo poručník zajistit dodržování pravidel zabezpečení zbraně. To neplatí, pokud zbraň zabezpečuje jiná osoba, která je s ní oprávněna nakládat.",
+            "Jiný způsob zabezpečení povolí krajské ředitelství policie na žádost. Musí jít o případ, kdy standardní zabezpečení nelze zajistit kvůli rozměrům zbraní nebo střeliva, jejich množství nebo účelu, anebo kdy to odpovídá zvláštním místním podmínkám. Ochrana proti zneužití, ztrátě nebo odcizení musí zůstat zaručena.",
+            "K žádosti se přikládá projekt jiného způsobu zabezpečení.",
+          ],
+          tip: "Zákonný zástupce nemusí zbraň zabezpečovat sám, ale musí zajistit dodržování pravidel. Bytová situace ani rodinné poměry nejsou důvodem pro jiný způsob zabezpečení a k žádosti se nepřikládá znalecký posudek, ale projekt.",
+          source: `§ 83 odst. 5 a § 84 zákona č. 90/2024 Sb.; ${MV("342–344")}`,
+        },
+        {
+          heading: "Zákaz vstupu se zbraní na úřad",
+          paragraphs: [
+            "Pokud orgán veřejné moci (například soud nebo úřad) nepouští do svých úředních nebo chráněných prostor nikoho se zbraní, musí držiteli umožnit bezpečné uložení krátké zbraně.",
+          ],
+          tip: "Povinnost umožnit uložení má orgán, který zákaz vynucuje. Zákon nestanoví žádné ochranné pásmo kolem budovy.",
+          source: `§ 85 zákona č. 90/2024 Sb.; ${MV("345")}`,
         },
         {
           heading: "Zbraň ve vozidle",
@@ -201,6 +306,109 @@ export const content: TopicContent = {
         },
       ],
     },
+    {
+      id: "nakladani-l5",
+      topic: T,
+      title: "Evidence a lidé u držitele zbrojní licence",
+      sections: [
+        {
+          heading: "Co zapisuje do CRZ držitel ZL1",
+          paragraphs: [
+            "Držitel zbrojní licence skupiny ZL1 (typicky obchod se zbraněmi nebo puškař) nabytí ani převody zbraní KŘP neohlašuje. Místo toho sám zapisuje do centrálního registru zbraní údaje o zbraních podléhajících registraci, zbraních kategorie PO a o střelivu, se kterými nakládá.",
+            "Každou změnu stavu musí zapsat nejpozději před předáním zbraně nebo střeliva a bez zbytečného odkladu po jejich převzetí. Jen v mimořádných odůvodněných případech smí převzetí zapsat nejpozději do 2 pracovních dnů.",
+          ],
+          bullets: [
+            "datum nabytí, převedení, přenechání nebo převzetí,",
+            "údaje identifikující konkrétní zbraň podléhající registraci nebo zbraň PO,",
+            "ráži a počet nábojů a druh a množství aktivních komponentů,",
+            "místo uložení a osobu, od které zbraň nebo střelivo převzal nebo které je předal,",
+            "údaje o přepravě a u přeshraničního přemístění údaj o povolení nebo licenci.",
+          ],
+          tip: "Do CRZ se nezapisují součásti zbraní kategorie NO. Lhůta 10 pracovních dnů platí pro ohlášení u běžného držitele ZO, ne pro zápisy ZL1.",
+          source: `§ 73 odst. 3 a § 76 zákona č. 90/2024 Sb.; ${MV("292, 301–303")}`,
+        },
+        {
+          heading: "Evidenční soupis – mimo CRZ",
+          paragraphs: [
+            "Palné zbraně kategorie NO, součásti zbraně umožňující samočinnou střelbu a polotovary hlavních částí zbraní podléhajících registraci eviduje držitel zbrojní licence v evidenčním soupisu. Ten se vede mimo CRZ, v listinné nebo elektronické podobě.",
+            "Soupis musí obsahovat aktuální údaje identifikující každou palnou zbraň NO, druh a množství uvedených součástí a polotovarů a údaje o osobě, které je předal nebo na kterou je převedl. Údaje musí být dostupné pro kontrolu a uchovávají se 10 let ode dne zápisu.",
+          ],
+          tip: "Dvě evidence: zbraně R1–R4, PO a střelivo → CRZ. Palné zbraně NO, součásti pro samočinnou střelbu a polotovary → evidenční soupis mimo CRZ.",
+          source: `§ 75 zákona č. 90/2024 Sb.; ${MV("297–300")}`,
+        },
+        {
+          heading: "Lidé, kteří pro držitele licence se zbraněmi pracují",
+          paragraphs: [
+            "Kdo se v rámci činnosti držitele zbrojní licence podílí na nakládání se zbraněmi podléhajícími registraci, zbraněmi PO nebo střelivem S1, S2 či S3, musí být držitelem zbrojního oprávnění. Výjimky stanoví zákon: například u držitele ZL1 nemusí mít ZO držitel zapsané autorizace, který zbraně ani střelivo nesvěřuje, nepřenechává, nepřevádí, nenosí ani nepoužívá ke střelbě. Při ochraně života, zdraví nebo majetku smí se zbraní podléhající registraci nakládat jen držitel rozšířeného ZO.",
+            "Držitel zbrojní licence každou takovou osobu bez zbytečného odkladu zapíše do CRZ. Když se přestane na nakládání podílet, zaniká povinnost zajišťovat jí školení a držitel licence ji z CRZ vymaže.",
+            "Pokud této osobě bylo zbrojní oprávnění pozastaveno nebo zaniklo, uvědomí držitele licence bez zbytečného odkladu KŘP.",
+          ],
+          tip: "Kdo u držitele licence nakládá výhradně se zbraněmi kategorie NO, do CRZ se nezapisuje a pravidelné školení pro něj zajišťovat nemusí.",
+          source: `§ 74 a § 90 zákona č. 90/2024 Sb.; ${MV("293–296, 354")}`,
+        },
+        {
+          heading: "Pravidelné školení",
+          bullets: [
+            "koná se alespoň jednou ročně,",
+            "obsahem je právní úprava nakládání se zbraněmi a střelivem, zásady bezpečného nakládání s ohledem na povahu úkolů a vnitřní předpis držitele licence,",
+            "kdo zajišťuje ochranu života, zdraví nebo majetku (nebo obdobnou činnost) nebo při činnosti nosí zbraň, musí mít ve školení i praktické ověření střeleckých dovedností a bezpečné manipulace se zbraní a střelivem,",
+            "kdo pro držitele licence pracuje kratší dobu než 1 rok nebo nakládá jen se zbraní, jejímž je sám hlavním držitelem, může mít místo toho zkrácené proškolení.",
+          ],
+          tip: "Ne jednou za 3 roky ani čtyřikrát ročně – školení je alespoň jednou ročně. Praktická část přibývá jen u ochrany osob a majetku nebo u nošení zbraně.",
+          source: `§ 91 zákona č. 90/2024 Sb.; ${MV("355–358")}`,
+        },
+      ],
+    },
+    {
+      id: "nakladani-l6",
+      topic: T,
+      title: "Označení zbraní a střeliva",
+      sections: [
+        {
+          heading: "Identifikační údaje zbraně",
+          paragraphs: [
+            "Každá palná a plynová zbraň musí být označena jedinečnými údaji, podle kterých ji lze individuálně identifikovat. Vždy jde alespoň o tyto údaje:",
+          ],
+          bullets: [
+            "jméno výrobce nebo jeho obchodní značka,",
+            "země nebo místo výroby,",
+            "výrobní číslo,",
+            "rok výroby, pokud není součástí výrobního čísla,",
+            "ráže,",
+            "označení modelu, pokud ho výrobce nebo dovozce užívá.",
+          ],
+          tip: "Rok uvedení na trh ani ověřovací (zkušební) značka mezi povinné identifikační údaje nepatří.",
+          source: `§ 86 odst. 1 zákona č. 90/2024 Sb.; ${MV("346, 348")}`,
+        },
+        {
+          heading: "Označení musí být trvalé",
+          paragraphs: [
+            "Označení identifikačními údaji musí být trvalé. Existující označení je zakázáno odstraňovat.",
+            "Pokud se označení při úpravě nebo opravě zbraně poškodí nebo zničí, musí se bez zbytečného odkladu obnovit v původním rozsahu.",
+            "Výjimky: zbraň zvláštní historické hodnoty určená výhradně pro sběratelství nemusí mít předepsané údaje, pokud ji lze identifikovat jinak. Na součást umožňující samočinnou střelbu, polotovar hlavní části a nadlimitní zásobník se požadavky na označení nevztahují.",
+          ],
+          tip: "Chyták: tvrzení „poškozené označení se po opravě nemusí obnovit“ je nepravdivé.",
+          source: `§ 86 zákona č. 90/2024 Sb.; ${MV("347, 349")}`,
+        },
+        {
+          heading: "Dodatečné označení a záznam v CRZ",
+          paragraphs: [
+            "Je-li to nezbytné pro individuální identifikaci zbraně, může KŘP držiteli rozhodnutím uložit, aby zajistil dodatečné označení zbraně identifikačními údaji. Držitel zbraň předá držiteli zbrojní licence skupiny ZL1 ve lhůtě, kterou KŘP určí (nejméně 10 pracovních dnů). Držitel ZL1 provedení označení bez zbytečného odkladu zapíše do CRZ.",
+            "Údaje o ověření a kontrole identifikačních údajů zbraně podléhající registraci nebo zbraně PO vyznačuje v CRZ Český úřad pro zkoušení zbraní a střeliva u zbraní, které ověřil nebo zkontroloval. U zbraně, kterou dovezl držitel ZL1 a která má platné ověřovací značky, to dělá on, v ostatních případech KŘP.",
+          ],
+          tip: "KŘP chybějící údaje nenahrazuje vlastním označením – označení provede držitel zbrojní licence skupiny ZL1.",
+          source: `§ 87 a § 88 zákona č. 90/2024 Sb.; ${MV("350–352")}`,
+        },
+        {
+          heading: "Označení balení střeliva",
+          paragraphs: [
+            "Každé jednotlivé základní balení kompletního střeliva musí uvádět jméno výrobce, identifikační číslo série nebo šarže, ráži a druh střeliva.",
+          ],
+          tip: "Zákon nepožaduje výrobní číslo, kategorii střeliva ani seznam zbraní. Hledejte „číslo série nebo šarže“ a „druh střeliva“.",
+          source: `§ 89 zákona č. 90/2024 Sb.; ${MV("353")}`,
+        },
+      ],
+    },
   ],
 
   glossary: [
@@ -214,6 +422,13 @@ export const content: TopicContent = {
     { term: "Zabezpečení „vhodným způsobem“", topic: T, definition: "Mírnější zabezpečení mimo technické požadavky. Lze ho použít pro nejvýše 2 zbraně R2–R4 nebo 1 000 nábojů S2/S3, pokud osoba celkem nenakládá s více, nebo při dočasném uložení v obydlí či krátkodobém uložení ve vozidle.", source: "§ 83 odst. 4 zákona č. 90/2024 Sb.; soubor MV ot. č. 340, 341" },
     { term: "Evropský zbrojní pas", topic: T, definition: "Doklad pro dočasné přemístění zbraně do jiného státu EU. Vydává se na 5 let s možností prodloužení o 5 let.", source: "§ 97 a násl. zákona č. 90/2024 Sb." },
     { term: "Nabývání na dálku", topic: T, definition: "Nákup bez osobního předání (např. e-shop se zásilkou). Je zakázané u zbraní R1–R4, PO, palných NO a u střeliva.", source: "soubor MV ot. č. 53" },
+    { term: "Ohlášení zbraně PO", topic: T, definition: "Nabytí i převod zbraně kategorie PO se hlásí krajskému ředitelství policie do 10 pracovních dnů (u nabytí ode dne, kdy s ní držitel začal nakládat). Zbraň se neregistruje a nepředkládá.", source: `§ 72 zákona č. 90/2024 Sb.; ${MV("283–287")}` },
+    { term: "Odmítnutí registrace", topic: T, definition: "Rozhodnutí KŘP v případě, že držitel ohlásí zbraň, se kterou není oprávněn nakládat. KŘP zároveň zbraň zadrží. U zbraně PO se obdobně neprovede zápis do CRZ a zbraň se zadrží.", source: `§ 70 odst. 3 a § 72 odst. 3 zákona č. 90/2024 Sb.; ${MV("274, 275, 288")}` },
+    { term: "Evidenční soupis", topic: T, definition: "Evidence držitele zbrojní licence vedená mimo CRZ: palné zbraně NO, součásti umožňující samočinnou střelbu a polotovary hlavních částí zbraní podléhajících registraci. Údaje se uchovávají 10 let.", source: `§ 75 zákona č. 90/2024 Sb.; ${MV("297–300")}` },
+    { term: "Pravidelné školení", topic: T, definition: "Školení osob, které se u držitele zbrojní licence podílejí na nakládání se zbraněmi podléhajícími registraci, zbraněmi PO nebo střelivem S1–S3. Koná se alespoň jednou ročně.", source: `§ 91 zákona č. 90/2024 Sb.; ${MV("355–358")}` },
+    { term: "Veřejné vystavování zbraní", topic: T, definition: "Vystavení zbraní nebo střeliva na veřejnosti, např. na veletrhu. Je možné za obdobných podmínek jako viditelné nošení; vystavovatel musí zbraně zabezpečit a nesmí ohrozit život, zdraví, majetek ani veřejný pořádek.", source: `§ 82 zákona č. 90/2024 Sb.; ${MV("330–332")}` },
+    { term: "Jiný způsob zabezpečení", topic: T, definition: "Zabezpečení odlišné od standardu, které na žádost povolí KŘP – kvůli rozměrům, množství nebo účelu zbraní či střeliva nebo zvláštním místním podmínkám. K žádosti se přikládá projekt.", source: `§ 84 zákona č. 90/2024 Sb.; ${MV("343, 344")}` },
+    { term: "Identifikační údaje zbraně", topic: T, definition: "Trvalé jedinečné označení palné a plynové zbraně: výrobce nebo obchodní značka, země nebo místo výroby, výrobní číslo, rok výroby (není-li ve výrobním čísle), ráže a označení modelu. Odstraňovat je zakázáno.", source: `§ 86 zákona č. 90/2024 Sb.; ${MV("346–349")}` },
   ],
 
   flashcards: [
@@ -241,6 +456,32 @@ export const content: TopicContent = {
     { id: "nakladani-k22", topic: T, front: "Jak často KŘP vyzve k předložení zbraní?", back: "Alespoň jednou za 10 let." },
     { id: "nakladani-k23", topic: T, front: "Základní pokuta pro fyzickou osobu", back: "Do 30 000 Kč (opakování 50 000, hrubé ohrožení 100 000, majetkový prospěch 1 000 000 Kč)." },
     { id: "nakladani-k24", topic: T, front: "Kdo projednává přestupky držitele ZO?", back: "Obecní úřad obce s rozšířenou působností; policista může uložit příkaz na místě." },
+    { id: "nakladani-k25", topic: T, front: "Ohlásíte zbraň R, se kterou nesmíte nakládat. Co udělá KŘP?", back: "Rozhodne o odmítnutí registrace a zbraň zadrží." },
+    { id: "nakladani-k26", topic: T, front: "Ohlásíte zbraň PO, se kterou nesmíte nakládat. Co udělá KŘP?", back: "Zápis změny do CRZ neprovede a zbraň zadrží." },
+    { id: "nakladani-k27", topic: T, front: "Vedlejšímu držiteli zaniklo ZO. Kdo to oznámí hlavnímu držiteli?", back: "KŘP, a to bez zbytečného odkladu." },
+    { id: "nakladani-k28", topic: T, front: "Signální zbraň pro náboje nejvýše ráže 16 mm", back: "Kategorie PO – nabytí se ohlašuje KŘP do 10 pracovních dnů." },
+    { id: "nakladani-k29", topic: T, front: "Převod zbraně PO na jiného", back: "Ohlásit KŘP do 10 pracovních dnů ode dne převodu." },
+    { id: "nakladani-k30", topic: T, front: "Dáte zbraň puškaři (ZL1) do opravy nebo úschovy. Hlásíte to?", back: "Ne, nejde o převod. Ohlašuje se až prodej (převod)." },
+    { id: "nakladani-k31", topic: T, front: "Ohlašuje se přenechání nebo svěření jako převod?", back: "Ne, ani přenechání, ani svěření v souladu se zákonem." },
+    { id: "nakladani-k32", topic: T, front: "Kdy se převod neohlašuje kvůli vývozu?", back: "Když oprávněný nabyvatel zbraň do 10 pracovních dnů od začátku nakládání trvale přeshraničně přemístí mimo ČR." },
+    { id: "nakladani-k33", topic: T, front: "Kdy zapisuje držitel ZL1 změnu stavu zbraně do CRZ?", back: "Nejpozději před předáním a bez zbytečného odkladu po převzetí; mimořádně do 2 pracovních dnů od převzetí." },
+    { id: "nakladani-k34", topic: T, front: "Evidenční soupis – co obsahuje a jak dlouho se uchovává?", back: "Palné zbraně NO, součásti pro samočinnou střelbu, polotovary hlavních částí. Vede se mimo CRZ, údaje 10 let od zápisu." },
+    { id: "nakladani-k35", topic: T, front: "Koho zapisuje držitel ZL do CRZ jako osobu se školením?", back: "Každého, kdo se podílí na nakládání se zbraněmi R, PO nebo střelivem S1–S3. Ne toho, kdo nakládá jen se zbraněmi NO." },
+    { id: "nakladani-k36", topic: T, front: "Pravidelné školení u držitele ZL – jak často a co navíc?", back: "Alespoň jednou ročně. Při ochraně osob a majetku nebo nošení zbraně i praktické ověření střelby a bezpečné manipulace." },
+    { id: "nakladani-k37", topic: T, front: "Komu lze přenechat zbraň PO nebo NO?", back: "Osobě oprávněné s ní nakládat nebo plně svéprávné zletilé fyzické osobě – vždy se známou totožností." },
+    { id: "nakladani-k38", topic: T, front: "Airsoft, paintball, plynovka NO – od kolika let lze přenechat?", back: "Od 15 let, se souhlasem zákonného zástupce, opatrovníka nebo poručníka." },
+    { id: "nakladani-k39", topic: T, front: "Svěření zbraně PO nebo NO", back: "Jen za dohledu osoby oprávněné s takovou zbraní a střelivem nakládat." },
+    { id: "nakladani-k40", topic: T, front: "Povinnosti toho, kdo dohlíží na svěřenou zbraň", back: "Poučit o bezpečném nakládání a dohlížet tak, aby svěřená osoba neporušila zákon a neohrozila život či zdraví." },
+    { id: "nakladani-k41", topic: T, front: "Viditelná přeprava zbraně na akci a zpět", back: "Jen nenabité zbraně, pokud to připouští způsob přepravy a je to obvyklé nebo přiměřené povaze akce." },
+    { id: "nakladani-k42", topic: T, front: "Povinnosti toho, kdo veřejně vystavuje zbraně", back: "Zabezpečit je proti zneužití, ztrátě a odcizení a neohrozit život, zdraví, majetek ani veřejný pořádek." },
+    { id: "nakladani-k43", topic: T, front: "Proti čemu se uložené zbraně a střelivo zabezpečují?", back: "Proti zneužití, ztrátě, odcizení a zašantročení – s ohledem na jejich povahu a místní podmínky. Povinnost má ten, kdo s nimi nakládá." },
+    { id: "nakladani-k44", topic: T, front: "Se zbraní nakládá nezletilý. Kdo dbá na zabezpečení?", back: "Zákonný zástupce, opatrovník nebo poručník zajistí dodržování pravidel (pokud zbraň nezabezpečuje jiná oprávněná osoba)." },
+    { id: "nakladani-k45", topic: T, front: "Jiný způsob zabezpečení – kdo povolí a co se přikládá?", back: "KŘP na žádost; přikládá se projekt jiného způsobu zabezpečení." },
+    { id: "nakladani-k46", topic: T, front: "Úřad nepouští dovnitř se zbraní. Co musí zajistit?", back: "Bezpečné uložení krátké zbraně." },
+    { id: "nakladani-k47", topic: T, front: "Povinné identifikační údaje palné zbraně", back: "Výrobce nebo obchodní značka, země/místo výroby, výrobní číslo, rok výroby (není-li v čísle), ráže, model (pokud se užívá)." },
+    { id: "nakladani-k48", topic: T, front: "Označení zbraně se při opravě poškodilo", back: "Bez zbytečného odkladu obnovit v původním rozsahu. Odstraňovat označení je zakázáno." },
+    { id: "nakladani-k49", topic: T, front: "Co musí být na základním balení střeliva?", back: "Jméno výrobce, číslo série nebo šarže, ráže, druh střeliva." },
+    { id: "nakladani-k50", topic: T, front: "Kdo provede dodatečné označení zbraně nařízené KŘP?", back: "Držitel zbrojní licence skupiny ZL1; provedení zapíše do CRZ." },
   ],
 
   questions: [
